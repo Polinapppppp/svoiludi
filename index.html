@@ -1,0 +1,3152 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Свои люди | Индивидуальные путешествия</title>
+    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/fonts.css">
+    <link rel="stylesheet" href="./assets/css/animate.css">
+    <link rel="stylesheet" href="./assets/files/jquery.fancybox.css">
+    <link rel="stylesheet" href="./assets/files/select.css">
+    <link rel="stylesheet" href="./assets/files/air-datepicker.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/media.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__row">
+                <ul class="header__menu">
+                    <li class="btn__menu open-countries">
+                        <a href="/country/">Страны</a>
+                    </li>
+                    <li class="btn__menu open-menu">
+                        <a href="/tours/">Виды отдыха</a>
+                    </li>
+                    <li>
+                        <a href="/about/">О компании</a>
+                    </li>
+                    <li>
+                        <a href="#">Спецпредложения</a>
+                    </li>
+
+                </ul>
+                <a href="/" class="header__logo">
+                    <i>
+                        <img width="272" height="41" class="lazy" src="./assets/img/logos.svg" alt="логотип">
+                    </i>
+                </a>
+                <div class="header__right">
+                    <div class="header__cont">
+                        <a href="#" class="header__cont-mobile">
+                            <i>
+                                <img width="14" height="14" class="lazy" src="./assets/img/phone.svg" alt="телефон">
+                            </i>
+                        </a>
+                        <a href="#" class="header__cont-mobile">
+                            <i>
+                                <img width="14" height="14" class="lazy" src="./assets/img/wh.svg" alt="ватсап">
+                            </i>
+                        </a>
+                        <a href="tel:+7 (495) 660-49-33" class="header__phone">+7 (495) 660-49-33</a>
+                        <a href="#" class="header__cont-mobile tg">
+                            <i>
+                                <img width="14" height="14" class="lazy" src="./assets/img/tg.svg" alt="телеграм">
+                            </i>
+                        </a>
+                        <div class="header__burger">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <a class="header__pod " href="/contacts/">Контакты</a>
+                    <a class="header__pod btn__call" href="#" data-modal="modal__podbor">Подбор тура</a>
+                    <div class="header__social">
+                        <a href="#" class="icon">
+                            <i>
+                                <img width="14" height="14" class="lazy" src="./assets/img/icons/key.svg" alt="вход">
+                            </i>
+                        </a>
+                        <a href="#" class="icon">
+                            <i>
+                                <img width="14" height="14" class="lazy" src="./assets/img/heart.svg" alt="избранное">
+                            </i>
+                        </a>
+
+                        <a href="#" class="icon opened-search">
+                            <i>
+                                <img width="12" height="12" class="lazy" src="./assets/img/search.svg" alt="поиск">
+                            </i>
+                        </a>
+                    </div>
+                    <div class="header-search">
+                        <input type="text" placeholder="Поиск по сайту">
+                        <div class="header-search-icons">
+                            <a href="#" class="header-search__close">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                    fill="none">
+                                    <g opacity="0.3">
+                                        <path d="M15.9116 5.30322L5.30502 15.9098" stroke="#1F2832"
+                                            stroke-linecap="round" />
+                                        <path d="M15.9116 15.9099L5.30502 5.30331" stroke="#1F2832"
+                                            stroke-linecap="round" />
+                                    </g>
+                                </svg>
+                            </a>
+                            <a href="#" class="header-search__btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <path
+                                        d="M6.53846 12.0769C9.59727 12.0769 12.0769 9.59727 12.0769 6.53846C12.0769 3.47965 9.59727 1 6.53846 1C3.47965 1 1 3.47965 1 6.53846C1 9.59727 3.47965 12.0769 6.53846 12.0769Z"
+                                        stroke="#1F2832" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M10.4524 10.4525L13.0001 13.0002" stroke="#1F2832" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </header>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <aside class="menu-panel" id="menuPanel">
+        <div class="menu-topbar">
+            <img src="./assets/img/logos.svg" alt="Свои Люди" class="menu-topbar__logo">
+            <div class="menu-topbar__wrapper">
+                <div class="menu-topbar__icons">
+                    <a href="#" class="header__cont-mobile">
+                        <i>
+                            <img width="14" height="14" class="lazy" src="./assets/img/phone.svg" alt="телефон">
+                        </i>
+                    </a>
+                    <a href="#">
+                        <i>
+                            <img width="14" height="14" class="lazy" src="./assets/img/wh.svg" alt="ватсап">
+                        </i>
+                    </a>
+                    <a href="#" class="header__cont-mobile tg">
+                        <i>
+                            <img width="14" height="14" class="lazy" src="./assets/img/tg.svg" alt="телеграм">
+                        </i>
+                    </a>
+                </div>
+                <button class="menu-topbar__close" id="menuTopClose" aria-label="Закрыть">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="menu-nav" id="menuNav">
+            <button class="menu-nav__back" id="menuBack">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M19.478 11.3214C19.4766 12.6405 18.952 13.9052 18.0193 14.8379C17.0865 15.7706 15.8219 16.2952 14.5028 16.2966H10.1343V15.0834H14.5028C15.5006 15.0834 16.4574 14.6871 17.1629 13.9815C17.8684 13.276 18.2648 12.3192 18.2648 11.3214C18.2648 10.3237 17.8684 9.36685 17.1629 8.66134C16.4574 7.95584 15.5006 7.55949 14.5028 7.55949H3.59021L6.19348 10.1644L5.33543 11.0224L1.26709 6.95287L5.33666 2.8833L6.19348 3.74135L3.58898 6.34625H14.5028C15.8219 6.34766 17.0865 6.87229 18.0193 7.80501C18.952 8.73773 19.4766 10.0024 19.478 11.3214Z"
+                        fill="#E21A55" />
+                </svg>
+            </button>
+            <div class="menu-nav__breadcrumbs" id="menuBreadcrumbs"></div>
+        </div>
+
+        <div class="menu-body">
+            <div class="menu-levels" id="menuLevels">
+
+                <div class="menu-level level1 active" data-level="0" data-title="Меню" id="level-0">
+                    <ul class="menu-list">
+                        <li>
+                            <button type="button" class="menu-item" data-target="level-countries" data-title="Страны">
+                                <span class="mi-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#323D48" stroke-width="1.5">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <path d="M2 12h20" />
+                                        <path
+                                            d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+                                    </svg>
+                                </span>
+                                <span class="mi-text">Регионы / Страны</span>
+                                <span class="mi-arrow">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 18l6-6-6-6" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="menu-item" data-target="level-types" data-title="Виды отдыха">
+                                <span class="mi-icon">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_7241_32118)">
+                                            <path d="M0.5 1H13.5" stroke="#1F2832" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M0.5 4H10.5" stroke="#1F2832" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M0.5 7H7.5" stroke="#1F2832" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M0.5 13H13.5" stroke="#1F2832" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M0.5 10H10.5" stroke="#1F2832" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_7241_32118">
+                                                <rect width="14" height="14" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                </span>
+                                <span class="mi-text">Виды отдыха</span>
+                                <span class="mi-arrow">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 18l6-6-6-6" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="menu-item" data-target="level-about" data-title="О компании">
+                                <span class="mi-icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.03796 11.0598H9.38579" stroke="#1F2832" stroke-width="1.11983"
+                                            stroke-miterlimit="10" stroke-linecap="round" />
+                                        <path
+                                            d="M7.55994 0.559814C3.69434 0.559814 0.559937 3.69422 0.559937 7.55981C0.559937 11.4254 3.69434 14.5598 7.55994 14.5598C11.4255 14.5598 14.5599 11.4254 14.5599 7.55981C14.5599 3.69422 11.4255 0.559814 7.55994 0.559814Z"
+                                            stroke="#1F2832" stroke-width="1.11983" stroke-miterlimit="10" />
+                                        <path d="M6.49463 6.49463H7.71202V10.9077" stroke="#1F2832"
+                                            stroke-width="1.11983" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M7.55981 3.0708C7.36418 3.0708 7.17294 3.12881 7.01028 3.2375C6.84762 3.34619 6.72084 3.50067 6.64597 3.68141C6.57111 3.86215 6.55152 4.06103 6.58969 4.2529C6.62785 4.44477 6.72206 4.62102 6.86039 4.75935C6.99872 4.89768 7.17497 4.99189 7.36684 5.03006C7.55871 5.06822 7.75759 5.04863 7.93833 4.97377C8.11907 4.8989 8.27355 4.77212 8.38224 4.60946C8.49093 4.4468 8.54894 4.25556 8.54894 4.05993C8.54894 3.7976 8.44473 3.54601 8.25923 3.36051C8.07373 3.17501 7.82214 3.0708 7.55981 3.0708Z"
+                                            fill="#1F2832" />
+                                    </svg>
+
+                                </span>
+                                <span class="mi-text">О компании</span>
+                                <span class="mi-arrow">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 18l6-6-6-6" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-item no-arrow">
+                                <span class="mi-icon">
+                                    <svg width="14" height="15" viewBox="0 0 14 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M2 9.65385C2 6.52404 6.17308 4.10096 5.23077 0.5C7.45192 0.5 11.6923 3.73077 11.6923 9.65385C11.6923 10.9391 11.1817 12.1718 10.2729 13.0806C9.36407 13.9894 8.13143 14.5 6.84615 14.5C5.56087 14.5 4.32824 13.9894 3.41941 13.0806C2.51058 12.1718 2 10.9391 2 9.65385Z"
+                                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M9.00008 11.2691C9.00008 13.2113 7.92315 13.9614 6.84623 13.9614C5.76931 13.9614 4.69238 13.2113 4.69238 11.2691C4.69238 9.32695 6.03854 8.37489 5.76931 6.96143C7.18277 6.96143 9.00008 9.32695 9.00008 11.2691Z"
+                                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                </span>
+                                <span class="mi-text">Спецпредложения</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/contacts/" class="menu-item no-arrow">
+                                <span class="mi-icon">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11.0401 1.60472C11.8658 1.37284 12.627 2.13403 12.3951 2.9597L10.493 9.73241C10.3894 10.1013 10.1011 10.3896 9.73229 10.4932L2.95958 12.3953C2.13391 12.6271 1.37272 11.866 1.6046 11.0403L3.50667 4.26757C3.61027 3.89868 3.89856 3.61039 4.26745 3.50679L11.0401 1.60472Z"
+                                            stroke="#1F2832" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M5.68902 8.31086C6.41306 9.03489 7.58694 9.03489 8.31098 8.31086C9.03501 7.58683 9.03501 6.41294 8.31098 5.68891C7.58694 4.96487 6.41306 4.96487 5.68902 5.68891C4.96499 6.41294 4.96499 7.58683 5.68902 8.31086Z"
+                                            stroke="#1F2832" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                </span>
+                                <span class="mi-text">Контакты</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-item no-arrow">
+                                <span class="mi-icon">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11.1538 4.30762H2.84615C1.82655 4.30762 1 5.13417 1 6.15377V11.2307C1 12.2503 1.82655 13.0768 2.84615 13.0768H11.1538C12.1735 13.0768 13 12.2503 13 11.2307V6.15377C13 5.13417 12.1735 4.30762 11.1538 4.30762Z"
+                                            stroke="#1F2832" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M4.23071 13.0768V4.30762" stroke="#1F2832" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M9.76929 13.0768V4.30762" stroke="#1F2832" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M4.69226 4.30769C4.69226 3.69566 4.93539 3.10868 5.36817 2.6759C5.80094 2.24313 6.38792 2 6.99995 2C7.61199 2 8.19897 2.24313 8.63174 2.6759C9.06452 3.10868 9.30765 3.69566 9.30765 4.30769"
+                                            stroke="#1F2832" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                </span>
+                                <span class="mi-text">Подбор тура</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="menu-level0-extra">
+                        <div class="modal__search__wrapper">
+                            <div class="modal__search-icon">
+                                <i>
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g opacity="0.6" clip-path="url(#clip0_7241_32169)">
+                                            <path
+                                                d="M6.5 12.5713C9.81371 12.5713 12.5 9.885 12.5 6.57129C12.5 3.25758 9.81371 0.571289 6.5 0.571289C3.18629 0.571289 0.5 3.25758 0.5 6.57129C0.5 9.885 3.18629 12.5713 6.5 12.5713Z"
+                                                stroke="#1F2832" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M10.74 10.74L13.5 13.5" stroke="#1F2832" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_7241_32169">
+                                                <rect width="14" height="14" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                </i>
+                                <input type="text" placeholder="Поиск">
+                            </div>
+                            <div class="modal__search__icon">
+                                <a href="#" class="icon burger__icon">
+                                    <i>
+                                        <img width="15" height="15" class="lazy" src="./assets/img/heart.svg"
+                                            alt="избранное">
+                                    </i>
+                                </a>
+                                <a href="#" class="icon burger__icon">
+                                    <i>
+                                        <img width="15" height="15" class="lazy" src="./assets/img/icons/key.svg"
+                                            alt="вход">
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                        <a href="tel:+74956604933" class="menu-phone-btn">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.9625 11.3702C13.4281 10.8318 12.1338 10.046 11.5059 9.7293C10.6881 9.31739 10.6208 9.28374 9.97806 9.76127C9.54933 10.08 9.26429 10.3647 8.76253 10.2576C8.26077 10.1506 7.17044 9.54724 6.21572 8.59555C5.261 7.64386 4.62261 6.52189 4.51526 6.02181C4.40791 5.52174 4.69732 5.24007 5.01298 4.81033C5.45787 4.20459 5.42421 4.10363 5.04394 3.28588C4.74746 2.64984 3.9388 1.36769 3.39834 0.83598C2.82019 0.264899 2.82019 0.365856 2.44766 0.520657C2.14437 0.648263 1.85341 0.803376 1.57842 0.984051C1.03998 1.34178 0.741146 1.63893 0.532164 2.08549C0.323183 2.53206 0.229293 3.57899 1.30853 5.53958C2.38776 7.50016 3.14494 8.50267 4.71213 10.0655C6.27932 11.6283 7.48441 12.4686 9.24612 13.4566C11.4254 14.6772 12.2614 14.4393 12.7093 14.2306C13.1572 14.022 13.4557 13.7259 13.8141 13.1874C13.9952 12.9129 14.1507 12.6223 14.2785 12.3192C14.4336 11.948 14.5346 11.948 13.9625 11.3702Z"
+                                    stroke="white" stroke-width="0.8" stroke-miterlimit="10" />
+                            </svg>
+                            +7 (495) 660-49-33</a>
+                    </div>
+                </div>
+
+                <div class="menu-level level2" data-level="1" data-title="Страны" id="level-countries">
+                    <ul class="menu-list">
+                        <li><a href="#" class="menu-item no-arrow"><span class="mi-text">Антарктида</span></a></li>
+                        <li><a href="#" class="menu-item no-arrow"><span class="mi-text">Арктика</span></a></li>
+                        <li>
+                            <button type="button" class="menu-item" data-target="level-africa" data-title="Африка">
+                                <span class="mi-text">Африка</span>
+                                <span class="mi-arrow">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 18l6-6-6-6" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="menu-item" data-target="level-oceania"
+                                data-title="Австралия и Океания">
+                                <span class="mi-text">Австралия и Океания</span>
+                                <span class="mi-arrow">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 18l6-6-6-6" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="menu-item" data-target="level-middle-east"
+                                data-title="Ближний Восток">
+                                <span class="mi-text">Ближний Восток</span>
+                                <span class="mi-arrow">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 18l6-6-6-6" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="menu-item" data-target="level-europe" data-title="Европа">
+                                <span class="mi-text">Европа</span>
+                                <span class="mi-arrow">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 18l6-6-6-6" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="menu-item" data-target="level-caribbean" data-title="Карибы">
+                                <span class="mi-text">Карибы</span>
+                                <span class="mi-arrow">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 18l6-6-6-6" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="menu-item" data-target="level-latin"
+                                data-title="Латинская Америка">
+                                <span class="mi-text">Латинская Америка</span>
+                                <span class="mi-arrow">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 18l6-6-6-6" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="menu-item" data-target="level-indian"
+                                data-title="Острова Индийского океана">
+                                <span class="mi-text">Острова Индийского океана</span>
+                                <span class="mi-arrow">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 18l6-6-6-6" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="menu-item" data-target="level-north-am"
+                                data-title="Северная Америка">
+                                <span class="mi-text">Северная Америка</span>
+                                <span class="mi-arrow">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 18l6-6-6-6" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="menu-item" data-target="level-cis" data-title="Страны СНГ">
+                                <span class="mi-text">Страны СНГ</span>
+                                <span class="mi-arrow">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 18l6-6-6-6" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="menu-item" data-target="level-asia"
+                                data-title="Юго-Восточная Азия">
+                                <span class="mi-text">Юго-Восточная Азия</span>
+                                <span class="mi-arrow">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 18l6-6-6-6" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="menu-level level2" data-level="2" data-title="Африка" id="level-africa">
+                    <ul class="menu-list">
+                        <li><a href="#" class="menu-item no-arrow"><span class="mi-text">Ботсвана</span></a></li>
+                        <li><a href="#" class="menu-item no-arrow"><span class="mi-text">Гвинея</span></a></li>
+                        <li><a href="#" class="menu-item no-arrow"><span class="mi-text">Египет</span></a></li>
+                        <li><a href="#" class="menu-item no-arrow"><span class="mi-text">Замбия</span></a></li>
+                        <li><a href="#" class="menu-item no-arrow"><span class="mi-text">Зимбабве</span></a></li>
+                        <li><a href="#" class="menu-item no-arrow"><span class="mi-text">Кения</span></a></li>
+                        <li><a href="#" class="menu-item no-arrow"><span class="mi-text">Конго</span></a></li>
+                        <li><a href="#" class="menu-item no-arrow"><span class="mi-text">Кот-д'Ивуар</span></a></li>
+                        <li><a href="#" class="menu-item no-arrow"><span class="mi-text">Мавритания</span></a></li>
+                        <li><a href="#" class="menu-item no-arrow"><span class="mi-text">Мадагаскар</span></a></li>
+                        <li><a href="#" class="menu-item no-arrow"><span class="mi-text">Марокко</span></a></li>
+                        <li><a href="#" class="menu-item no-arrow"><span class="mi-text">Намибия</span></a></li>
+                        <li><a href="#" class="menu-item no-arrow"><span class="mi-text">Нигерия</span></a></li>
+                        <li><a href="#" class="menu-item no-arrow"><span class="mi-text">Танзания</span></a></li>
+                        <li><a href="#" class="menu-item no-arrow"><span class="mi-text">Уганда</span></a></li>
+                        <li><a href="#" class="menu-item no-arrow"><span class="mi-text">Эфиопия</span></a></li>
+                        <li><a href="#" class="menu-item no-arrow"><span class="mi-text">ЮАР</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="menu-level level2" data-level="1" data-title="Виды отдыха" id="level-types">
+                    <ul class="menu-list">
+                        <li>
+                            <a href="/event/" class="menu-item no-arrow">
+                                <span class="mi-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#323D48" stroke-width="1.5">
+                                        <rect x="2" y="7" width="20" height="14" rx="2" />
+                                        <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" />
+                                    </svg>
+                                </span>
+                                <span class="mi-text">Корпоративные туры</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/event/" class="menu-item no-arrow">
+                                <span class="mi-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#323D48" stroke-width="1.5">
+                                        <path d="M2 9a3 3 0 013-3h14a3 3 0 013 3v6a3 3 0 01-3 3H5a3 3 0 01-3-3V9z" />
+                                        <path d="M15 9v6M9 9v6" />
+                                    </svg>
+                                </span>
+                                <span class="mi-text">Событийные туры</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-item no-arrow">
+                                <span class="mi-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#323D48" stroke-width="1.5">
+                                        <polygon points="1 6 1 22 8 18 16 22 21 18 21 2 16 6 8 2 1 6" />
+                                        <line x1="8" y1="2" x2="8" y2="18" />
+                                        <line x1="16" y1="6" x2="16" y2="22" />
+                                    </svg>
+                                </span>
+                                <span class="mi-text">Экскурсионные туры</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-item no-arrow">
+                                <span class="mi-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#323D48" stroke-width="1.5">
+                                        <path d="M8 21h8M12 21v-5M7 3h10l-1 9H8L7 3z" />
+                                    </svg>
+                                </span>
+                                <span class="mi-text">Гастрономические и винные туры</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-item no-arrow">
+                                <span class="mi-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#323D48" stroke-width="1.5">
+                                        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                                        <circle cx="9" cy="7" r="4" />
+                                        <path d="M23 21v-2a4 4 0 00-3-3.87" />
+                                        <path d="M16 3.13a4 4 0 010 7.75" />
+                                    </svg>
+                                </span>
+                                <span class="mi-text">Туры в мини-группах</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-item no-arrow">
+                                <span class="mi-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#323D48" stroke-width="1.5">
+                                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+                                        <circle cx="12" cy="7" r="4" />
+                                    </svg>
+                                </span>
+                                <span class="mi-text">Индивидуальные туры</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-item no-arrow">
+                                <span class="mi-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#323D48" stroke-width="1.5">
+                                        <path d="M11 20A7 7 0 019 7h5a7 7 0 015 12.5" />
+                                    </svg>
+                                </span>
+                                <span class="mi-text">Эко-туры</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-item no-arrow">
+                                <span class="mi-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#323D48" stroke-width="1.5">
+                                        <path
+                                            d="M6.5 12c.94-3.05 4.08-5 7.5-5s6.56 1.95 7.5 5c-.94 3.05-4.08 5-7.5 5s-6.56-1.95-7.5-5z" />
+                                        <path d="M18 12v.5" />
+                                        <path d="M2 16c1.5-2 2-4 2-4s.5 2 2 4" />
+                                    </svg>
+                                </span>
+                                <span class="mi-text">Рыболовные туры</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-item no-arrow">
+                                <span class="mi-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#323D48" stroke-width="1.5">
+                                        <circle cx="12" cy="12" r="5" />
+                                        <path
+                                            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                                    </svg>
+                                </span>
+                                <span class="mi-text">Отдых на море</span>
+                            </a>
+                        </li>
+                        <li>
+                            <button type="button" class="menu-item" data-target="level-cruises" data-title="Круизы">
+                                <span class="mi-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#323D48" stroke-width="1.5">
+                                        <circle cx="12" cy="5" r="3" />
+                                        <path d="M12 22V8" />
+                                        <path d="M5 12H2a10 10 0 0020 0h-3" />
+                                    </svg>
+                                </span>
+                                <span class="mi-text">Круизы</span>
+                                <span class="mi-arrow">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 18l6-6-6-6" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-item no-arrow">
+                                <span class="mi-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#323D48" stroke-width="1.5">
+                                        <rect x="4" y="3" width="16" height="16" rx="2" />
+                                        <path d="M4 11h16M12 3v8M8 19l-2 3M16 19l2 3M8 15h.01M16 15h.01" />
+                                    </svg>
+                                </span>
+                                <span class="mi-text">Круизы на поездах</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-item no-arrow">
+                                <span class="mi-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#323D48" stroke-width="1.5">
+                                        <path d="M9 12h.01M15 12h.01M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5" />
+                                        <path
+                                            d="M19 6.3a9 9 0 01-1.7 12.6A9 9 0 014.3 8.7L5 3l2.8 1.2a9 9 0 006.4 0L17 3l2 3.3z" />
+                                    </svg>
+                                </span>
+                                <span class="mi-text">Отдых с детьми</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-item no-arrow">
+                                <span class="mi-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#323D48" stroke-width="1.5">
+                                        <path d="M2 18c1.5-1 4-1 5.5 0s4 1 5.5 0 4-1 5.5 0 4 1 5.5 0" />
+                                        <path d="M6 12l3-6 3 4 4-4 2 6" />
+                                    </svg>
+                                </span>
+                                <span class="mi-text">Горнолыжные туры</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-item no-arrow">
+                                <span class="mi-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#323D48" stroke-width="1.5">
+                                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                                    </svg>
+                                </span>
+                                <span class="mi-text">Активные туры</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-item no-arrow">
+                                <span class="mi-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#323D48" stroke-width="1.5">
+                                        <path
+                                            d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                                    </svg>
+                                </span>
+                                <span class="mi-text">Оздоровительные туры</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-item no-arrow">
+                                <span class="mi-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#323D48" stroke-width="1.5">
+                                        <path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14" />
+                                    </svg>
+                                </span>
+                                <span class="mi-text">Аренда частного острова и дворца</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-item no-arrow">
+                                <span class="mi-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#323D48" stroke-width="1.5">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" />
+                                        <path d="M16 2v4M8 2v4M3 10h18" />
+                                    </svg>
+                                </span>
+                                <span class="mi-text">Организовать событие</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="menu-level level2" data-level="2" data-title="Круизы" id="level-cruises">
+                    <ul class="menu-list">
+                        <li>
+                            <button type="button" class="menu-item" data-target="level-river"
+                                data-title="Речные круизы">
+                                <span class="mi-text">Речные круизы</span>
+                                <span class="mi-arrow">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 18l6-6-6-6" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </li>
+                        <li><a href="#" class="menu-item no-arrow"><span class="mi-text">Морские круизы</span></a></li>
+                        <li><a href="#" class="menu-item no-arrow"><span class="mi-text">Круизы на праздники</span></a>
+                        </li>
+                        <li><a href="#" class="menu-item no-arrow"><span class="mi-text">Круизные компании</span></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="menu-level level2" data-level="3" data-title="Речные круизы" id="level-river">
+                    <ul class="menu-list">
+                        <li><a href="#" class="menu-item no-arrow"><span class="mi-text">Круизы по рекам
+                                    России</span></a></li>
+                        <li><a href="#" class="menu-item no-arrow"><span class="mi-text">Круизы по рекам
+                                    Европы</span></a></li>
+                        <li><a href="#" class="menu-item no-arrow"><span class="mi-text">Круизы по Амазонке</span></a>
+                        </li>
+                        <li><a href="#" class="menu-item no-arrow"><span class="mi-text">Круизы по Нилу</span></a></li>
+                        <li><a href="#" class="menu-item no-arrow"><span class="mi-text">Круизы по норвежским
+                                    фьордам</span></a></li>
+                        <li><a href="#" class="menu-item no-arrow"><span class="mi-text">Речные круизы по
+                                    Янцзы</span></a></li>
+                        <li>
+                            <button type="button" class="menu-item" data-target="level-private"
+                                data-title="Круизы на частных судах">
+                                <span class="mi-text">Круизы на частных судах и баржах</span>
+                                <span class="mi-arrow">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 18l6-6-6-6" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="menu-level level2" data-level="4" data-title="Круизы на частных судах" id="level-private">
+                    <ul class="menu-list">
+                        <li><a href="#" class="menu-item no-arrow"><span class="mi-text">Индивидуальные люкс-круизы по
+                                    Нилу на частных судах!</span></a></li>
+                        <li><a href="#" class="menu-item no-arrow"><span class="mi-text">Баржи Belmond Afloat во
+                                    Франции</span></a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </aside>
+
+
+    <div class="modal-window modal-thank">
+        <div class="inner">
+            <div class="modal__close">
+                <span></span>
+                <span></span>
+            </div>
+
+            <h2 class="modal-thank__title section__title">
+                Спасибо за заявку!
+            </h2>
+            <div class="modal-thank__text">
+                Наш менеджер свяжется с Вами в ближайшее время
+            </div>
+        </div>
+    </div>
+
+    <main>
+
+        <section class="main 2">
+            <div class="main__oval">
+                <span>
+                    с&nbsp;2002 <br>
+                    года
+                </span>
+                <img width="123" height="123" loading="lazy" src="./assets/img/home/main/oval.svg" alt="oval">
+            </div>
+            <div class="container">
+                <div class="main__wrapper">
+                    <h1 class="main__top">
+                        СТУДИЯ ИНДИВИДУАЛЬНОГО ОТДЫХА и&nbsp;ТУРИЗМА «СВОИ ЛЮДИ»
+                    </h1>
+
+                    <div class="effect1">
+                        <div class="main__title">
+                            <p class="slide">
+                                Ваши эксперты <br>
+                                в мире эксклюзивных <br>
+                                путешествий
+                            </p>
+
+                            <p class="slide">
+                                Ваш личный гид <br>
+                                по индивидуальному <br>
+                                отдыху
+                            </p>
+
+                            <p class="slide">
+                                Больше, чем просто <br>
+                                туристическое <br>
+                                агентство
+                            </p>
+                        </div>
+                    </div>
+                    <div class="main__search">
+                        <form action="#" class="main__search-form">
+                            <div class="main__select main__napr">
+                                <div class="main__napr-wrapper hide-mobile">
+                                    <div class="main__napr-item">
+                                        <i>
+                                            <img width="14" height="14" loading="lazy"
+                                                src="./assets/img/home/main/earth.svg" alt="">
+                                        </i>
+                                        <select class="form-select" data-placeholder="Выберите направление">
+                                            <option></option>
+                                            <option>Африка</option>
+                                            <option>Латинская Америка</option>
+                                            <option>Азия</option>
+                                            <option>Ближний Восток</option>
+                                            <option>Европа</option>
+                                            <option>Острова Индийского океана</option>
+                                            <option>Россия и&nbsp;страны СНГ</option>
+                                            <option>Карибский регион</option>
+                                            <option>Антарктида</option>
+                                            <option>Арктика</option>
+                                            <option>Северная Америка</option>
+                                            <option>Австралия и&nbsp;Океания</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="main__napr-wrapper strana_box">
+                                    <div class="main__napr-item">
+                                        <select class="form-select strana" data-placeholder="Страна">
+                                            <option></option>
+                                            <option data-icon="./assets/img/icons/requered.svg">Ботсвана</option>
+                                            <option>Гвинея</option>
+                                            <option data-icon="./assets/img/icons/requered.svg">Египет</option>
+                                            <option data-icon="./assets/img/icons/requered.svg">Замбия </option>
+                                            <option>Мавритания</option>
+                                            <option>Россия</option>
+                                            <option>США</option>
+                                            <option>Алжир</option>
+                                            <option>Китай</option>
+                                            <option>Япония</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="main__napr-wrapper resort_box hide-mobile">
+                                    <div class="main__napr-item">
+                                        <select class="form-select strana" data-placeholder="Город/Курорт">
+                                            <option></option>
+                                            <option>Абриола</option>
+                                            <option>Авелла</option>
+                                            <option>Авеллино</option>
+                                            <option>Авеньо</option>
+                                            <option>Аверса</option>
+                                            <option>Аветрана</option>
+                                            <option>Москва</option>
+                                            <option>Стамбул</option>
+                                            <option>Ватикан</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main__select main__toor">
+                                <div class="main__napr-wrapper">
+                                    <div class="main__toor-item">
+                                        <i>
+                                            <img width="14" height="14" loading="lazy"
+                                                src="./assets/img/home/main/list.svg" alt="">
+                                        </i>
+                                        <select class="form-select" data-placeholder="Вид отдыха">
+                                            <option></option>
+                                            <option>Корпоративные туры</option>
+                                            <option>Событийные туры </option>
+                                            <option>Экскурсионные туры</option>
+                                            <option>Гастрономические и&nbsp;винные туры</option>
+                                            <option>Туры в&nbsp;мини-группах</option>
+                                            <option>Индивидуальные туры</option>
+                                            <option>Эко-туры</option>
+                                            <option>Рыболовные туры</option>
+                                            <option>Отдых на море</option>
+                                            <option>Круизы</option>
+                                            <option>Круизы на поездах</option>
+                                            <option>Отдых с&nbsp;детьми</option>
+                                            <option>Горнолыжные туры</option>
+                                            <option>Активные туры</option>
+                                            <option>Оздоровительные туры</option>
+                                            <option>Аренда частного острова и&nbsp;дворца</option>
+                                            <option>Организовать событие</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="main__select main__days hide-mobile">
+                                <i>
+                                    <img width="14" height="14" loading="lazy" src="./assets/img/home/main/moon.svg"
+                                        alt="">
+                                </i>
+                                <p class="main__days-count">
+                                    1 - 5
+                                </p>
+                                <div class="main__counter">
+                                    <p>
+                                        Кол-во ночей
+                                    </p>
+                                    <div class="main__counter-list">
+                                        <div class="main__counter-item from">
+                                            <p>от</p>
+                                            <div class="main__counter-btns">
+                                                <button class="main__counter-btn main__counter-minus">-</button>
+                                                <input type="text" class="main__counter-input from" readonly min="1"
+                                                    value="1">
+                                                <button class="main__counter-btn main__counter-plus">+</button>
+                                            </div>
+                                        </div>
+                                        <div class="main__counter-item to">
+                                            <p>до</p>
+                                            <div class="main__counter-btns">
+                                                <button class="main__counter-btn main__counter-minus">-</button>
+                                                <input type="text" class="main__counter-input to" readonly min="1"
+                                                    value="1">
+                                                <button class="main__counter-btn main__counter-plus">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="wrapper-right">
+                                <div class="main__calendar hide-mobile">
+                                    <i>
+                                        <img width="14" height="14" loading="lazy"
+                                            src="./assets/img/home/main/calendar.svg" alt="">
+                                    </i>
+                                    <input type="text" class="form-datapicker" placeholder="Выберите дату">
+                                </div>
+                                <button type="submit" class="main__btn main__btn-call">
+                                    <i>
+                                        <img width="24" height="24" loading="lazy" src="./assets/img/search-main.svg"
+                                            alt="">
+                                    </i>
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="mobile-filter__open">
+                        <div class="mobile-filter__item_wrapper">
+                            <div class="mobile-filter__item">
+                                <i>
+                                    <img width="14" height="14" loading="lazy" src="./assets/img/home/main/earth.svg"
+                                        alt="">
+                                </i>
+                                <p>Страна</p>
+                            </div>
+                            <div class="mobile-filter__item">
+                                <i>
+                                    <img width="14" height="14" loading="lazy" src="./assets/img/home/main/list.svg"
+                                        alt="">
+                                </i>
+                                <p>Вид отдыха</p>
+                            </div>
+                        </div>
+                        <div class="mobile-filter__item-search">
+                            <i>
+                                <img width="14" height="14" loading="lazy" src="./assets/img/search-main.svg" alt="">
+                            </i>
+                        </div>
+                    </div>
+                    <!-- Мобильный фильтр -->
+                    <div class="filter-overlay" id="filterOverlay"></div>
+
+                    <aside class="filter-panel" id="filterPanel">
+                        <div class="filter-topbar">
+                            <button class="filter-topbar__back" id="filterBack">
+                                <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
+                                    <path
+                                        d="M19.478 11.3214C19.4766 12.6405 18.952 13.9052 18.0193 14.8379C17.0865 15.7706 15.8219 16.2952 14.5028 16.2966H10.1343V15.0834H14.5028C15.5006 15.0834 16.4574 14.6871 17.1629 13.9815C17.8684 13.276 18.2648 12.3192 18.2648 11.3214C18.2648 10.3237 17.8684 9.36685 17.1629 8.66134C16.4574 7.95584 15.5006 7.55949 14.5028 7.55949H3.59021L6.19348 10.1644L5.33543 11.0224L1.26709 6.95287L5.33666 2.8833L6.19348 3.74135L3.58898 6.34625H14.5028C15.8219 6.34766 17.0865 6.87229 18.0193 7.80501C18.952 8.73773 19.4766 10.0024 19.478 11.3214Z"
+                                        fill="#E21A55" />
+                                </svg>
+                            </button>
+                            <div class="filter-topbar__title" id="filterTitle">Подобрать путешествие</div>
+                            <button class="filter-topbar__close" id="filterClose">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#E21A55" stroke-width="2">
+                                    <path d="M18 6L6 18M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="filter-body">
+                            <div class="filter-levels" id="filterLevels">
+
+                                <!-- Уровень 0 — главный экран -->
+                                <div class="filter-level active" data-level="0" data-title="Подобрать путешествие"
+                                    id="filter-level-0">
+                                    <ul class="filter-list">
+                                        <li>
+                                            <button type="button" class="filter-item" data-target="filter-direction"
+                                                data-title="Направление">
+                                                <span class="fi-icon">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="#323D48"
+                                                        stroke-width="1.5">
+                                                        <circle cx="12" cy="12" r="10" />
+                                                        <path d="M2 12h20" />
+                                                        <path
+                                                            d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+                                                    </svg>
+                                                </span>
+                                                <span class="fi-text">Выберите направление</span>
+                                                <span class="fi-arrow">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2">
+                                                        <path d="M9 18l6-6-6-6" />
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="filter-item" data-target="filter-country"
+                                                data-title="Страна">
+                                                <span class="fi-text">Страна</span>
+                                                <span class="fi-arrow">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2">
+                                                        <path d="M9 18l6-6-6-6" />
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="filter-item" data-target="filter-resort"
+                                                data-title="Город/Курорт">
+                                                <span class="fi-text">Город/Курорт</span>
+                                                <span class="fi-arrow">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2">
+                                                        <path d="M9 18l6-6-6-6" />
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="filter-item" data-target="filter-type"
+                                                data-title="Вид отдыха">
+                                                <span class="fi-icon">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="#323D48"
+                                                        stroke-width="1.5">
+                                                        <rect x="2" y="7" width="20" height="14" rx="2" />
+                                                        <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" />
+                                                    </svg>
+                                                </span>
+                                                <span class="fi-text">Вид отдыха</span>
+                                                <span class="fi-arrow">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2">
+                                                        <path d="M9 18l6-6-6-6" />
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="filter-item" data-target="filter-nights"
+                                                data-title="Количество ночей">
+                                                <span class="fi-icon">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="#323D48"
+                                                        stroke-width="1.5">
+                                                        <path d="M12 3a6 6 0 009 9 9 9 0 11-9-9z" />
+                                                    </svg>
+                                                </span>
+                                                <span class="fi-text">Количество ночей</span>
+                                                <span class="fi-arrow">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2">
+                                                        <path d="M9 18l6-6-6-6" />
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="filter-item" data-target="filter-date"
+                                                data-title="Дата поездки">
+                                                <span class="fi-icon">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="#323D48"
+                                                        stroke-width="1.5">
+                                                        <rect x="3" y="4" width="18" height="18" rx="2" />
+                                                        <path d="M16 2v4M8 2v4M3 10h18" />
+                                                    </svg>
+                                                </span>
+                                                <span class="fi-text">Дата поездки</span>
+                                                <span class="fi-arrow">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2">
+                                                        <path d="M9 18l6-6-6-6" />
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                    <div class="filter-submit-wrap">
+                                        <button type="button" class="filter-submit" id="filterSubmit">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="11" cy="11" r="8" />
+                                                <path d="M21 21l-4.35-4.35" />
+                                            </svg>
+                                            Найти
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Уровень 1 — Направления -->
+                                <div class="filter-level" data-level="1" data-title="Направление" id="filter-direction">
+                                    <div class="filter-search">
+                                        <input type="text" placeholder="Поиск по направлениям">
+                                    </div>
+                                    <ul class="filter-list">
+                                        <li><button type="button" class="filter-option"
+                                                data-value="africa">Африка</button></li>
+                                        <li><button type="button" class="filter-option" data-value="latin">Латинская
+                                                Америка</button></li>
+                                        <li><button type="button" class="filter-option" data-value="asia">Азия</button>
+                                        </li>
+                                        <li><button type="button" class="filter-option" data-value="middle-east">Ближний
+                                                Восток</button></li>
+                                        <li><button type="button" class="filter-option"
+                                                data-value="europe">Европа</button></li>
+                                        <li><button type="button" class="filter-option" data-value="indian">Острова
+                                                Индийского океана</button></li>
+                                        <li><button type="button" class="filter-option" data-value="cis">Россия и страны
+                                                СНГ</button></li>
+                                        <li><button type="button" class="filter-option" data-value="caribbean">Карибский
+                                                регион</button></li>
+                                        <li><button type="button" class="filter-option"
+                                                data-value="antarctica">Антарктида</button></li>
+                                        <li><button type="button" class="filter-option"
+                                                data-value="arctic">Арктика</button></li>
+                                        <li><button type="button" class="filter-option"
+                                                data-value="north-america">Северная Америка</button></li>
+                                        <li><button type="button" class="filter-option" data-value="oceania">Австралия и
+                                                Океания</button></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Уровень 1 — Страны -->
+                                <div class="filter-level" data-level="1" data-title="Страна" id="filter-country">
+                                    <div class="filter-search">
+                                        <input type="text" placeholder="Поиск по странам">
+                                    </div>
+                                    <ul class="filter-list">
+                                        <li><button type="button" class="filter-option"
+                                                data-value="botswana">Ботсвана</button></li>
+                                        <li><button type="button" class="filter-option"
+                                                data-value="egypt">Египет</button></li>
+                                        <li><button type="button" class="filter-option"
+                                                data-value="zambia">Замбия</button></li>
+                                        <li><button type="button" class="filter-option"
+                                                data-value="zimbabwe">Зимбабве</button></li>
+                                        <li><button type="button" class="filter-option"
+                                                data-value="kenya">Кения</button></li>
+                                    </ul>
+                                    <div class="filter-hint">Безвизовые страны и страны упрощенного въезда</div>
+                                </div>
+
+                                <!-- Уровень 1 — Виды отдыха -->
+                                <div class="filter-level" data-level="1" data-title="Вид отдыха" id="filter-type">
+                                    <ul class="filter-list">
+                                        <li><button type="button" class="filter-option">Корпоративные туры</button></li>
+                                        <li><button type="button" class="filter-option">Событийные туры</button></li>
+                                        <li>
+                                            <button type="button" class="filter-option" data-target="filter-excursion"
+                                                data-title="Экскурсионные туры">
+                                                <span class="fi-text">Экскурсионные туры</span>
+                                                <span class="fi-arrow">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2">
+                                                        <path d="M9 18l6-6-6-6" />
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </li>
+                                        <li><button type="button" class="filter-option">Гастрономические и винные
+                                                туры</button></li>
+                                        <li><button type="button" class="filter-option">Туры в мини-группах</button>
+                                        </li>
+                                        <li><button type="button" class="filter-option">Индивидуальные туры</button>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Уровень 2 — Экскурсионные туры -->
+                                <div class="filter-level" data-level="2" data-title="Экскурсионные туры"
+                                    id="filter-excursion">
+                                    <ul class="filter-list">
+                                        <li><button type="button" class="filter-option">Туры на Формулу-1</button></li>
+                                        <li><button type="button" class="filter-option">Туры на Формулу-1</button></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Уровень 1 — Количество ночей -->
+                                <div class="filter-level" data-level="1" data-title="Количество ночей"
+                                    id="filter-nights">
+                                    <div class="filter-counter">
+                                        <div class="filter-counter__row">
+                                            <span>от</span>
+                                            <button type="button" class="filter-counter__btn minus">-</button>
+                                            <input type="text" class="filter-counter__input" readonly value="1">
+                                            <button type="button" class="filter-counter__btn plus">+</button>
+                                        </div>
+                                        <div class="filter-counter__row">
+                                            <span>до</span>
+                                            <button type="button" class="filter-counter__btn minus">-</button>
+                                            <input type="text" class="filter-counter__input" readonly value="5">
+                                            <button type="button" class="filter-counter__btn plus">+</button>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="filter-apply">Применить</button>
+                                </div>
+
+                                <!-- Уровень 1 — Дата -->
+                                <div class="filter-level" data-level="1" data-title="Дата поездки" id="filter-date">
+                                    <div class="filter-calendar">
+                                        <input type="text" class="form-datapicker-mobile" placeholder="Выберите дату">
+                                    </div>
+                                    <button type="button" class="filter-apply">Применить</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </aside>
+
+                    <!-- Кнопка открытия фильтра -->
+                    <button type="button" class="filter-trigger" id="filterTrigger">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                        </svg>
+                        Подобрать путешествие
+                    </button>
+                </div>
+            </div>
+            <div class="main__bg">
+                <video width="1400" height="700" class="main__video lazy" muted loop autoplay playsinline loading="lazy"
+                    src="./assets/files/main.mp4" poster="./assets/img/home/main/preload.jpg"></video>
+            </div>
+        </section>
+
+
+        <section class="gran lazy" style="background-image: url(./assets/img/home/Group.png);">
+            <svg width="1440" height="556" viewBox="0 0 1440 556" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path id="put" opacity="0.1"
+                    d="M1568.71 153.657C1540.38 204.748 1507.69 254.338 1464.19 293.351C1420.69 332.364 1365.2 360.21 1306.87 361.958C1223.84 364.43 1149.21 315.638 1078.58 271.94C1009.21 229.109 937.26 189.147 859.723 163.964C782.186 138.781 698.213 128.72 618.626 146.376C452.744 183.126 326.187 332.628 158.105 357.154C59.2065 371.623 -45.5899 337.612 -117.14 267.863"
+                    stroke="#323D48" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                    stroke-dasharray="3 10" />
+                <path id="plaine"
+                    d="M31.0169 20.5931H25.2892L17.3408 32.0888C16.293 33.6043 14.5679 34.5088 12.7254 34.5088L16.5422 20.2751L14.372 19.987C10.1532 19.427 5.9552 21.1549 3.35299 24.5224C2.66368 25.4145 1.4211 25.6597 0.444608 25.0963L0.0820313 24.8871C3.89889 19.6071 1.67239 12.6679 0.0820313 9.85822L0.616392 9.6527C1.53699 9.29862 2.58074 9.5577 3.2289 10.3012C5.93621 13.4066 10.0051 14.9707 14.0954 14.4784L16.1447 14.2317L12.4073 0.0775129C14.0042 0.0775129 15.5027 0.8487 16.4309 2.14812L25.2892 14.5498L31.2922 14.7829C32.7394 14.8391 34.1657 15.1471 35.5071 15.693L35.7037 15.773C37.4175 16.4705 37.4414 18.8886 35.7417 19.6199C34.2493 20.262 32.6416 20.5931 31.0169 20.5931Z"
+                    fill="#E21A55" />
+            </svg>
+            <div class="container">
+                <h2 class="gran__title">
+                    <span>Путешествия</span> <br>
+                    за границу&nbsp;ожиданий
+                </h2>
+                <p>
+                    Представьте мир, где каждое мгновение таит в&nbsp;себе обещание нового открытия, <br>
+                    каждый&nbsp;закат переписывает определение красоты, а&nbsp;каждый маршрут тщательно создан, <br>
+                    чтобы
+                    удивлять, восхищать и&nbsp;вдохновлять.
+                </p>
+                <p>
+                    с&nbsp;2002 года мы являемся вашим надежным проводником в&nbsp;мир путешествий высшего класса
+                </p>
+            </div>
+        </section>
+
+
+        <section class="put">
+            <div class="container">
+                <div class="put__row">
+                    <div class="put__left">
+                        <div class="put__left-text">
+                            <p class="section__title-top">
+                                Топ направлений
+                            </p>
+                            <h2 class="section__title"><span> Каждое путешествие</span> <br>
+                                уникально
+                                и&nbsp;тщательно
+                                спланировано
+                            </h2>
+                            <p>
+                                Мы не просто планируем ваш следующий отпуск, мы создаем эмоции, <br>
+                                которые остаются в&nbsp;памяти на всю жизнь. Наша команда экспертов <br> путешествует
+                                по миру, чтобы лично изучить и&nbsp;выбрать лучшие <br> предложения для вас.
+                            </p>
+                            <p>
+                                Именно поэтому мы можем гарантировать, что&nbsp;каждый наш тур – <br>
+                                это сочетание качества и&nbsp;эксклюзивности. «Свои люди» по всему миру!
+                            </p>
+                        </div>
+                        <div class="put__bottom">
+                            <div class="slider__arrow">
+                                <div class="slider__prev put__slider-prev"></div>
+                                <div class="slider__next put__slider-next"></div>
+                            </div>
+                            <a href="#">Все предложения</a>
+                        </div>
+                    </div>
+                    <div class="put__right">
+                        <div class="put__slider">
+                            <div class="swiper-wrapper">
+                                <a href="#" class="swiper-slide put__item">
+                                    <div class="put__img">
+                                        <img width="295" height="400" loading="lazy" src="./assets/img/home/put/1.jpg"
+                                            alt="Малайзия">
+                                    </div>
+                                    <div class="put__item-info">
+                                        <div class="put__item-top">
+                                            <p>
+                                                Малайзия
+                                            </p>
+                                            <h3>
+                                                Спецпредложение <br> по&nbsp;Imperial Three-Bedroom Beach Villa With
+                                                Pool
+                                            </h3>
+                                        </div>
+                                        <p class="put__price">
+                                            от $3210
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="#" class="swiper-slide put__item">
+                                    <div class="put__img">
+                                        <img width="295" height="400" loading="lazy" src="./assets/img/home/put/2.jpg"
+                                            alt="Малайзия">
+                                    </div>
+                                    <div class="put__item-info">
+                                        <div class="put__item-top">
+                                            <p>
+                                                Малайзия
+                                            </p>
+                                            <h3>
+                                                Спецпредложение <br> по&nbsp;Imperial Three-Bedroom Beach Villa With
+                                                Pool
+                                            </h3>
+                                        </div>
+                                        <p class="put__price">
+                                            от $3210
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="#" class="swiper-slide put__item">
+                                    <div class="put__img">
+                                        <img width="295" height="400" loading="lazy" src="./assets/img/home/put/3.jpg"
+                                            alt="Малайзия">
+                                    </div>
+                                    <div class="put__item-info">
+                                        <div class="put__item-top">
+                                            <p>
+                                                Малайзия
+                                            </p>
+                                            <h3>
+                                                Спецпредложение <br> по&nbsp;Imperial Three-Bedroom Beach Villa With
+                                                Pool
+                                            </h3>
+                                        </div>
+                                        <p class="put__price">
+                                            от $3210
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="#" class="swiper-slide put__item">
+                                    <div class="put__img">
+                                        <img width="295" height="400" loading="lazy" src="./assets/img/home/put/4.jpg"
+                                            alt="Малайзия">
+                                    </div>
+                                    <div class="put__item-info">
+                                        <div class="put__item-top">
+                                            <p>
+                                                Малайзия
+                                            </p>
+                                            <h3>
+                                                Спецпредложение <br> по&nbsp;Imperial Three-Bedroom Beach Villa With
+                                                Pool
+                                            </h3>
+                                        </div>
+                                        <p class="put__price">
+                                            от $3210
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="#" class="swiper-slide put__item">
+                                    <div class="put__img">
+                                        <img width="295" height="400" loading="lazy" src="./assets/img/home/put/5.jpg"
+                                            alt="Малайзия">
+                                    </div>
+                                    <div class="put__item-info">
+                                        <div class="put__item-top">
+                                            <p>
+                                                Малайзия
+                                            </p>
+                                            <h3>
+                                                Спецпредложение <br> по&nbsp;Imperial Three-Bedroom Beach Villa With
+                                                Pool
+                                            </h3>
+                                        </div>
+                                        <p class="put__price">
+                                            от $3210
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="#" class="swiper-slide put__item">
+                                    <div class="put__img">
+                                        <img width="295" height="400" loading="lazy" src="./assets/img/home/put/6.jpg"
+                                            alt="Малайзия">
+                                    </div>
+                                    <div class="put__item-info">
+                                        <div class="put__item-top">
+                                            <p>
+                                                Малайзия
+                                            </p>
+                                            <h3>
+                                                Спецпредложение <br> по&nbsp;Imperial Three-Bedroom Beach Villa With
+                                                Pool
+                                            </h3>
+                                        </div>
+                                        <p class="put__price">
+                                            от $3210
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="nap">
+            <div class="nap__contaniner contaniner">
+                <div class="nap__row">
+                    <div class="nap__left flex_column">
+                        <h2 class="nap__title">
+                            Доступ к&nbsp;закрытым <br>
+                            и&nbsp;редким направлениям
+                        </h2>
+                        <p>
+                            Мы откроем для вас двери в&nbsp;самые завораживающие <br>
+                            и&nbsp;труднодоступные уголки мира.
+                        </p>
+                    </div>
+                    <div class="nap__right flex_column">
+                        <p>
+                            От закрытых частных пляжей Мальдив до секретных винных погребов Франции, где каждая бутылка
+                            вина — это произведение искусства. Исследуйте затерянные храмы Камбоджи и&nbsp;проплывите по
+                            непроходимым джунглям Амазонки
+                            на роскошном частном катере.
+                        </p>
+                        <p>
+                            «Мы дарим радость открытий» — миссия нашей студии.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="nap__slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide nap__item">
+                        <div class="nap__img">
+                            <img width="1440" height="810" loading="lazy" src="./assets/img/home/nap/1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide nap__item">
+                        <div class="nap__img">
+                            <img width="1440" height="810" loading="lazy" src="./assets/img/home/nap/2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide nap__item">
+                        <div class="nap__img">
+                            <img width="1440" height="810" loading="lazy" src="./assets/img/home/nap/3.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide nap__item">
+                        <div class="nap__img">
+                            <img width="1440" height="810" loading="lazy" src="./assets/img/home/nap/4.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide nap__item">
+                        <div class="nap__img">
+                            <img width="1440" height="810" loading="lazy" src="./assets/img/home/nap/5.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide nap__item">
+                        <div class="nap__img">
+                            <img width="1440" height="810" loading="lazy" src="./assets/img/home/nap/6.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide nap__item">
+                        <div class="nap__img">
+                            <img width="1440" height="810" loading="lazy" src="./assets/img/home/nap/7.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide nap__item">
+                        <div class="nap__img">
+                            <img width="1440" height="810" loading="lazy" src="./assets/img/home/nap/8.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide nap__item">
+                        <div class="nap__img">
+                            <img width="1440" height="810" loading="lazy" src="./assets/img/home/nap/9.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide nap__item">
+                        <div class="nap__img">
+                            <img width="1440" height="810" loading="lazy" src="./assets/img/home/nap/10.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide nap__item">
+                        <div class="nap__img">
+                            <img width="1440" height="810" loading="lazy" src="./assets/img/home/nap/11.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide nap__item">
+                        <div class="nap__img">
+                            <img width="1440" height="810" loading="lazy" src="./assets/img/home/nap/12.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="nap__pagination"></div>
+            </div>
+            <div class="nap__info">
+                <div class="slider__arrow nap__arrow">
+                    <div class="slider__prev nap__prev"></div>
+                    <div class="slider__next nap__next"></div>
+                </div>
+                <div class="nap__info-item">
+                    <div class="nap__info-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide nap__info-slide">
+                                <p class="nap__name">
+                                    <i>
+                                        <img width="14" height="14" loading="lazy" src="./assets/img/home/nap/1.svg"
+                                            alt="">
+                                    </i>
+                                    <span>
+                                        Азия
+                                    </span>
+                                </p>
+                                <a href="#">Подробнее</a>
+                            </div>
+                            <div class="swiper-slide nap__info-slide">
+                                <p class="nap__name">
+                                    <i>
+                                        <img width="14" height="14" loading="lazy" src="./assets/img/home/nap/1.svg"
+                                            alt="">
+                                    </i>
+                                    <span>
+                                        Африка
+                                    </span>
+                                </p>
+                                <a href="#">Подробнее</a>
+                            </div>
+                            <div class="swiper-slide nap__info-slide">
+                                <p class="nap__name">
+                                    <i>
+                                        <img width="14" height="14" loading="lazy" src="./assets/img/home/nap/1.svg"
+                                            alt="">
+                                    </i>
+                                    <span>
+                                        Карибский регион
+                                    </span>
+                                </p>
+                                <a href="#">Подробнее</a>
+                            </div>
+                            <div class="swiper-slide nap__info-slide">
+                                <p class="nap__name">
+                                    <i>
+                                        <img width="14" height="14" loading="lazy" src="./assets/img/home/nap/1.svg"
+                                            alt="">
+                                    </i>
+                                    <span>
+                                        Австралия и&nbsp;Океания
+                                    </span>
+                                </p>
+                                <a href="#">Подробнее</a>
+                            </div>
+                            <div class="swiper-slide nap__info-slide">
+                                <p class="nap__name">
+                                    <i>
+                                        <img width="14" height="14" loading="lazy" src="./assets/img/home/nap/1.svg"
+                                            alt="">
+                                    </i>
+                                    <span>
+                                        Европа
+                                    </span>
+                                </p>
+                                <a href="#">Подробнее</a>
+                            </div>
+                            <div class="swiper-slide nap__info-slide">
+                                <p class="nap__name">
+                                    <i>
+                                        <img width="14" height="14" loading="lazy" src="./assets/img/home/nap/1.svg"
+                                            alt="">
+                                    </i>
+                                    <span>
+                                        Россия и&nbsp;страны СНГ
+                                    </span>
+                                </p>
+                                <a href="#">Подробнее</a>
+                            </div>
+                            <div class="swiper-slide nap__info-slide">
+                                <p class="nap__name">
+                                    <i>
+                                        <img width="14" height="14" loading="lazy" src="./assets/img/home/nap/1.svg"
+                                            alt="">
+                                    </i>
+                                    <span>
+                                        Арктика
+                                    </span>
+                                </p>
+                                <a href="#">Подробнее</a>
+                            </div>
+                            <div class="swiper-slide nap__info-slide">
+                                <p class="nap__name">
+                                    <i>
+                                        <img width="14" height="14" loading="lazy" src="./assets/img/home/nap/1.svg"
+                                            alt="">
+                                    </i>
+                                    <span>
+                                        Антарктида
+                                    </span>
+                                </p>
+                                <a href="#">Подробнее</a>
+                            </div>
+                            <div class="swiper-slide nap__info-slide">
+                                <p class="nap__name">
+                                    <i>
+                                        <img width="14" height="14" loading="lazy" src="./assets/img/home/nap/1.svg"
+                                            alt="">
+                                    </i>
+                                    <span>
+                                        Острова Индийского океана
+                                    </span>
+                                </p>
+                                <a href="#">Подробнее</a>
+                            </div>
+                            <div class="swiper-slide nap__info-slide">
+                                <p class="nap__name">
+                                    <i>
+                                        <img width="14" height="14" loading="lazy" src="./assets/img/home/nap/1.svg"
+                                            alt="">
+                                    </i>
+                                    <span>
+                                        Ближний восток
+                                    </span>
+                                </p>
+                                <a href="#">Подробнее</a>
+                            </div>
+                            <div class="swiper-slide nap__info-slide">
+                                <p class="nap__name">
+                                    <i>
+                                        <img width="14" height="14" loading="lazy" src="./assets/img/home/nap/1.svg"
+                                            alt="">
+                                    </i>
+                                    <span>
+                                        Северная Америка
+                                    </span>
+                                </p>
+                                <a href="#">Подробнее</a>
+                            </div>
+                            <div class="swiper-slide nap__info-slide">
+                                <p class="nap__name">
+                                    <i>
+                                        <img width="14" height="14" loading="lazy" src="./assets/img/home/nap/1.svg"
+                                            alt="">
+                                    </i>
+                                    <span>
+                                        Латинская Америка
+                                    </span>
+                                </p>
+                                <a href="#">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="dream">
+            <div class="container">
+                <h2 class="section__title">
+                    <span>
+                        Отели мечты для вашего
+                    </span> <br>
+                    идеального отпуска
+                </h2>
+                <p class="dream__subtitle">
+                    Позвольте себе насладиться отдыхом в&nbsp;лучших отелях, где каждый день начинается с&nbsp;улыбки
+                    и&nbsp;заботы о&nbsp;вас. <br>
+                    От романтических уединенных мест до семейных курортов – у нас есть всё для вашего незабываемого
+                    отдыха.
+                </p>
+            </div>
+            <div class="dream__slider">
+                <div class="swiper-wrapper">
+                    <a href="#" class="swiper-slide dream__item">
+                        <div class="dream__img">
+                            <img width="325" height="500" loading="lazy" src="./assets/img/home/dream/1.jpg" alt="">
+                        </div>
+                        <p class="dream__title">
+                            Отели в&nbsp;замках, дворцах&nbsp;и&nbsp;монастырях
+                        </p>
+                    </a>
+                    <a href="#" class="swiper-slide dream__item">
+                        <div class="dream__img">
+                            <img width="325" height="500" loading="lazy" src="./assets/img/home/dream/2.jpg" alt="">
+                        </div>
+                        <p class="dream__title">
+                            Виллы и&nbsp;апартаменты
+                        </p>
+                    </a>
+                    <a href="#" class="swiper-slide dream__item">
+                        <div class="dream__img">
+                            <img width="325" height="500" loading="lazy" src="./assets/img/home/dream/3.jpg" alt="">
+                        </div>
+                        <p class="dream__title">
+                            Дизайнерские отели
+                        </p>
+                    </a>
+                    <a href="#" class="swiper-slide dream__item">
+                        <div class="dream__img">
+                            <img width="325" height="500" loading="lazy" src="./assets/img/home/dream/4.jpg" alt="">
+                        </div>
+                        <p class="dream__title">
+                            Необычные отели
+                        </p>
+                    </a>
+                    <a href="#" class="swiper-slide dream__item">
+                        <div class="dream__img">
+                            <img width="325" height="500" loading="lazy" src="./assets/img/home/dream/5.jpg" alt="">
+                        </div>
+                        <p class="dream__title">
+                            Инстаграмные отели
+                        </p>
+                    </a>
+                    <a href="#" class="swiper-slide dream__item">
+                        <div class="dream__img">
+                            <img width="325" height="500" loading="lazy" src="./assets/img/home/dream/1.jpg" alt="">
+                        </div>
+                        <p class="dream__title">
+                            Отели в&nbsp;замках, дворцах&nbsp;и&nbsp;монастырях
+                        </p>
+                    </a>
+                    <a href="#" class="swiper-slide dream__item">
+                        <div class="dream__img">
+                            <img width="325" height="500" loading="lazy" src="./assets/img/home/dream/2.jpg" alt="">
+                        </div>
+                        <p class="dream__title">
+                            Виллы и&nbsp;апартаменты
+                        </p>
+                    </a>
+                    <a href="#" class="swiper-slide dream__item">
+                        <div class="dream__img">
+                            <img width="325" height="500" loading="lazy" src="./assets/img/home/dream/3.jpg" alt="">
+                        </div>
+                        <p class="dream__title">
+                            Дизайнерские отели
+                        </p>
+                    </a>
+                    <a href="#" class="swiper-slide dream__item">
+                        <div class="dream__img">
+                            <img width="325" height="500" loading="lazy" src="./assets/img/home/dream/4.jpg" alt="">
+                        </div>
+                        <p class="dream__title">
+                            Необычные отели
+                        </p>
+                    </a>
+                    <a href="#" class="swiper-slide dream__item">
+                        <div class="dream__img">
+                            <img width="325" height="500" loading="lazy" src="./assets/img/home/dream/5.jpg" alt="">
+                        </div>
+                        <p class="dream__title">
+                            Инстаграмные отели
+                        </p>
+                    </a>
+                </div>
+                <div class="slider__arrow">
+                    <div class="slider__prev dream__prev"></div>
+                    <div class="slider__next dream__next"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="koll">
+            <div class="container">
+                <div class="koll__top">
+                    <h2 class="section__title">
+                        <span>
+                            Не просто отдых, а&nbsp;коллекция
+                        </span>
+                        незабываемых впечатлений
+                    </h2>
+
+                </div>
+                <div class="koll__list">
+                    <a href="#" class="koll__item item1">
+                        <div class="koll__img">
+                            <img width="438" height="240" loading="lazy" src="./assets/img/home/koll/1.jpg" alt="">
+                        </div>
+                        <p class="koll__title">
+                            <span>
+                                Корпоративные туры
+                            </span>
+                        </p>
+                    </a>
+                    <a href="#" class="koll__item item2">
+                        <div class="koll__img">
+                            <img width="324" height="500" loading="lazy" src="./assets/img/home/koll/2.jpg" alt="">
+                        </div>
+                        <p class="koll__title">
+                            <span>
+                                Эко-туры
+                            </span>
+                        </p>
+                    </a>
+                    <a href="#" class="koll__item item3">
+                        <div class="koll__img">
+                            <img width="438" height="240" loading="lazy" src="./assets/img/home/koll/3.jpg" alt="">
+                        </div>
+                        <p class="koll__title">
+                            <span>
+                                Круизы
+                            </span>
+                        </p>
+                    </a>
+                    <a href="#" class="koll__item item4">
+                        <div class="koll__img">
+                            <img width="438" height="240" loading="lazy" src="./assets/img/home/koll/4.jpg" alt="">
+                        </div>
+                        <p class="koll__title">
+                            <span>
+                                Гастрономические и&nbsp;винные туры
+                            </span>
+                        </p>
+                    </a>
+                    <a href="#" class="koll__item item5">
+                        <div class="koll__img">
+                            <img width="438" height="240" loading="lazy" src="./assets/img/home/koll/5.jpg" alt="">
+                        </div>
+                        <p class="koll__title">
+                            <span>
+                                Событийные туры
+                            </span>
+                        </p>
+                    </a>
+                </div>
+                <div class="koll_bottom">
+                    <p class="koll__bottom">
+                        Мы знаем, что истинная роскошь заключается не&nbsp;только в&nbsp;золоте и&nbsp;блеске, но
+                        и&nbsp;в&nbsp;возможности испытывать новое, переживать непередаваемые эмоции и&nbsp;создавать
+                        воспоминания, которые станут частью вашей жизни. с&nbsp;нами вы&nbsp;увидите мир таким, каким не
+                        увидит больше никто
+                    </p>
+                    <a href="#" class="koll__link">Все разделы</a>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="map">
+            <div class="container">
+                <h2 class="section__title">
+                    выберите свое&nbsp;место
+                    <span>для&nbsp;путешествия</span>
+                </h2>
+            </div>
+            <div class="map__list">
+                <div class="map__list_bg">
+                    <div class="map__list_bg_pc"><img loading="lazy" src="./assets/img/home/map/map.jpg" width="1440"
+                            height="810" alt="maps"></div>
+                    <div class="map__list_bg_mob" style="display: none;"><img loading="lazy"
+                            src="./assets/img/home/map/map_mob.jpg" width="453" height="255" alt="maps"></div>
+                </div>
+                <a href="https://www.svoiludi.ru/cruise/karibskie-ostrova-amerika-avstralia-kruizy.html"
+                    class="map__item i1 wow animate__animated animate__fadeIn" data-wow-delay="0.1s">
+                    <i>
+                        <img loading="lazy" src="./assets/img/home/map/i1.jpg" alt="">
+                    </i>
+                    <span>
+                        Северная Америка
+                    </span>
+                </a>
+                <a href="https://www.svoiludi.ru/cruise/kruizy-v-antarktidu-i-na-severnyj-poljus.html"
+                    class="map__item i2 wow animate__animated animate__fadeIn" data-wow-delay="0.2s">
+                    <i>
+                        <img loading="lazy" src="./assets/img/home/map/i2.jpg" alt="">
+                    </i>
+                    <span>
+                        Арктика
+                    </span>
+                </a>
+                <a href="https://www.svoiludi.ru/russia/kruizy-po-rossii.html"
+                    class="map__item i3 wow animate__animated animate__fadeIn" data-wow-delay="0.3s">
+                    <i>
+                        <img loading="lazy" src="./assets/img/home/map/i3.jpg" alt="">
+                    </i>
+                    <span>
+                        Россия и&nbsp;страныи&nbsp;СНГ
+                    </span>
+                </a>
+                <a href="https://www.svoiludi.ru/cruise/zapadnaya-vostochnaya-evropa-kruizy.html"
+                    class="map__item i4 wow animate__animated animate__fadeIn" data-wow-delay="0.4s">
+                    <i>
+                        <img loading="lazy" src="./assets/img/home/map/i4.jpg" alt="">
+                    </i>
+                    <span>
+                        Европа
+                    </span>
+                </a>
+                <a href="https://www.svoiludi.ru/cruise/novogodnii-kruiz-po-persidskomu-zalivu.html"
+                    class="map__item i5 wow animate__animated animate__fadeIn" data-wow-delay="0.5s">
+                    <i>
+                        <img loading="lazy" src="./assets/img/home/map/i5.jpg" alt="">
+                    </i>
+                    <span>
+                        Ближний Восток
+                    </span>
+                </a>
+                <a href="https://www.svoiludi.ru/cruise/azia-avstralia-kruizy.html"
+                    class="map__item i6 wow animate__animated animate__fadeIn" data-wow-delay="0.6s">
+                    <i>
+                        <img loading="lazy" src="./assets/img/home/map/i6.jpg" alt="">
+                    </i>
+                    <span>
+                        Азия
+                    </span>
+                </a>
+                <a href="https://www.svoiludi.ru/cruise/karibskie-ostrova-amerika-avstralia-kruizy.html"
+                    class="map__item i7 wow animate__animated animate__fadeIn" data-wow-delay="0.7s">
+                    <i>
+                        <img loading="lazy" src="./assets/img/home/map/i7.jpg" alt="">
+                    </i>
+                    <span>
+                        Карибский регион
+                    </span>
+                </a>
+                <a href="https://www.svoiludi.ru/cruise/morskie-kruizy-po-afrike.html"
+                    class="map__item i8 wow animate__animated animate__fadeIn" data-wow-delay="0.8s">
+                    <i>
+                        <img loading="lazy" src="./assets/img/home/map/i8.jpg" alt="">
+                    </i>
+                    <span>
+                        Африка
+                    </span>
+                </a>
+                <a href="https://www.svoiludi.ru/cruise/karibskie-ostrova-amerika-avstralia-kruizy.html"
+                    class="map__item i9 wow animate__animated animate__fadeIn" data-wow-delay="0.9s">
+                    <i>
+                        <img loading="lazy" src="./assets/img/home/map/i10.jpg" alt="">
+                    </i>
+                    <span>
+                        Латинская Америка
+                    </span>
+                </a>
+                <a href="https://www.svoiludi.ru/cruise/karibskie-ostrova-amerika-avstralia-kruizy.html"
+                    class="map__item i10 wow animate__animated animate__fadeIn" data-wow-delay="1s">
+                    <i>
+                        <img loading="lazy" src="./assets/img/home/map/i9.jpg" alt="">
+                    </i>
+                    <span>
+                        Острова Индийского океана
+                    </span>
+                </a>
+                <a href="https://www.svoiludi.ru/cruise/karibskie-ostrova-amerika-avstralia-kruizy.html"
+                    class="map__item i11 wow animate__animated animate__fadeIn" data-wow-delay="1.1s">
+                    <i>
+                        <img loading="lazy" src="./assets/img/home/map/i11.jpg" alt="">
+                    </i>
+                    <span>
+                        Австралия и&nbsp;Океания
+                    </span>
+                </a>
+                <a href="https://www.svoiludi.ru/cruise/kruizy-v-antarktidu-i-na-severnyj-poljus.html"
+                    class="map__item i12 wow animate__animated animate__fadeIn" data-wow-delay="1.2s">
+                    <i>
+                        <img loading="lazy" src="./assets/img/home/map/i12.jpg" alt="">
+                    </i>
+                    <span>
+                        Антарктида
+                    </span>
+                </a>
+            </div>
+        </section>
+
+        <section class="org">
+            <div class="container">
+                <div class="org__top">
+                    <h2 class="section__title">
+                        <span>ОРГАНИЗОВАТЬ</span> <br> МЕРОПРИЯТИЕ
+                    </h2>
+                    <div class="org__top-right">
+                        <p>
+                            Представьте себе вечеринку в стиле «Великого Гэтсби» <br>
+                            в роскошном замке во Франции, историю любви в уютных шале в Альпах. Мы сможем организовать
+                            любую вашу мечту
+                        </p>
+                        <div class="slider__arrow">
+                            <div class="slider__prev org__prev"></div>
+                            <div class="slider__next org__next"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="org__slider">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="swiper-slide org__slide">
+                            <img loading="lazy" src="./assets/img/home/org/1.jpg" alt="">
+                            <div class="org__info">
+                                <div class="org__info-top">
+                                    <p class="org__title">
+                                        Свадебные туры
+                                    </p>
+                                    <i>
+                                        <img loading="lazy" src="./assets/img/home/org/1.svg" alt="">
+                                    </i>
+                                </div>
+                                <div class="org__info-desc">
+                                    <p>
+                                        Пусть ваш самый важный день будет безупречным! <br> Мы организуем для вас
+                                        незабываемую свадьбу в&nbsp;самых живописных местах мира. От пляжей
+                                        с&nbsp;белым песком до старинных замков – ваша свадьба будет наполнена магией
+                                        и&nbsp;романтикой
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="swiper-slide org__slide">
+                            <img loading="lazy" src="./assets/img/home/org/2.jpg" alt="">
+                            <div class="org__info">
+                                <div class="org__info-top">
+                                    <p class="org__title">
+                                        Романтические туры
+                                    </p>
+                                    <i>
+                                        <img loading="lazy" src="./assets/img/home/org/2.svg" alt="">
+                                    </i>
+                                </div>
+                                <div class="org__info-desc">
+                                    <p>
+                                        Создайте волшебные моменты для вашей пары. Вас ждут прогулки по живописным
+                                        побережьям, ужины при свечах и&nbsp;восхитительные закаты.
+                                        Мы воплотим ваши желания, чтобы это путешествие стало новой,
+                                        яркой страницей в&nbsp;вашей истории любви.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="swiper-slide org__slide">
+                            <img loading="lazy" src="./assets/img/home/org/3.jpg" alt="">
+                            <div class="org__info">
+                                <div class="org__info-top">
+                                    <p class="org__title">
+                                        Корпоративные туры
+                                    </p>
+                                    <i>
+                                        <img loading="lazy" src="./assets/img/home/org/3.svg" alt="">
+                                    </i>
+                                </div>
+                                <div class="org__info-desc">
+                                    <p>
+                                        Забудьте об обычных деловых поездках! Корпоративные туры от «Свои люди»
+                                        предлагают инновационный тимбилдинг с&nbsp;мастер-классами, визитами на выставки
+                                        и&nbsp;увлекательными квестами
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="swiper-slide org__slide">
+                            <img loading="lazy" src="./assets/img/home/org/4.jpg" alt="">
+                            <div class="org__info">
+                                <div class="org__info-top">
+                                    <p class="org__title">
+                                        Туры на день рождения, юбилей или праздник
+                                    </p>
+                                    <i>
+                                        <img loading="lazy" src="./assets/img/home/org/4.svg" alt="">
+                                    </i>
+                                </div>
+                                <div class="org__info-desc">
+                                    <p>
+                                        Мы организуем идеальный праздник для вас и&nbsp;ваших друзей
+                                        в&nbsp;самых удивительных уголках мира. Каждая деталь будет продумана
+                                        до мелочей, чтобы ваше событие стало поистине незабываемым
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gift">
+            <div class="container">
+                <div class="section__row">
+                    <div class="gift__left flex_column">
+                        <h2 class="section__title">
+                            <span>
+                                Подарите
+                            </span>
+                            незабываемые впечатления
+                        </h2>
+                        <div class="gift__info">
+                            <p>
+                                Наши подарочные сертификаты — <br>
+                                это идеальный способ показать свою заботу и&nbsp;любовь.
+                            </p>
+                            <p>
+                                Позвольте вашим любимым почувствовать себя
+                                особенными, подарив им удивительное путешествие,
+                                организованное с&nbsp;трепетом и&nbsp;вниманием к каждой детали
+                            </p>
+                        </div>
+                        <a href="#" class="btn gift__btn">
+                            <i>
+                                <img loading="lazy" src="./assets/img/home/gift/gift.svg" alt="">
+                            </i>
+                            <span>Подарить</span>
+                        </a>
+                    </div>
+                    <div class="gift__right">
+                        <img loading="lazy" src="./assets/img/home/gift/1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="features">
+            <div class="container">
+                <div class="features__row">
+                    <div class="features__left">
+                        <div class="features__img">
+                            <div class="features__img-item">
+                                <img width="559" height="570" loading="lazy" src="./assets/img/home/features/1.jpeg"
+                                    alt="">
+                                <div class="features__img-mask">
+                                    <div class="features__img-white"></div>
+                                    <img width="559" height="570" loading="lazy"
+                                        src="./assets/img/home/features/mask2.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="features__right">
+                        <h2 class="section__title">
+                            Наши <span>преимущества</span>
+                        </h2>
+                        <div class="features__list flex_column">
+                            <div class="features__item flex_column">
+                                <p class="features__title">
+                                    Эксклюзивно для вас
+                                </p>
+                                <p>
+                                    Ваш личный туристический консьерж использует свои связи и&nbsp;знания, чтобы сделать
+                                    ваше путешествие особенным
+                                </p>
+                            </div>
+                            <div class="features__item flex_column">
+                                <p class="features__title">
+                                    Большой опыт в&nbsp;нестандартных путешествиях
+                                </p>
+                                <p>
+                                    Мы создаем уникальные маршруты, которые выходят за рамки стандартных туров
+                                    и&nbsp;учитывают все ваши пожелания
+                                </p>
+                            </div>
+                            <div class="features__item flex_column">
+                                <p class="features__title">
+                                    Проверенные партнеры и&nbsp;отели
+                                </p>
+                                <p>
+                                    Мы сотрудничаем только с&nbsp;надежными партнерами и&nbsp;отелями, что гарантирует
+                                    вам комфорт и&nbsp;безопасность
+                                </p>
+                            </div>
+                            <div class="features__item flex_column">
+                                <p class="features__title">
+                                    Личная инспекция курортов
+                                </p>
+                                <p>
+                                    Наши эксперты лично инспектируют курорты, чтобы предлагать вам только лучшие места
+                                    для отдыха
+                                </p>
+                            </div>
+                            <div class="features__item flex_column">
+                                <p class="features__title">
+                                    Опытные гиды
+                                </p>
+                                <p>
+                                    Наши профессиональные гиды обеспечат увлекательные и&nbsp;информативные экскурсии,
+                                    раскрывая все тайны мест, которые вы&nbsp;посещаете
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="container">
+                <h2 class="section__title">
+                    Часто задаваемые вопросы <span>(faq)</span>
+                </h2>
+                <div class="section__row accordion">
+                    <div class="faq__list ">
+                        <div class="faq__item accordion__item">
+                            <p class="faq__title accordion__title">
+                                Как забронировать тур?
+                            </p>
+                            <div class="faq__body">
+                                <p>
+                                    вы&nbsp;можете забронировать тур через наш сайт или связавшись с&nbsp;нашим
+                                    менеджером по телефону. Мы поможем вам выбрать маршрут, подходящий именно вам
+                                    и&nbsp;обеспечим полный цикл бронирования
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq__item accordion__item">
+                            <p class="faq__title accordion__title">
+                                Как оплатить тур?
+                            </p>
+                            <div class="faq__body">
+                                <p>
+                                    Мы принимаем оплату различными способами, включая банковские карты, онлайн-платежи
+                                    и&nbsp;банковские переводы. Подробную информацию о&nbsp;способах оплаты
+                                    вы&nbsp;найдете на нашем сайте или у наших менеджеров
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq__item accordion__item">
+                            <p class="faq__title accordion__title">
+                                Оформляете ли вы&nbsp;визы?
+                            </p>
+                            <div class="faq__body">
+                                <p>
+                                    Да, мы помогаем с&nbsp;оформлением виз для наших клиентов. Наши специалисты
+                                    проконсультируют вас по всем необходимым документам и&nbsp;процессу подачи заявки
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq__list">
+                        <div class="faq__item accordion__item">
+                            <p class="faq__title accordion__title">
+                                Предлагаете ли вы&nbsp;страховку для путешествий?
+                            </p>
+                            <div class="faq__body">
+                                <p>
+                                    Да, мы предлагаем страховые полисы для путешествий, которые покрывают различные
+                                    риски, включая медицинскую помощь, потерю багажа и&nbsp;отмену поездки. Подробности
+                                    можно узнать у наших менеджеров
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq__item accordion__item">
+                            <p class="faq__title accordion__title">
+                                Как вы&nbsp;обеспечиваете высокий уровень сервиса?
+                            </p>
+                            <div class="faq__body">
+                                <p>
+                                    Наши эксперты лично проверяют и&nbsp;отбирают все предложения, от отелей до
+                                    экскурсионных программ. Мы регулярно инспектируем новые локации и&nbsp;сотрудничаем
+                                    с&nbsp;лучшими поставщиками услуг по всему миру, чтобы гарантировать вам
+                                    незабываемые впечатления
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq__item accordion__item">
+                            <p class="faq__title accordion__title">
+                                Могу ли я заказать тур с&nbsp;индивидуальным маршрутом?
+                            </p>
+                            <div class="faq__body">
+                                <p>
+                                    Конечно! Мы специализируемся на создании индивидуальных маршрутов, которые полностью
+                                    соответствуют вашим пожеланиям и&nbsp;интересам. Ваш личный туристический консьерж
+                                    будет рад помочь вам спланировать идеальное путешествие
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="news">
+            <div class="container">
+                <div class="news__top">
+                    <h2 class="section__title">
+                        Новости
+                    </h2>
+                    <div class="news__top-right">
+                        <a href="#" class="news__link">
+                            Все новости
+                        </a>
+                        <div class="slider__arrow">
+                            <div class="slider__prev news__slider-prev"></div>
+                            <div class="slider__next news__slider-next"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="news__slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide news__slide">
+                            <a href="#" class="news__img">
+                                <img loading="lazy" src="./assets/img/home/news/1.jpg" alt="">
+                            </a>
+                            <p class="news__date">
+                                16.05.2024
+                            </p>
+                            <a href="#" class="news__title">
+                                Путешествие на Бали: советы
+                                бывалых туристов. Что нужно знать перед поездкой
+                            </a>
+                            <a href="#">Подробнее</a>
+                        </div>
+                        <div class="swiper-slide news__slide">
+                            <a href="#" class="news__img">
+                                <img loading="lazy" src="./assets/img/home/news/2.jpg" alt="">
+                            </a>
+                            <p class="news__date">
+                                16.05.2024
+                            </p>
+                            <a href="#" class="news__title">
+                                Путешествие на Бали: советы
+                                бывалых туристов. Что нужно знать перед поездкой
+                            </a>
+                            <a href="#">Подробнее</a>
+                        </div>
+                        <div class="swiper-slide news__slide">
+                            <a href="#" class="news__img">
+                                <img loading="lazy" src="./assets/img/home/news/3.jpg" alt="">
+                            </a>
+                            <p class="news__date">
+                                16.05.2024
+                            </p>
+                            <a href="#" class="news__title">
+                                Путешествие на Бали: советы
+                                бывалых туристов. Что нужно знать перед поездкой
+                            </a>
+                            <a href="#">Подробнее</a>
+                        </div>
+                        <div class="swiper-slide news__slide">
+                            <a href="#" class="news__img">
+                                <img loading="lazy" src="./assets/img/home/news/4.jpg" alt="">
+                            </a>
+                            <p class="news__date">
+                                16.05.2024
+                            </p>
+                            <a href="#" class="news__title">
+                                Путешествие на Бали: советы
+                                бывалых туристов. Что нужно знать перед поездкой
+                            </a>
+                            <a href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="review">
+            <div class="container">
+                <div class="section__row">
+                    <div class="review__left">
+                        <h2 class="section__title">
+                            Отзывы
+                        </h2>
+                        <p class="review__count">
+                            Средняя оценка <span>4.9</span> <span> (367 отзывов)</span>
+                        </p>
+                        <div class="review__bottom">
+                            <div class="slider__arrow">
+                                <div class="slider__prev review__prev"></div>
+                                <div class="slider__next review__next"></div>
+                            </div>
+                            <a href="#" class="news__link">
+                                Все отзывы
+                            </a>
+                        </div>
+                    </div>
+                    <div class="review__right">
+                        <div class="review__slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide review__slide">
+                                    <p class="review__name">
+                                        Михаил
+                                    </p>
+                                    <p class="review__city">
+                                        Италия, Сан Кашиано
+                                        Деи&nbsp;Бальи, Тоскана
+                                    </p>
+                                    <div class="review__info">
+                                        <p>
+                                            Уважаемая, Юлия.
+                                            Большое спасибо, за прекрасную поездку!!!
+                                            Всё было очень чётко организовано, ваши представители на местах всегда
+                                            быстро реагировали на наши просьбы и вопросы.
+                                            Просим вас ,присылать нам ваши предложения, я уже вас начинаю
+                                            рекламировать!!!
+                                        </p>
+                                    </div>
+                                    <div class="review__raiting">
+                                        <i>
+                                            <img loading="lazy" src="./assets/img/home/review/star.svg" alt="">
+                                        </i>
+                                        <span>4.9</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide review__slide">
+                                    <p class="review__name">
+                                        Ольга
+                                    </p>
+                                    <p class="review__city">
+                                        Индонезия
+                                    </p>
+                                    <div class="review__info">
+                                        <p>
+                                            Здравствуйте, Юля! Мы вернулись в Москву.
+                                            Хотим поблагодарить Вас за профессионализм, за прекрасную организацию и
+                                            поддержку. Тур у нас был сложный и мы справились, все прошло без накладок.
+                                            Желаю Вам здоровья и успехов во всем!
+                                            С удовольствием будем пользоваться услугами вашего турагентства.
+                                        </p>
+                                    </div>
+                                    <div class="review__raiting">
+                                        <i>
+                                            <img loading="lazy" src="./assets/img/home/review/star.svg" alt="">
+                                        </i>
+                                        <span>5</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide review__slide">
+                                    <p class="review__name">
+                                        Марина Валерьевна
+                                    </p>
+                                    <p class="review__city">
+                                        Италия
+                                    </p>
+                                    <div class="review__info">
+                                        <p>
+                                            Большое спасибо Роману Пыраеву за прекрасно организованную поездку по
+                                            Италии. Мы не первый раз путешествовали по Италии, по Риму. И тем не менее,
+                                            увидели много интересного. Понравилась экскурсия по Doria Pamphily Gallery,
+                                            по Тиволи. Хочется отметить отличную работу всех экскусоводов. Спасибо!
+                                        </p>
+                                    </div>
+                                    <div class="review__raiting">
+                                        <i>
+                                            <img loading="lazy" src="./assets/img/home/review/star.svg" alt="">
+                                        </i>
+                                        <span>5</span>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide review__slide">
+                                    <p class="review__name">
+                                        Шагит
+                                    </p>
+                                    <p class="review__city">
+                                        Малайзия
+                                    </p>
+                                    <div class="review__info">
+                                        <p>
+                                            Юля, хочу сказать Вам большое спасибо за прекрасно организованный тур. Так
+                                            случилось, что я в четвертый раз в Малайзии, но до этого ничего кроме КЛ не
+                                            видел, а здесь полное знакомство со страной, отличный гид, со своей оценкой,
+                                            может не всегда схожей с моей, но умница. Все было замечательно
+                                            организовано, нигде ничего не ждали. Мы получили отличное впечатление. Еще
+                                            раз Вам спасибо
+                                        </p>
+                                    </div>
+                                    <div class="review__raiting">
+                                        <i>
+                                            <img loading="lazy" src="./assets/img/home/review/star.svg" alt="">
+                                        </i>
+                                        <span>5</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tmr">
+            <div class="tmr__container lazy" style="background-image: url(./assets/img/tmr/bg.jpg);">
+                <div class="container">
+                    <div class="tmr__info">
+                        <h2 class="section__title">
+                            Не откладывайте
+                            мечту на завтра
+                        </h2>
+                        <p>
+                            Свяжитесь с&nbsp;нами уже сегодня и&nbsp;шагните навстречу путешествию,
+                            которое изменит ваше представление о&nbsp;привычном мире.
+                        </p>
+                        <button class="btn tmr__btn btn__call" data-modal="modal__podbor">Оставить заявку</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="news">
+            <div class="container">
+                <div class="news__top">
+                    <h2 class="section__title">
+                        статьи
+                    </h2>
+                    <div class="news__top-right">
+                        <a href="#" class="news__link">
+                            Все статьи
+                        </a>
+                        <div class="slider__arrow">
+                            <div class="slider__prev news__prev"></div>
+                            <div class="slider__next news__next"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="news__slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide news__slide">
+                            <a href="#" class="news__img">
+                                <img loading="lazy" src="./assets/img/home/news/5.jpg" alt="">
+                            </a>
+                            <p class="news__date">
+                                16.05.2024
+                            </p>
+                            <a href="#" class="news__title">
+                                Путешествие на Бали: советы
+                                бывалых туристов. Что нужно знать перед поездкой
+                            </a>
+                            <a href="#">Подробнее</a>
+                        </div>
+                        <div class="swiper-slide news__slide">
+                            <a href="#" class="news__img">
+                                <img loading="lazy" src="./assets/img/home/news/6.jpg" alt="">
+                            </a>
+                            <p class="news__date">
+                                16.05.2024
+                            </p>
+                            <a href="#" class="news__title">
+                                Путешествие на Бали: советы
+                                бывалых туристов. Что нужно знать перед поездкой
+                            </a>
+                            <a href="#">Подробнее</a>
+                        </div>
+                        <div class="swiper-slide news__slide">
+                            <a href="#" class="news__img">
+                                <img loading="lazy" src="./assets/img/home/news/7.jpg" alt="">
+                            </a>
+                            <p class="news__date">
+                                16.05.2024
+                            </p>
+                            <a href="#" class="news__title">
+                                Путешествие на Бали: советы
+                                бывалых туристов. Что нужно знать перед поездкой
+                            </a>
+                            <a href="#">Подробнее</a>
+                        </div>
+                        <div class="swiper-slide news__slide">
+                            <a href="#" class="news__img">
+                                <img loading="lazy" src="./assets/img/home/news/8.jpg" alt="">
+                            </a>
+                            <p class="news__date">
+                                16.05.2024
+                            </p>
+                            <a href="#" class="news__title">
+                                Путешествие на Бали: советы
+                                бывалых туристов. Что нужно знать перед поездкой
+                            </a>
+                            <a href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="mailing container">
+            <div class="container lazy" style="background-image: url(./assets/img/home/mailing/mailing.png);">
+                <div class="mailing__top">
+                    <h2 class="section__title">
+                        <span>Подпишитесь</span> на&nbsp;рассылку
+                    </h2>
+                    <div class="mailing__info">
+                        <p>
+                            Чтобы быть в&nbsp;курсе новостей, подпишитесь на&nbsp;нашу рассылку. Вы&nbsp;первыми узнаете
+                            о&nbsp;выгодных акциях и&nbsp;скидках, новых направлениях и&nbsp;редких маршрутах. А ещё
+                            мы&nbsp;расскажем Вам об интересных достопримечательностях, традициях и&nbsp;обычаях разных
+                            стран,
+                            а&nbsp;также&nbsp;о&nbsp;праздниках, мероприятиях, фестивалях и&nbsp;выставках. Авторская
+                            рассылка
+                            приходит&nbsp;не&nbsp;чаще 1-2 раза в&nbsp;неделю.
+                        </p>
+                    </div>
+                </div>
+                <form action="#" class="form">
+                    <div class="form__group">
+                        <input type="email" name="email" placeholder="E-mail" required>
+                        <button type="submit" class="btn form__btn">Подписаться</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="section__row">
+                <div class="footer__top">
+                    <a href="/" class="footer__logo">
+                        <img class="lazy" src="./assets/img/logo-w.svg" alt="logo">
+                    </a>
+                    <a href="tel:+7 (495) 660-49-33" class="footer__phone">+7 (495) 660-49-33</a>
+                    <a href="mailto:info@svoiludi.ru" class="footer__mail">info@svoiludi.ru</a>
+                </div>
+
+                <div class="footer__menu">
+                    <ul>
+                        <li><a href="/about/">О компании</a></li>
+                        <li><a href="/news/">Новости</a></li>
+                        <li><a href="/blog/">Блог</a></li>
+                        <li><a href="/reviews/">Отзывы</a></li>
+                        <li><a href="#">Агентствам</a></li>
+                        <li><a href="#">Сайт по Японии</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Наши услуги</a></li>
+                        <li><a href="/country/">Страны</a></li>
+                        <li><a href="/tours/">Виды отдыха</a></li>
+                        <li><a href="/hotel/">Отели</a></li>
+                        <li><a href="#">Авиабилеты</a></li>
+                        <li><a href="#">Бизнес-авиация</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Спецпредложения</a></li>
+                        <li><a href="#">Топ-направления</a></li>
+                        <li><a href="#">Корпоративные туры</a></li>
+                        <li><a href="#">Организовать мероприятие</a></li>
+                        <li><a href="#">Подарочный сертификат</a></li>
+                        <li><a href="#">Архив туров</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__bottom">
+
+                    <div class="footer__bottom-left">
+                        <div class="footer-wrap">
+                            <p class="footer__address">
+                                105052, Россия, г. Москва, Лялин переулок, д. 9, стр. 1, подъезд 1
+                            </p>
+                            <p class="footer__days">
+                                Пн-Пт: с&nbsp;10:00 до 20:00
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="footer-exchange">
+                        <div class="footer-exchange__name">
+                            Курсы валют 19.03.2025
+                        </div>
+                        <div class="exchange-items">
+                            <div class="exchange-item">
+                                <img class="lazy" src="./assets/img/icons/dollar.svg" alt="$">
+                                <span>84.76 р.</span>
+                            </div>
+                            <div class="exchange-item">
+                                <img class="lazy" src="./assets/img/icons/euro.svg" alt="€">
+                                <span>90.20 р.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="footer__number">
+                        Номер в федеральном реестре<br>
+                        туроператоров РТО 017357
+                    </p>
+                </div>
+
+
+
+                <div class="footer__copy">
+                    <p class="footer__copy-text">
+                        <span>©</span> ООО Студия индивидуального отдыха и&nbsp;туризма «Свои люди», 2025
+                    </p>
+                    <div class="footer__copy-policy">
+                        <a href="/policy/" class="footer__copy-link">
+                            Политика конфиденциальности
+                        </a>
+                    </div>
+                    <div class="footer-copy__right">
+                        <p class="veonix">
+                            Разработка сайта: <a target="_blank" href="https://ontape-design.ru">Студия Ontape
+                                Design</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer__soc">
+                <a href="#" target="_blank">
+                    <img class="lazy" src="./assets/img/icons/youtube.svg" alt="YouTube">
+                </a>
+                <a href="#" target="_blank">
+                    <img class="lazy" src="./assets/img/icons/telegram.svg" alt="Telegram">
+                </a>
+                <a href="https://wa.me/74956604933" target="_blank">
+                    <img class="lazy" src="./assets/img/icons/whatsapp.svg" alt="WhatsApp">
+                </a>
+                <a href="#">
+                    <img class="lazy" src="./assets/img/icons/vk.svg" alt="VK">
+                </a>
+                <a href="#" target="_blank">
+                    <img class="lazy" src="./assets/img/icons/mess2.svg" alt="Messenger">
+                </a>
+                <a href="#" class="top-scroll">
+                    <img class="lazy" src="./assets/img/icons/top-icon.svg" alt="Наверх">
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+    <div id="modal__search" class="modal modal__search">
+        <div class="modal__content">
+            <div class="modal__close">
+                <span></span>
+                <span></span>
+            </div>
+            <h2 class="modal__search-title">ПОИСК</h2>
+            <form action="#" class="search__form">
+                <div class="search__form-wrapper">
+                    <div class="search__form-napr">
+                        <i>
+                            <img width="14" height="14" class="lazy" src="./assets/img/home/main/earth.svg" alt="">
+                        </i>
+                        <select class="search__form-select" data-placeholder="Выберите направление">
+                            <option></option>
+                            <option>Африка</option>
+                            <option>Латинская Америка</option>
+                            <option>Азия</option>
+                            <option>Ближний Восток</option>
+                            <option>Европа</option>
+                            <option>Острова Индийского океана</option>
+                            <option>Россия и&nbsp;страны СНГ</option>
+                            <option>Карибский регион</option>
+                            <option>Антарктида</option>
+                            <option>Арктика</option>
+                            <option>Северная Америка</option>
+                            <option>Австралия и&nbsp;Океания</option>
+
+                        </select>
+                    </div>
+                    <div class="search__form-napr">
+                        <select class="search__form-select" data-placeholder="Страна">
+                            <option></option>
+                            <option data-icon="./assets/img/icons/requered.svg">Ботсвана</option>
+                            <option>Гвинея</option>
+                            <option data-icon="./assets/img/icons/requered.svg">Египет</option>
+                            <option data-icon="./assets/img/icons/requered.svg">Замбия </option>
+                            <option>Мавритания</option>
+                            <option>Россия</option>
+                            <option>США</option>
+                            <option>Алжир</option>
+                            <option>Китай</option>
+                            <option>Япония</option>
+                        </select>
+                    </div>
+                    <div class="search__form-napr">
+                        <i>
+                            <img width="14" height="14" class="lazy" src="./assets/img/home/main/list.svg" alt="">
+                        </i>
+                        <select class="search__form-select" data-placeholder="Вид отдыха">
+                            <option></option>
+                            <option>Корпоративные туры</option>
+                            <option>Событийные туры </option>
+                            <option>Экскурсионные туры</option>
+                            <option>Гастрономические и&nbsp;винные туры</option>
+                            <option>Туры в&nbsp;мини-группах</option>
+                            <option>Индивидуальные туры</option>
+                            <option>Эко-туры</option>
+                            <option>Рыболовные туры</option>
+                            <option>Отдых на море</option>
+                            <option>Круизы</option>
+                            <option>Круизы на поездах</option>
+                            <option>Отдых с&nbsp;детьми</option>
+                            <option>Горнолыжные туры</option>
+                            <option>Активные туры</option>
+                            <option>Оздоровительные туры</option>
+                            <option>Аренда частного острова и&nbsp;дворца</option>
+                            <option>Организовать событие</option>
+                        </select>
+                    </div>
+                    <div class="search__form-group">
+                        <div class="main__select main__days">
+                            <i>
+                                <img width="14" height="14" class="lazy" src="./assets/img/home/main/moon.svg" alt="">
+                            </i>
+                            <p class="main__days-count">
+                                1 - 5
+                            </p>
+                            <div class="main__counter">
+                                <p>
+                                    Кол-во ночей
+                                </p>
+                                <div class="main__counter-list">
+                                    <div class="main__counter-item from">
+                                        <p>от</p>
+                                        <div class="main__counter-btns">
+                                            <button class="main__counter-btn main__counter-minus">-</button>
+                                            <input type="text" class="main__counter-input from" readonly min="1"
+                                                value="1">
+                                            <button class="main__counter-btn main__counter-plus">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="main__counter-item to">
+                                        <p>до</p>
+                                        <div class="main__counter-btns">
+                                            <button class="main__counter-btn main__counter-minus">-</button>
+                                            <input type="text" class="main__counter-input to" readonly min="1"
+                                                value="1">
+                                            <button class="main__counter-btn main__counter-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main__calendar">
+                            <i>
+                                <img width="14" height="14" class="lazy" src="./assets/img/home/main/calendar.svg"
+                                    alt="">
+                            </i>
+                            <input type="text" class="form-datapicker" placeholder="Выберите дату">
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="main__btn">
+                    <i>
+                        <img width="24" height="24" class="lazy" src="./assets/img/search-main.svg" alt="">
+                    </i>
+                    <span>
+                        Найти
+                    </span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="notification">
+        <p>
+            Мы используем cookies, чтобы сайт работал лучше. Оставаясь на сайте, вы&nbsp;соглашаетесь с&nbsp;<a
+                href="#">политикой конфиденциальности</a>
+        </p>
+        <button class="notification__btn notification__close">Подтверждаю</button>
+    </div>
+
+
+
+    <div id="modal__podbor" class="modal modal__podbor pod">
+        <div class="container">
+            <div class="modal__close">
+                <span></span>
+                <span></span>
+            </div>
+            <div class="pod__wrapper">
+                <h2 class="section__title">
+                    Запрос путешествия
+                </h2>
+                <form action="#" class="pod__form form">
+                    <div class="form__items">
+                        <div class="form__item">
+                            <label class="form__label">
+                                <input name="name" type="text" required>
+                                <span>
+                                    Ваше имя
+                                    <i>
+                                        <img class="lazy" src="./assets/img/icons/requered.svg" alt="">
+                                    </i>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form__item">
+                            <label class="form__label">
+                                <input name="email" type="email" required>
+                                <span>
+                                    E-mail
+                                    <i>
+                                        <img class="lazy" src="./assets/img/icons/requered.svg" alt="">
+                                    </i>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form__item">
+                            <label class="form__label">
+                                <input name="phone" type="tel" required>
+                                <span>
+                                    Телефон
+                                    <i>
+                                        <img class="lazy" src="./assets/img/icons/requered.svg" alt="">
+                                    </i>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form__items">
+                        <div class="pod__calendar">
+                            <div class="pod__calendar-icon">
+                                <i>
+                                    <img width="14" height="14" class="lazy" src="./assets/img/home/main/calendar.svg"
+                                        alt="">
+                                </i>
+                                <span>Предполагаемые даты поездки</span>
+                            </div>
+                            <input type="text" class="form-cal" name="date" readonly>
+                        </div>
+
+                        <div class="main__days pod__days">
+                            <div class="pod__days-icon">
+                                <i>
+                                    <img width="14" height="14" class="lazy" src="./assets/img/home/main/moon.svg"
+                                        alt="">
+                                </i>
+                                <span>
+                                    Кол-во ночей
+                                </span>
+                            </div>
+                            <div class="main__counter-list">
+                                <div class="main__counter-item from">
+                                    <p>от</p>
+                                    <div class="main__counter-btns">
+                                        <button class="main__counter-btn main__counter-minus">-</button>
+                                        <input type="text" name="night-from" class="main__counter-input from" readonly
+                                            min="1" value="1">
+                                        <button class="main__counter-btn main__counter-plus">+</button>
+                                    </div>
+                                </div>
+                                <div class="main__counter-item to">
+                                    <p>до</p>
+                                    <div class="main__counter-btns">
+                                        <button class="main__counter-btn main__counter-minus">-</button>
+                                        <input type="text" name="night-to" class="main__counter-input to" readonly
+                                            min="1" value="1">
+                                        <button class="main__counter-btn main__counter-plus">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="main__days pod__days pod__people">
+                            <div class="pod__days-icon">
+                                <i>
+                                    <img width="14" height="14" class="lazy" src="./assets/img/icons/user-plus.svg"
+                                        alt="">
+                                </i>
+                                <span>
+                                    Кол-во человек
+                                </span>
+                            </div>
+                            <div class="main__counter-list">
+                                <div class="main__counter-item from">
+                                    <div class="main__counter-btns">
+                                        <button class="main__counter-btn main__counter-minus">-</button>
+                                        <input type="text" name="people" class="main__counter-input from" readonly
+                                            min="1" value="1">
+                                        <button class="main__counter-btn main__counter-plus">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__list">
+                        <div class="form__item">
+                            <label class="form__label">
+                                <input name="city" type="text">
+                                <span>
+                                    <i>
+                                        <img class="lazy" src="./assets/img/home/main/earth.svg" alt="">
+                                    </i>
+                                    Город вылета
+                                </span>
+                            </label>
+                            <label class="form__label form__check">
+                                <input name="flight" type="checkbox" hidden>
+                                <span>
+                                    <i>
+                                        <img class="lazy" src="./assets/img/icons/plane.svg" alt="">
+                                    </i>
+                                    Перелет
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form__item-big">
+                            <div class="form__item-wrapper">
+                                <div class="form__item-icon">
+                                    <i>
+                                        <img width="14" height="14" class="lazy" src="./assets/img/icons/hostel.svg"
+                                            alt="">
+                                    </i>
+                                    <span>
+                                        Категория отеля
+                                    </span>
+                                </div>
+                                <select class="form-select-modal" data-placeholder="&nbsp;">
+                                    <option></option>
+                                    <option data-icon="./assets/img/icons/star-1.svg">1</option>
+                                    <option data-icon="./assets/img/icons/star-2.svg">2</option>
+                                    <option data-icon="./assets/img/icons/star-3.svg">3</option>
+                                    <option data-icon="./assets/img/icons/star-4.svg">4</option>
+                                    <option data-icon="./assets/img/icons/star-5.svg">5</option>
+                                </select>
+                            </div>
+                            <label class="form__label form__check">
+                                <input name="visa" type="checkbox" hidden>
+                                <span>
+                                    <i>
+                                        <img class="lazy" src="./assets/img/icons/visa.svg" alt="">
+                                    </i>
+                                    Виза
+                                </span>
+                            </label>
+                            <label class="form__label form__check">
+                                <input name="car" type="checkbox" hidden>
+                                <span>
+                                    <i>
+                                        <img class="lazy" src="./assets/img/icons/car.svg" alt="">
+                                    </i>
+                                    Трансфер
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="pod__bottom">
+                        <div class="pod__komm">
+                            <label for="" class="form__label">
+                                <textarea name="comment"></textarea>
+                                <span>
+                                    Комментарий
+                                    <span>(дополнительные пожелания, удобное время и&nbsp;способ связи)</span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="pod__client">
+                            <label class="form__label form__check">
+                                <input name="spo" type="checkbox" hidden>
+                                <span>
+                                    Рассылка СПО <span>(не чаще 2-3 раз в&nbsp;неделю)</span>
+                                </span>
+                            </label>
+                            <label class="form__label form__check">
+                                <input name="client" type="checkbox" hidden>
+                                <span>
+                                    Являюсь постоянным клиентом компании
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="pod__sub">
+                        <div class="pod__sub-big">
+                            <button type="submit" class="pod__btn btn">
+                                Оставить заявку
+                            </button>
+                            <label class="form__polityc">
+                                <input type="checkbox" hidden checked>
+                                <span>
+                                    Согласен на обработку персональных данных в&nbsp;соответствии с&nbsp;
+                                    <a href="#">Политикой конфиденциальности</a>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="pod__sub-item">
+                            <p>
+                                <i>
+                                    <img class="lazy" src="./assets/img/icons/requered.svg" alt="">
+                                </i>
+                                <span> - поля, обязательные для заполнения</span>
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="fixed-icons">
+        <a href="#" class="mess">
+            <img class="lazy" src="./assets/img/icons/mess.svg" alt="">
+        </a>
+        <a href="#" class="up top-scroll">
+            <img class="lazy" src="./assets/img/icons/up.svg" alt="">
+        </a>
+    </div>
+
+    <script src="./assets/js/components/lottie.js?_v=20250723061907"></script>
+    <script src="./assets/js/components/gsap.min.js"></script>
+    <script src="./assets/js/components/MotionPathPlugin.js?_v=20250723061907"></script>
+    <script src="./assets/js/components/ScrollTrigger.js?_v=20250723061907"></script>
+    <script src="./assets/js/components/swiper.min.js?_v=20250723061907"></script>
+    <script src="./assets/js/components/jquery.min.js?_v=20250723061907"></script>
+    <script src="./assets/js/components/jquery.fancybox.js?_v=20250723061907"></script>
+    <script src="./assets/js/components/scrollClass.js?_v=20250723061907"></script>
+    <script src="./assets/js/components/accordion.js?_v=20250723061907"></script>
+    <script src="./assets/js/components/modalShow.js?_v=20250723061907"></script>
+    <script src="./assets/js/components/lazyload.js?_v=20250723061907"></script>
+    <script src="./assets/js/components/initYMap.js?_v=20250723061907"></script>
+    <script src="./assets/js/components/mask.js?_v=20250723061907"></script>
+    <script src="./assets/js/components/wow.js?_v=20250723061907"></script>
+    <script src="./assets/js/components/select2.js?_v=20250723061907"></script>
+    <script src="./assets/js/components/select2-dropdownPosition.js?_v=20250723061907"></script>
+    <script src="./assets/js/components/air-datepicker.js?_v=20250723061907"></script>
+    <script src="./assets/js/components/jquery.menu-aim.js?_v=20250723061907"></script>
+    <script src="./assets/js/components/modernizr.js?_v=20250723061907"></script>
+    <script src="./assets/js/components/mobMenu.js?_v=20250723061907"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js?_v=20250723061907"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20250723061907" type="text/javascript"></script>
+    <script src="./assets/js/app.js?_v=20250723061907"></script>
+    <script src="./assets/js/components/script.js"></script>
+</body>
+
+</html>

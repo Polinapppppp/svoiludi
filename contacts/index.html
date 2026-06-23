@@ -1,0 +1,2387 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Свои люди | Индивидуальные путешествия</title>
+<link rel="shortcut icon" href="/assets/img/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/assets/css/fonts.css?_v=20250723061907">
+<link rel="stylesheet" href="/assets/css/animate.css?_v=20250723061907">
+<link rel="stylesheet" href="/assets/files/jquery.fancybox.css?_v=20250723061907">
+<link rel="stylesheet" href="/assets/files/select.css?_v=20250723061907">
+<link rel="stylesheet" href="/assets/files/air-datepicker.css?_v=20250723061907">
+<link rel="stylesheet" href="/assets/css/style.css?_v=20250723061907">
+<link rel="stylesheet" href="/assets/css/media.css?_v=20250723061907">
+</head>
+<body>
+    <header class="header">
+    <div class="container">
+        <div class="header__row">
+            <ul class="header__menu">
+                <li class="btn__menu open-countries">
+                    <a href="/country/">Страны</a>
+                    <div class="btn-menu-arrow opened-menu">
+                        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.56213 4.16677C7.38911 4.16356 7.21938 4.21421 7.07641 4.3117C6.93344 4.40919 6.82432 4.54871 6.76413 4.71095C6.70393 4.87319 6.69566 5.05013 6.74044 5.21728C6.78522 5.38442 6.88085 5.53352 7.01409 5.64393L12.1133 10.0093L7.01094 14.3746C6.91773 14.4426 6.83961 14.5291 6.78152 14.6288C6.72343 14.7285 6.68663 14.8391 6.67344 14.9537C6.66025 15.0683 6.67096 15.1844 6.70489 15.2946C6.73882 15.4049 6.79524 15.5069 6.87058 15.5942C6.94592 15.6816 7.03855 15.7524 7.14262 15.8021C7.2467 15.8519 7.35995 15.8795 7.47525 15.8833C7.59054 15.8871 7.70536 15.8669 7.81247 15.8241C7.91958 15.7813 8.01665 15.7167 8.09756 15.6345L13.9306 10.6487C14.0224 10.5703 14.096 10.473 14.1465 10.3634C14.197 10.2539 14.2232 10.1347 14.2232 10.014C14.2232 9.89337 14.197 9.77416 14.1465 9.6646C14.096 9.55503 14.0224 9.45772 13.9306 9.37937L8.09756 4.37779C7.94974 4.2462 7.75998 4.17141 7.56213 4.16677Z" fill="#E21A55"/>
+                        </svg>
+                    </div>
+                </li>
+                <li class="btn__menu open-menu">
+                    <a href="/tours/">Виды отдыха</a>
+                    <div class="btn-menu-arrow opened-menu">
+                        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.56213 4.16677C7.38911 4.16356 7.21938 4.21421 7.07641 4.3117C6.93344 4.40919 6.82432 4.54871 6.76413 4.71095C6.70393 4.87319 6.69566 5.05013 6.74044 5.21728C6.78522 5.38442 6.88085 5.53352 7.01409 5.64393L12.1133 10.0093L7.01094 14.3746C6.91773 14.4426 6.83961 14.5291 6.78152 14.6288C6.72343 14.7285 6.68663 14.8391 6.67344 14.9537C6.66025 15.0683 6.67096 15.1844 6.70489 15.2946C6.73882 15.4049 6.79524 15.5069 6.87058 15.5942C6.94592 15.6816 7.03855 15.7524 7.14262 15.8021C7.2467 15.8519 7.35995 15.8795 7.47525 15.8833C7.59054 15.8871 7.70536 15.8669 7.81247 15.8241C7.91958 15.7813 8.01665 15.7167 8.09756 15.6345L13.9306 10.6487C14.0224 10.5703 14.096 10.473 14.1465 10.3634C14.197 10.2539 14.2232 10.1347 14.2232 10.014C14.2232 9.89337 14.197 9.77416 14.1465 9.6646C14.096 9.55503 14.0224 9.45772 13.9306 9.37937L8.09756 4.37779C7.94974 4.2462 7.75998 4.17141 7.56213 4.16677Z" fill="#E21A55"/>
+                        </svg>
+                    </div>
+                </li>
+                <li>
+                    <a href="/about/">О компании</a>
+                </li>
+                <li>
+                    <a href="#">Спецпредложения</a>
+                </li>
+
+                             </ul>
+            <a href="/" class="header__logo">
+                <i>
+                    <img width="272" height="41" class="lazy" data-src="/assets/img/logos.svg" alt="">
+                </i>
+            </a>
+            <div class="header__right">
+                <div class="header__cont">
+                    <a href="#">
+                        <i>
+                            <img width="13" height="13" class="lazy" data-src="/assets/img/wh.svg" alt="">
+                        </i>
+                    </a>
+                    <a href="tel:+7 (495) 660-49-33" class="header__phone">+7 (495) 660-49-33</a>
+                    <div class="header__burger">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <a class="header__pod " href="/contacts/" >Контакты</a>
+                <a class="header__pod btn__call" href="#" data-modal="modal__podbor">Подбор тура</a>
+                <div class="header__social">
+                    <a href="#" class="icon">
+                        <i>
+                            <img width="12" height="12" class="lazy" data-src="/assets/img/icons/key.svg" alt="">
+                        </i>
+                    </a>
+                    <a href="#" class="icon">
+                        <i>
+                            <img width="12" height="12" class="lazy" data-src="/assets/img/heart.svg" alt="">
+                        </i>
+                    </a>
+
+                                         <a href="#" class="icon opened-search">
+                        <i>
+                            <img width="12" height="12" class="lazy" data-src="/assets/img/search.svg" alt="">
+                        </i>
+                    </a>
+                </div>
+                <div class="header-search">
+                    <input type="text" placeholder="Поиск по сайту">
+                    <div class="header-search-icons">
+                        <a href="#" class="header-search__close">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                              <g opacity="0.3">
+                                <path d="M15.9116 5.30322L5.30502 15.9098" stroke="#1F2832" stroke-linecap="round"/>
+                                <path d="M15.9116 15.9099L5.30502 5.30331" stroke="#1F2832" stroke-linecap="round"/>
+                              </g>
+                            </svg>
+                        </a>
+                        <a href="#" class="header-search__btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                              <path d="M6.53846 12.0769C9.59727 12.0769 12.0769 9.59727 12.0769 6.53846C12.0769 3.47965 9.59727 1 6.53846 1C3.47965 1 1 3.47965 1 6.53846C1 9.59727 3.47965 12.0769 6.53846 12.0769Z" stroke="#1F2832" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M10.4524 10.4525L13.0001 13.0002" stroke="#1F2832" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</header>
+
+<div id="menu" class="menu menu__viev menu-main">
+    <div class="container">
+        <ul class="menu__list">
+            <li>
+                <a href="#">
+                    <i>
+                        <img width="14" height="14" class="lazy" data-src="/assets/img/menu/1.svg" alt="">
+                    </i>
+                    <span>
+                        Корпоративные туры
+                    </span>
+                </a>
+            </li>
+            <li class="sub">
+                <a href="#">
+                    <i>
+                        <img width="14" height="14" class="lazy" data-src="/assets/img/menu/2.svg" alt="">
+                    </i>
+                    <span>
+                        Событийные туры 
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i>
+                        <img width="14" height="14" class="lazy" data-src="/assets/img/menu/3.svg" alt="">
+                    </i>
+                    <span>
+                        Экскурсионные туры
+                    </span>
+                </a>
+            </li>
+            <li class="sub">
+                <a href="#">
+                    <i>
+                        <img width="14" height="14" class="lazy" data-src="/assets/img/menu/4.svg" alt="">
+                    </i>
+                    <span>
+                        Гастрономические и&nbsp;винные туры
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i>
+                        <img width="14" height="14" class="lazy" data-src="/assets/img/menu/5.svg" alt="">
+                    </i>
+                    <span>
+                        Туры в&nbsp;мини-группах
+                    </span>
+                </a>
+            </li>
+            <li class="sub">
+                <a href="#">
+                    <i>
+                        <img width="14" height="14" class="lazy" data-src="/assets/img/menu/6.svg" alt="">
+                    </i>
+                    <span>
+                        Индивидуальные туры
+                    </span>
+                </a>
+            </li>
+            <li class="sub">
+                <a href="#">
+                    <i>
+                        <img width="14" height="14" class="lazy" data-src="/assets/img/menu/7.svg" alt="">
+                    </i>
+                    <span>
+                        Эко-туры
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i>
+                        <img width="14" height="14" class="lazy" data-src="/assets/img/menu/8.svg" alt="">
+                    </i>
+                    <span>
+                        Рыболовные туры
+                    </span>
+                </a>
+            </li>
+            <li class="sub">
+                <a href="#">
+                    <i>
+                        <img width="14" height="14" class="lazy" data-src="/assets/img/menu/9.svg" alt="">
+                    </i>
+                    <span>
+                        Отдых на море
+                    </span>
+                </a>
+            </li>
+            <li class="sub">
+                <a href="#">
+                    <i>
+                        <img width="14" height="14" class="lazy" data-src="/assets/img/menu/10.svg" alt="">
+                    </i>
+                    <span>
+                        Круизы
+                    </span>
+                </a>
+                <ul>
+                    <li class="sub">
+                        <a href="#">
+                            Речные круизы
+                        </a>
+                        <ul>
+                            <li class="sub">
+                                <a href="#">
+                                    Круизы по рекам России
+                                </a>
+                            </li>
+                            <li class="sub">
+                                <a href="#">
+                                    Круизы по рекам Европы
+                                </a>
+                            </li>
+                            <li class="sub">
+                                <a href="#">
+                                    Круизы по Амазонке
+                                </a>
+                            </li>
+                            <li class="sub">
+                                <a href="#">
+                                    Круизы по Нилу
+                                </a>
+                            </li>
+                            <li class="sub">
+                                <a href="#">
+                                    Круизы по норвежским фьордам
+                                </a>
+                            </li>
+                            <li class="sub">
+                                <a href="#">
+                                    Речные круизы по Янцзы
+                                </a>
+                            </li>
+                            <li class="sub">
+                                <a href="#">
+                                    Круизы на частных судах и&nbsp;баржах
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            Индивидуальные люкс-круизы <br> по Нилу на частных судах!
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Баржи Belmond Afloat во Франции
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sub">
+                        <a href="#">
+                            Морские круизы
+                        </a>
+                    </li>
+                    <li class="sub">
+                        <a href="#">
+                            Круизы на праздники
+                        </a>
+                    </li>
+                    <li class="sub">
+                        <a href="#">
+                            Круизные компании
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i>
+                        <img width="14" height="14" class="lazy" data-src="/assets/img/menu/11.svg" alt="">
+                    </i>
+                    <span>
+                        Круизы на поездах
+                    </span>
+                </a>
+            </li>
+            <li class="sub">
+                <a href="#">
+                    <i>
+                        <img width="14" height="14" class="lazy" data-src="/assets/img/menu/12.svg" alt="">
+                    </i>
+                    <span>
+                        Отдых с&nbsp;детьми
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i>
+                        <img width="14" height="14" class="lazy" data-src="/assets/img/menu/13.svg" alt="">
+                    </i>
+                    <span>
+                        Горнолыжные туры
+                    </span>
+                </a>
+            </li>
+            <li class="sub">
+                <a href="#">
+                    <i>
+                        <img width="14" height="14" class="lazy" data-src="/assets/img/menu/14.svg" alt="">
+                    </i>
+                    <span>
+                        Активные туры
+                    </span>
+                </a>
+            </li>
+            <li class="sub">
+                <a href="#">
+                    <i>
+                        <img width="14" height="14" class="lazy" data-src="/assets/img/menu/15.svg" alt="">
+                    </i>
+                    <span>
+                        Оздоровительные туры
+                    </span>
+                </a>
+            </li>
+            <li class="sub">
+                <a href="#">
+                    <i>
+                        <img width="14" height="14" class="lazy" data-src="/assets/img/menu/16.svg" alt="">
+                    </i>
+                    <span>
+                        Аренда частного острова и&nbsp;дворца
+                    </span>
+                </a>
+            </li>
+            <li class="sub">
+                <a href="#">
+                    <i>
+                        <img width="14" height="14" class="lazy" data-src="/assets/img/menu/17.svg" alt="">
+                    </i>
+                    <span>
+                        Организовать событие
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="menu-country" class="menu menu__viev menu--country">
+    <div class="container">
+        <ul class="menu__list">
+            <li class="sub">
+                <a href="#"><span>Антарктида</span></a>
+            </li>
+            <li class="sub">
+                <a href="#"><span>Арктика</span></a>
+            </li>
+            <li class="sub">
+                <a href="#"><span>Африка</span></a>
+                <ul>
+                    <li class="sub"><a href="#">Ботсвана</a></li>
+                    <li class="sub"><a href="#">Гвинея</a></li>
+                    <li class="sub"><a href="#">Египет</a></li>
+                    <li class="sub"><a href="#">Замбия</a></li>
+                    <li class="sub"><a href="#">Зимбабве</a></li>
+                    <li class="sub"><a href="#">Кения</a></li>
+                    <li class="sub"><a href="#">Конго</a></li>
+                    <li class="sub"><a href="#">Кот-д’Ивуар</a></li>
+                    <li class="sub"><a href="#">Мавритания</a></li>
+                    <li class="sub"><a href="#">Мадагаскар</a></li>
+                    <li class="sub"><a href="#">Марокко</a></li>
+                    <li class="sub"><a href="#">Намибия</a></li>
+                    <li class="sub"><a href="#">Нигерия</a></li>
+                    <li class="sub"><a href="#">Танзания</a></li>
+                    <li class="sub"><a href="#">Уганда</a></li>
+                    <li class="sub"><a href="#">Эфиопия</a></li>
+                    <li class="sub"><a href="#">ЮАР</a></li>
+                </ul>
+            </li>
+            <li class="sub">
+                <a href="#"><span>Афстралия и Океания</span></a>
+                <ul>
+                    <li class="sub"><a href="#">Австралия</a></li>
+                    <li class="sub"><a href="#">Новая Зеландия</a></li>
+                    <li class="sub"><a href="#">Папуа - Новая Гвинея</a></li>
+                    <li class="sub"><a href="#">Фиджи</a></li>
+                </ul>
+            </li>
+            <li class="sub">
+                <a href="#"><span>Ближний Восток</span></a>
+                <ul>
+                    <li class="sub"><a href="#">Бахрейн</a></li>
+                    <li class="sub"><a href="#">Иордания</a></li>
+                    <li class="sub"><a href="#">Иран</a></li>
+                    <li class="sub"><a href="#">Катар</a></li>
+                    <li class="sub"><a href="#">ОАЭ</a></li>
+                    <li class="sub"><a href="#">Оман</a></li>
+                    <li class="sub"><a href="#">Саудовская Аравия</a></li>
+                </ul>
+            </li>
+            <li class="sub">
+                <a href="#"><span>Европа</span></a>
+                <ul>
+                    <li class="sub"><a href="#">Австрия</a></li>
+                    <li class="sub"><a href="#">Андорра</a></li>
+                    <li class="sub"><a href="#">Бельгия</a></li>
+                    <li class="sub"><a href="#">Великобритания</a></li>
+                    <li class="sub"><a href="#">Венгрия</a></li>
+                    <li class="sub"><a href="#">Германия</a></li>
+                    <li class="sub"><a href="#">Греция</a></li>
+                    <li class="sub"><a href="#">Дания</a></li>
+                    <li class="sub"><a href="#">Ирландия</a></li>
+                    <li class="sub"><a href="#">Исландия</a></li>
+                    <li class="sub"><a href="#">Испания</a></li>
+                    <li class="sub"><a href="#">Италия</a></li>
+                    <li class="sub"><a href="#">Кипр*</a></li>
+                    <li class="sub"><a href="#">Люксембург</a></li>
+                    <li class="sub"><a href="#">Монако</a></li>
+                    <li class="sub"><a href="#">Нидерланды</a></li>
+                    <li class="sub"><a href="#">Норвегия</a></li>
+                    <li class="sub"><a href="#">Португалия</a></li>
+                    <li class="sub"><a href="#">Словакия</a></li>
+                    <li class="sub"><a href="#">Словения</a></li>
+                    <li class="sub"><a href="#">Финляндия</a></li>
+                    <li class="sub"><a href="#">Франция</a></li>
+                    <li class="sub"><a href="#">Хорватия</a></li>
+                    <li class="sub"><a href="#">Чешская Республика</a></li>
+                    <li class="sub"><a href="#">Черногория *</a></li>
+                    <li class="sub"><a href="#">Швейцария</a></li>
+                    <li class="sub"><a href="#">Швеция</a></li>
+                </ul>
+            </li>
+            <li class="sub">
+                <a href="#"><span>Карибы</span></a>
+                <ul>
+                    <li class="sub"><a href="#">Аруба</a></li>
+                    <li class="sub"><a href="#">Багамские острова</a></li>
+                    <li class="sub"><a href="#">Барбадос</a></li>
+                    <li class="sub"><a href="#">Доминикана</a></li>
+                    <li class="sub"><a href="#">Острова Карибского бассейна</a></li>
+                    <li class="sub"><a href="#">Ямайка</a></li>
+                </ul>
+            </li>
+            <li class="sub">
+                <a href="#"><span>Латинская Америка</span></a>
+                <ul>
+                    <li class="sub"><a href="#">Аргентина</a></li>
+                    <li class="sub"><a href="#">Боливия</a></li>
+                    <li class="sub"><a href="#">Бразилия</a></li>
+                    <li class="sub"><a href="#">Венесуэла</a></li>
+                    <li class="sub"><a href="#">Гватемала</a></li>
+                    <li class="sub"><a href="#">Колумбия</a></li>
+                    <li class="sub"><a href="#">Коста-Рика</a></li>
+                    <li class="sub"><a href="#">Куба</a></li>
+                    <li class="sub"><a href="#">Мексика</a></li>
+                    <li class="sub"><a href="#">Панама</a></li>
+                    <li class="sub"><a href="#">Перу</a></li>
+                    <li class="sub"><a href="#">Чили</a></li>
+                    <li class="sub"><a href="#">Эквадор</a></li>
+                </ul>
+            </li>
+            <li class="sub">
+                <a href="#"><span>Острова Индийского океана</span></a>
+                <ul>
+                    <li class="sub"><a href="#">Маврикий</a></li>
+                    <li class="sub"><a href="#">Мальдивы</a></li>
+                    <li class="sub"><a href="#">Реюньон (остров Франции)</a></li>
+                    <li class="sub"><a href="#">Сейшелы</a></li>
+                    <li class="sub"><a href="#">Шри-Ланка</a></li>
+                </ul>
+            </li>
+            <li class="sub">
+                <a href="#"><span>Северная Америка</span></a>
+                <ul>
+                    <li class="sub"><a href="#">Канада</a></li>
+                    <li class="sub"><a href="#">США</a></li>
+                </ul>
+            </li>
+            <li class="sub">
+                <a href="#"><span>Страны СНГ</span></a>
+                <ul>
+                    <li class="sub"><a href="#">Азербайджан</a></li>
+                    <li class="sub"><a href="#">Армения</a></li>
+                    <li class="sub"><a href="#">Беларусь</a></li>
+                    <li class="sub"><a href="#">Казахстан</a></li>
+                    <li class="sub"><a href="#">Киргизия</a></li>
+                    <li class="sub"><a href="#">Молдова</a></li>
+                    <li class="sub"><a href="#">Россия</a></li>
+                    <li class="sub"><a href="#">Таджикистан</a></li>
+                    <li class="sub"><a href="#">Туркменистан</a></li>
+                    <li class="sub"><a href="#">Узбекистан</a></li>
+                </ul>
+            </li>
+            <li class="sub">
+                <a href="#"><span>Юго-Восточная Азия</span></a>
+                <ul>
+                    <li class="sub"><a href="#">Бруней</a></li>
+                    <li class="sub"><a href="#">Бутан</a></li>
+                    <li class="sub"><a href="#">Вьетнам</a></li>
+                    <li class="sub"><a href="#">Гонконг</a></li>
+                    <li class="sub"><a href="#">Индия</a></li>
+                    <li class="sub"><a href="#">Индонезия</a></li>
+                    <li class="sub"><a href="#">Камбоджа</a></li>
+                    <li class="sub"><a href="#">Китай</a></li>
+                    <li class="sub"><a href="#">КНДР</a></li>
+                    <li class="sub"><a href="#">Лаос</a></li>
+                    <li class="sub"><a href="#">Макао</a></li>
+                    <li class="sub"><a href="#">Малайзия</a></li>
+                    <li class="sub"><a href="#">Монголия</a></li>
+                    <li class="sub"><a href="#">Мьянма (Бирма)</a></li>
+                    <li class="sub"><a href="#">Непал</a></li>
+                    <li class="sub"><a href="#">Сингапур</a></li>
+                    <li class="sub"><a href="#">Таиланд</a></li>
+                    <li class="sub"><a href="#">Филиппины</a></li>
+                    <li class="sub"><a href="#">Южная Корея</a></li>
+                    <li class="sub"><a href="#">Япония</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<div id="modal__menu" class="modal modal__menu">
+    <div class="modal__content">
+        <div class="modal__menu-content">
+            <ul>
+                <li>
+                    <a href="/country/">Страны</a>
+                </li>
+                <li class="btn__sub cd-dropdown-trigger">
+                    <a href="/event/">Виды отдыха</a>
+                </li>
+                <li>
+                    <a href="/about/">О компании</a>
+                </li>
+                <li>
+                    <a href="#">Спецпредложения</a>
+                </li>
+                <li>
+                    <a href="/contacts/">Контакты</a>
+                </li>
+            </ul>
+            <a href="tel:+7(495)660-49-33" class="modal__phone">+7 (495) 660-49-33</a>
+            <p class="modal__pod btn__call" data-modal="modal__podbor">Подбор тура</p>
+            <div class="modal__search-icon">
+                <i>
+                    <img width="14" height="14" class="lazy" data-src="/assets/img/search.svg" alt="">
+                </i>
+                <input type="text" placeholder="Поиск">
+            </div>
+        </div>
+        <div class="header__social modal__social">
+            <a href="#" class="icon">
+                <i>
+                    <img width="12" height="12" class="lazy" data-src="/assets/img/mail.svg" alt="">
+                </i>
+            </a>
+            <a href="#" class="icon">
+                <i>
+                    <img width="12" height="12" class="lazy" data-src="/assets/img/heart.svg" alt="">
+                </i>
+            </a>
+            <a href="#" class="icon">
+                <i>
+                    <img width="12" height="12" class="lazy" data-src="/assets/img/key.svg" alt="">
+                </i>
+            </a>
+        </div>
+    </div>
+    <nav class="cd-dropdown">
+        <ul class="cd-dropdown-content">
+            <li>
+                <a href="/event/">
+                    <i>
+                        <img class="lazy" data-src="/assets/img/menu/1.svg" alt="">
+                    </i>
+                    <span>
+                        Корпоративные туры
+                    </span>
+                </a>
+            </li>
+            <li class="has-children">
+                <a href="/event/">
+                    <i>
+                        <img class="lazy" data-src="/assets/img/menu/2.svg" alt="">
+                    </i>
+                    <span>
+                        Событийные туры
+                    </span>
+                </a>
+
+                <ul class="cd-secondary-dropdown is-hidden">
+                    <li class="see-all">
+                        <a href="#">
+                            <i>
+                                <img class="lazy" data-src="/assets/img/menu/2.svg" alt="">
+                            </i>
+                            <span>
+                                Перейти в раздел
+                            </span>
+                        </a>
+                    </li>
+                    <li class="go-back">
+                        <a href="#0">
+                            <i>
+                                <img class="lazy" data-src="/assets/img/menu/arr-l.svg" alt="">
+                            </i>
+                            <span>
+                                Назад
+                            </span>
+                        </a>
+                    </li>
+                    <li class="has-children">
+                        <a href="#">Речные круизы</a>
+                        <ul class="is-hidden">
+                            <li class="see-all"><a href="#">Перейти в раздел</a></li>
+                            <li class="go-back">
+                                <a href="#0">
+                                    <i>
+                                        <img class="lazy" data-src="/assets/img/menu/arr-l.svg" alt="">
+                                    </i>
+                                    <span>
+                                        Назад
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="has-children">
+                                <a href="#">
+                                    Круизы по рекам России
+                                </a>
+                            </li>
+                            <li class="has-children">
+                                <a href="#">
+                                    Круизы по рекам Европы
+                                </a>
+                            </li>
+                            <li class="has-children">
+                                <a href="#">
+                                    Круизы по Амазонке
+                                </a>
+                            </li>
+                            <li class="has-children">
+                                <a href="#">
+                                    Круизы по Нилу
+                                </a>
+                            </li>
+                            <li class="has-children">
+                                <a href="#">
+                                    Круизы по норвежским фьордам
+                                </a>
+                            </li>
+                            <li class="has-children">
+                                <a href="#">
+                                    Речные круизы по Янцзы
+                                </a>
+                            </li>
+                            <li class="has-children">
+                                <a href="#">
+                                    Круизы на частных судах и&nbsp;баржах
+                                </a>
+                                <ul class="is-hidden">
+                                    <li class="see-all"><a href="#">Перейти в раздел</a></li>
+                                    <li class="go-back">
+                                        <a href="#0">
+                                            <i>
+                                                <img class="lazy" data-src="/assets/img/menu/arr-l.svg" alt="">
+                                            </i>
+                                            <span>
+                                                Назад
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Индивидуальные люкс-круизы <br> по Нилу на частных судах!
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Баржи Belmond Afloat во Франции
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Морские круизы
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Круизы на праздники
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Круизные компании
+                        </a>
+                    </li>
+                </ul> 
+            </li> 
+            <li>
+                <a href="#">
+                    <i>
+                        <img class="lazy" data-src="/assets/img/menu/3.svg" alt="">
+                    </i>
+                    <span>
+                        Экскурсионные туры
+                    </span>
+                </a>
+            </li>
+            <li class="has-children">
+                <a href="#">
+                    <i>
+                        <img class="lazy" data-src="/assets/img/menu/4.svg" alt="">
+                    </i>
+                    <span>
+                        Гастрономические и винные туры
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i>
+                        <img width="14" height="14" class="lazy" data-src="/assets/img/menu/5.svg" alt="">
+                    </i>
+                    <span>
+                        Туры в&nbsp;мини-группах
+                    </span>
+                </a>
+            </li>
+            <li class="has-children">
+                <a href="#">
+                    <i>
+                        <img width="14" height="14" class="lazy" data-src="/assets/img/menu/6.svg" alt="">
+                    </i>
+                    <span>
+                        Индивидуальные туры
+                    </span>
+                </a>
+            </li>
+            <li class="has-children">
+                <a href="#">
+                    <i>
+                        <img width="14" height="14" class="lazy" data-src="/assets/img/menu/7.svg" alt="">
+                    </i>
+                    <span>
+                        Эко-туры
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i>
+                        <img width="14" height="14" class="lazy" data-src="/assets/img/menu/8.svg" alt="">
+                    </i>
+                    <span>
+                        Рыболовные туры
+                    </span>
+                </a>
+            </li>
+            <li class="has-children">
+                <a href="#">
+                    <i>
+                        <img width="14" height="14" class="lazy" data-src="/assets/img/menu/9.svg" alt="">
+                    </i>
+                    <span>
+                        Отдых на море
+                    </span>
+                </a>
+            </li>
+
+            <li class="has-children">
+                <a href="#">
+                    <i>
+                        <img class="lazy" data-src="/assets/img/menu/10.svg" alt="">
+                    </i>
+                    <span>
+                        Круизы
+                    </span>
+                </a>
+
+                <ul class="cd-secondary-dropdown is-hidden">
+                    <li class="see-all">
+                        <a href="#">
+                            <i>
+                                <img class="lazy" data-src="/assets/img/menu/10.svg" alt="">
+                            </i>
+                            <span>
+                                Перейти в раздел
+                            </span>
+                        </a>
+                    </li>
+                    <li class="go-back">
+                        <a href="#0">
+                            <i>
+                                <img class="lazy" data-src="/assets/img/menu/arr-l.svg" alt="">
+                            </i>
+                            <span>
+                                Назад
+                            </span>
+                        </a>
+                    </li>
+                    <li class="has-children">
+                        <a href="#">Речные круизы</a>
+                        <ul class="is-hidden">
+                            <li class="see-all"><a href="#">Перейти в раздел</a></li>
+                            <li class="go-back">
+                                <a href="#0">
+                                    <i>
+                                        <img class="lazy" data-src="/assets/img/menu/arr-l.svg" alt="">
+                                    </i>
+                                    <span>
+                                        Назад
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="has-children">
+                                <a href="#">
+                                    Круизы по рекам России
+                                </a>
+                            </li>
+                            <li class="has-children">
+                                <a href="#">
+                                    Круизы по рекам Европы
+                                </a>
+                            </li>
+                            <li class="has-children">
+                                <a href="#">
+                                    Круизы по Амазонке
+                                </a>
+                            </li>
+                            <li class="has-children">
+                                <a href="#">
+                                    Круизы по Нилу
+                                </a>
+                            </li>
+                            <li class="has-children">
+                                <a href="#">
+                                    Круизы по норвежским фьордам
+                                </a>
+                            </li>
+                            <li class="has-children">
+                                <a href="#">
+                                    Речные круизы по Янцзы
+                                </a>
+                            </li>
+                            <li class="has-children">
+                                <a href="#">
+                                    Круизы на частных судах и&nbsp;баржах
+                                </a>
+                                <ul class="is-hidden">
+                                    <li class="see-all"><a href="#">Перейти в раздел</a></li>
+                                    <li class="go-back">
+                                        <a href="#0">
+                                            <i>
+                                                <img class="lazy" data-src="/assets/img/menu/arr-l.svg" alt="">
+                                            </i>
+                                            <span>
+                                                Назад
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Индивидуальные люкс-круизы <br> по Нилу на частных судах!
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Баржи Belmond Afloat во Франции
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Морские круизы
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Круизы на праздники
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Круизные компании
+                        </a>
+                    </li>
+                </ul> 
+            </li> 
+            <li>
+                <a href="#">
+                    <i>
+                        <img width="14" height="14" class="lazy" data-src="/assets/img/menu/11.svg" alt="">
+                    </i>
+                    <span>
+                        Круизы на поездах
+                    </span>
+                </a>
+            </li>
+            <li class="has-children">
+                <a href="#">
+                    <i>
+                        <img width="14" height="14" class="lazy" data-src="/assets/img/menu/12.svg" alt="">
+                    </i>
+                    <span>
+                        Отдых с&nbsp;детьми
+                    </span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i>
+                        <img width="14" height="14" class="lazy" data-src="/assets/img/menu/13.svg" alt="">
+                    </i>
+                    <span>
+                        Горнолыжные туры
+                    </span>
+                </a>
+            </li>
+            <li class="has-children">
+                <a href="#">
+                    <i>
+                        <img width="14" height="14" class="lazy" data-src="/assets/img/menu/14.svg" alt="">
+                    </i>
+                    <span>
+                        Активные туры
+                    </span>
+                </a>
+            </li>
+            <li class="has-children">
+                <a href="#">
+                    <i>
+                        <img width="14" height="14" class="lazy" data-src="/assets/img/menu/15.svg" alt="">
+                    </i>
+                    <span>
+                        Оздоровительные туры
+                    </span>
+                </a>
+            </li>
+            <li class="has-children">
+                <a href="#">
+                    <i>
+                        <img width="14" height="14" class="lazy" data-src="/assets/img/menu/16.svg" alt="">
+                    </i>
+                    <span>
+                        Аренда частного острова и&nbsp;дворца
+                    </span>
+                </a>
+            </li>
+            <li class="has-children">
+                <a href="#">
+                    <i>
+                        <img width="14" height="14" class="lazy" data-src="/assets/img/menu/17.svg" alt="">
+                    </i>
+                    <span>
+                        Организовать событие
+                    </span>
+                </a>
+            </li>
+        </ul> 
+    </nav> 
+</div>
+
+
+
+<div class="modal-window modal-thank">
+    <div class="inner">
+        <div class="modal__close">
+            <span></span>
+            <span></span>
+        </div>
+
+        <h2 class="modal-thank__title section__title">
+            Спасибо за заявку!
+        </h2>
+        <div class="modal-thank__text">
+            Наш менеджер свяжется с Вами в ближайшее время
+        </div>
+    </div>
+</div>
+
+        <main>
+        <section class="inner contacts-page">
+            <div class="container">
+                <div class="bread">
+                    <a href="/">Главная</a> • Контакты
+                </div>
+                <h1 class="inner__title">
+                    <p>Наши <span>Контакты</span></p>
+                    <p>
+                        ООО Студия индивидуального <br>
+                        отдыха и туризма «Свои люди»
+                    </p>
+                </h1>
+                <div class="contacts-items">
+                    <div class="contacts-item">
+                        <div class="contacts-item__name">
+                            Телефон
+                        </div>
+                        <a href="https://wa.me/74956604933" class="contacts-item__link link--icon">
+                            <img src="/assets/img/icons/whatccap.svg" alt="icon" loading="lazy">
+                            <span>+7 (495) 660-49-33</span>
+                        </a>
+                        <a href="mailto:info@svoiludi.ru" class="contacts-item__link contacts-item--email" target="_blank">
+                            info@svoiludi.ru
+                        </a>
+                    </div>
+                    <div class="contacts-item">
+                        <div class="contacts-item__name">
+                            Наш адрес
+                        </div>
+                        <p class="contacts-item__link">
+                            105062, Россия, г. Москва, Лялин переулок, д. 9, стр.1, подъезд 1.
+                        </p>
+                        <a href="#" class="contacts-item__link link--icon border-hover">
+                            <img src="/assets/img/icons/travel.svg" alt="icon" loading="lazy">
+                            <span>Схема проезда</span>
+                        </a>
+                    </div>
+                    <div class="contacts-item">
+                        <div class="contacts-item__name">
+                            График работы
+                        </div>
+                        <p class="contacts-item__link">
+                            Понедельник - пятница: с 10:00 до 20:00  <br>
+                            Суббота, воскресенье: выходной.
+                        </p>
+                    </div>
+                    <div class="contacts-item">
+                        <div class="contacts-item__name">
+                            Финансовые гарантии
+                        </div>
+                        <p class="contacts-item__link">
+                            <a href="https://www.svoiludi.ru/finance.html" target="_blank" class="border-hover">Финансовое обеспечение туроператора</a> «Свои люди» <br>
+                            на 2023 - 2024 г. Реестровый номер РТО 017357
+                        </p>
+                    </div>
+                    <div class="contacts-item">
+                        <div class="contacts-item__name">
+                            Присоединяйтесь к нам в соцсетях
+                        </div>
+                        <div class="contacts-soc">
+                            <a href="#">
+                                <img src="/assets/img/icons/yt_icon.svg" alt="icon youtube" loading="lazy" target="_blank">
+                            </a>
+                            <a href="#">
+                                <img src="/assets/img/icons/tg_icon.svg" alt="icon telegram" loading="lazy" target="_blank">
+                            </a>
+                            <a href="#">
+                                <img src="/assets/img/icons/vk_icon.svg" alt="icon vk" loading="lazy" target="_blank">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacts-message">
+                    <div class="contacts-message__title">
+                        <img src="/assets/img/icons/message-icon.svg" alt="icon" loading="lazy">Уважаемые клиенты!
+                    </div>
+                    <div class="contacts-message__text">
+                        <p>
+                            Сообщаем, что в праздничные дни наш график работы изменится. <br>
+                            Мы не работаем 31 декабря и 1 января.
+                        </p>
+                        <p>
+                            С 2 января возвращаемся к обычному расписанию. <br>
+                            Желаем вам волшебного Нового года и ярких праздников! 🎄✨
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="team" id="team">
+            <div class="container">
+                <h2 class="section__title">
+                    Наша <span>команда </span>
+                </h2>
+                <div class="team-row row">
+                    <div class="team-wrap">
+                        <div class="team__name">
+                            Руководство
+                        </div>
+                        <div class="team-block">
+                            <div class="team-photo">
+                                <div class="team-photo-circle">
+                                    <img src="/assets/img/team/1.jpg" alt="team photo" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="team-info">
+                                <div class="team-info__name">
+                                    Афанасьев Дмитрий
+                                </div>
+                                <div class="team-info__work">
+                                    Генеральный директор
+                                </div>
+                                <a href="mailto:info@svoiludi.ru" class="team-info__email">
+                                    <img src="/assets/img/icons/mail.svg" alt="icon" loading="lazy">
+                                    info@svoiludi.ru
+                                </a>
+                            </div>
+                            <div class="team-content">
+                                <p>
+                                    <strong>Дмитрий Васильевич Афанасьев</strong> — настоящий романтик и мечтатель, который много лет назад решил подарить всем возможность <br> путешествовать, открывать новое, получать незабываемые эмоции.
+                                </p>
+                                <p>
+                                    Дмитрий Васильевич собрал уникальную команду, в которой каждый разделяет его страсть к путешествиям и стремление делать отдых клиентов безупречным. Под его руководством компания стала воплощением мечты <br>об идеальных турах, где каждая деталь продумана с заботой и любовью к своему делу.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="team-block">
+                            <div class="team-photo">
+                                <div class="team-photo-circle">
+                                    <img src="/assets/img/team/2.jpg" alt="team photo" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="team-info">
+                                <div class="team-info__name">
+                                    Лущик Ксения
+                                </div>
+                                <div class="team-info__work">
+                                    Заместитель Генерального директора
+                                </div>
+                                <a href="mailto:ksenia@svoiludi.ru " class="team-info__email">
+                                    <img src="/assets/img/icons/mail.svg" alt="icon" loading="lazy">
+                                    ksenia@svoiludi.ru 
+                                </a>
+                            </div>
+                            <div class="team-content">
+                                <p>
+                                    <strong>Ксения Лущик</strong> — сооснователь и один из руководителей нашей компании. Путешествия — это ее увлечение и работа. Ксения настоящий дизайнер во всех сферах жизни, в том числе и в создании уникальной туристической компании и индивидуальных путешествий. Она может предвидеть все, что ждет вас в вашем путешествии!
+                                </p>
+                                <p class="specialization">
+                                    <span>Специализация:</span> Индивидуальные туры и спецпроекты любой сложности, кругосветные путешествия, спортивные программы, туры на события.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-wrap">
+                        <div class="team__name">
+                            Отдел путешествий
+                        </div>
+                        <div class="team-block">
+                            <div class="team-photo">
+                                <div class="team-photo-circle">
+                                    <img src="/assets/img/team/3.jpg" alt="team photo" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="team-info">
+                                <div class="team-info__name">
+                                    Басина Юлия 
+                                </div>
+                                <div class="team-info__work">
+                                    Эксперт Отдела путешествий
+                                </div>
+                                <a href="mailto:zakaz@svoiludi.ru" class="team-info__email">
+                                    <img src="/assets/img/icons/mail.svg" alt="icon" loading="lazy">
+                                    zakaz@svoiludi.ru
+                                </a>
+                            </div>
+                            <div class="team-content">
+                                <p>
+                                    <strong>Юлия Басина</strong> — мастер создания индивидуальных путешествий в самые яркие и необычные уголки мира. Благодаря обширным знаниям о культуре, традициях и особенностях регионов Юлия создает маршруты, которые не только вдохновляют, но и погружают в уникальную атмосферу каждой страны.
+                                </p>
+                                <p class="specialization">
+                                    <span>Специализация:</span> Китай, Гонконг, Бутан, Непал, Южная Корея, Малайзия, Бруней, Сингапур, Шри-Ланка, Камбоджа, Бирма, Лаос, Таиланд, Вьетнам, Индонезия, Сейшелы, Мальдивы, Маврикий, Мадагаскар, Филиппины, Кения, ОАЭ, Марокко, Бахрейн, Катар, Оман, Турция, Египет, Куба, Доминикана.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="team-block">
+                            <div class="team-photo">
+                                <div class="team-photo-circle">
+                                    <img src="/assets/img/team/4.jpg" alt="team photo" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="team-info">
+                                <div class="team-info__name">
+                                    Пыраев Роман 
+                                </div>
+                                <div class="team-info__work">
+                                    Эксперт Отдела путешествий
+                                </div>
+                                <a href="mailto:zakaz@svoiludi.ru" class="team-info__email">
+                                    <img src="/assets/img/icons/mail.svg" alt="icon" loading="lazy">
+                                    zakaz@svoiludi.ru
+                                </a>
+                            </div>
+                            <div class="team-content">
+                                <p>
+                                    Роман Пыраев — знаток путешествий в редкие и экзотические страны. Его маршруты охватывают Африку, Латинскую Америку, Азию, Ближний Восток и островные уголки мира. Роман создает путешествия, которые впечатляют культурным разнообразием и незабываемыми эмоциями.
+                                </p>
+                                <p class="specialization">
+                                    <span>Специализация:</span> ЮАР, Кения, Эфиопия, Мавритания, Кот-д’Ивуар, Эквадор, Мексика, Аргентина, Бразилия, Перу, Колумбия, Бутан, КНДР, Южная Корея, Япония, Новая Гвинея, Оман, Бахрейн, Саудовская Аравия, Ливан, Иордания, Иран, Ирак. Острова: Фиджи, Багамские острова, Мадагаскар, Кабо-Верде, Австралия, Новая Зеландия.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="team-block">
+                            <div class="team-photo">
+                                <div class="team-photo-circle">
+                                    <img src="/assets/img/team/5.jpg" alt="team photo" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="team-info">
+                                <div class="team-info__name">
+                                    Трунина Нина
+                                </div>
+                                <div class="team-info__work">
+                                    Эксперт Отдела путешествий
+                                </div>
+                                <a href="mailto:zakaz@svoiludi.ru" class="team-info__email">
+                                    <img src="/assets/img/icons/mail.svg" alt="icon" loading="lazy">
+                                    zakaz@svoiludi.ru
+                                </a>
+                            </div>
+                            <div class="team-content">
+                                <p>
+                                    <strong>Нина Трунина</strong> — эксперт, которая организует поездки по Европе, Азии, Америке и Ближнему Востоку, включая горнолыжные туры и уникальные направления. Она создает путешествия, сочетающие комфорт, стиль и яркие новые впечатления.
+                                </p>
+                                <p class="specialization">
+                                    <span>Специализация:</span> Европа: Италия, Испания, Франция, Португалия. Горнолыжные туры.Ближний Восток: Турция, ОАЭ, Катар, Бахрейн. Азия: Индонезия, Таиланд, Индия, Япония. Америка: Аргентина, Чили, Эквадор, Галапагосские острова, США. Другие направления: Марокко, Азербайджан.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="team-block">
+                            <div class="team-photo">
+                                <div class="team-photo-circle">
+                                    <img src="/assets/img/team/6.jpg" alt="team photo" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="team-info">
+                                <div class="team-info__name">
+                                    Тарасова Ольга
+                                </div>
+                                <div class="team-info__work">
+                                    Эксперт Отдела путешествий
+                                </div>
+                                <a href="mailto:zakaz@svoiludi.ru" class="team-info__email">
+                                    <img src="/assets/img/icons/mail.svg" alt="icon" loading="lazy">
+                                    zakaz@svoiludi.ru
+                                </a>
+                            </div>
+                            <div class="team-content">
+                                <p>
+                                    <strong>Ольга Тарасова</strong> — уникальный эксперт, которая создает маршруты, словно художник пишет картину, вплетая в единый сюжет комфорт, эстетику и вдохновение. Ее клиенты отправляются в мир, где каждая деталь продумана, а отдых превращается в искусство наслаждения и гармонии.
+                                </p>
+                                <p class="specialization">
+                                    <span>Специализация:</span> Европа. Маврикий, Сейшелы, Мальдивы, Турция, Россия.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="team-block">
+                            <div class="team-photo">
+                                <div class="team-photo-circle">
+                                    <img src="/assets/img/team/7.jpg" alt="team photo" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="team-info">
+                                <div class="team-info__name">
+                                    Егорова Ольга
+                                </div>
+                                <div class="team-info__work">
+                                    Эксперт Отдела путешествий
+                                </div>
+                                <a href="mailto:zakaz@svoiludi.ru" class="team-info__email">
+                                    <img src="/assets/img/icons/mail.svg" alt="icon" loading="lazy">
+                                    zakaz@svoiludi.ru
+                                </a>
+                            </div>
+                            <div class="team-content">
+                                <p>
+                                    <strong>Ольга Егорова</strong> — эксперт, которая поможет вам, если вы мечтаете погрузиться в атмосферу старинных замков, изысканных виноделен или романтичных улочек. Она создаст путешествие, которое раскроет для вас всю магию и утонченность Европы.
+                                </p>
+                                <p class="specialization">
+                                    <span>Специализация:</span> Круизы. Туры по России, Финляндия, Норвегия, Швеция, Исландия, Дания, Швейцария, Великобритания, Ирландия, Латвия, Литва, Эстония, Германия, Австрия.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="team-block">
+                            <div class="team-photo">
+                                <div class="team-photo-circle">
+
+                                                                    </div>
+                            </div>
+                            <div class="team-info">
+                                <div class="team-info__name">
+                                    Бутько Виктория 
+                                </div>
+                                <div class="team-info__work">
+                                    Эксперт Отдела путешествий
+                                </div>
+                                <a href="mailto:zakaz@svoiludi.ru" class="team-info__email">
+                                    <img src="/assets/img/icons/mail.svg" alt="icon" loading="lazy">
+                                    zakaz@svoiludi.ru
+                                </a>
+                            </div>
+                            <div class="team-content">
+                                <p>
+                                    <strong>Виктория Бутько</strong> — эксперт в создании идеальных маршрутов.
+                                    Виктория мастерски организует путешествия в Азию, Европу и популярные курортные направления. Ее внимательность к деталям и глубокие знания позволяют создавать маршруты, которые удивляют, вдохновляют и остаются в памяти на долгие годы.
+                                </p>
+                                <p class="specialization">
+                                    <span>Специализация:</span> Таиланд, Сингапур, Малайзия, Филиппины, Бутан, КНДР, Южная Корея, Япония, Китай, Кипр, Испания, Франция, Чехия, Финляндия, Литва, Турция, Египет, ОАЭ.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-wrap">
+                        <div class="team__name">
+                            Авиаотдел
+                        </div>
+                        <div class="team-block">
+                            <div class="team-photo">
+                                <div class="team-photo-circle">
+                                    <img src="/assets/img/team/8.jpg" alt="team photo" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="team-info">
+                                <div class="team-info__name">
+                                    Колесник Ирина
+                                </div>
+                                <div class="team-info__work">
+                                    Специалист авиаотдела
+                                </div>
+                                <a href="mailto:fly@svoiludi.ru " class="team-info__email">
+                                    <img src="/assets/img/icons/mail.svg" alt="icon" loading="lazy">
+                                    fly@svoiludi.ru 
+                                </a>
+                            </div>
+                            <div class="team-content">
+                                <p>
+                                    <strong>Ирина Колесник</strong> — наш и ваш надежный помощник в организации поездок. Она обладает исключительной внимательностью и скрупулезностью. Бронирование билетов и отелей — все находится под ее контролем. Вы можете быть уверены, что каждая деталь будет учтена, ведь ваши планы — в надежных руках.
+                                </p>
+                                <p class="specialization">
+                                    <span>Специализация:</span> Авиабилеты, ж/д билеты. Бронирование отелей <br>
+                                    и гостиниц.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-wrap">
+                        <div class="team__name">
+                            Бухгалтерия
+                        </div>
+                        <div class="team-block">
+                            <div class="team-photo">
+                                <div class="team-photo-circle">
+                                    <img src="/assets/img/team/9.jpg" alt="team photo" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="team-info">
+                                <div class="team-info__name">
+                                    Брожин Сергей
+                                </div>
+                                <div class="team-info__work">
+                                    Специалист отдела бухгалтерии
+                                </div>
+                                <a href="mailto:fly@svoiludi.ru " class="team-info__email">
+                                    <img src="/assets/img/icons/mail.svg" alt="icon" loading="lazy">
+                                    fly@svoiludi.ru 
+                                </a>
+                            </div>
+                            <div class="team-content">
+                                <p>
+                                    <strong>Сергей Брожин</strong> — мастер цифр и счетов. Благодаря его точности и ответственности все документы будут подготовлены вовремя, а счета выставлены без ошибок. С ним финансовая сторона вашего путешествия всегда в полном порядке.
+                                </p>
+                                <p class="specialization">
+                                    <span>Специализация:</span> Подготовка бухгалтерских документов, <br>
+                                    выставление счетов на безналичную оплату.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="team-block">
+                            <div class="team-photo">
+                                <div class="team-photo-circle">
+                                    <img src="/assets/img/team/10.jpg" alt="team photo" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="team-info">
+                                <div class="team-info__name">
+                                    Ливинская Ольга
+                                </div>
+                                <div class="team-info__work">
+                                    Специалист отдела бухгалтерии
+                                </div>
+                                <a href="mailto:olga@svoiludi.ru" class="team-info__email">
+                                    <img src="/assets/img/icons/mail.svg" alt="icon" loading="lazy">
+                                    olga@svoiludi.ru
+                                </a>
+                            </div>
+                            <div class="team-content">
+                                <p>
+                                    <strong>Ольга Литвинская</strong> — хранитель финансовой гармонии. Ее внимательность к деталям и спокойствие превращают подготовку документов в безупречный процесс. Благодаря Ольге каждый счет будет оформлен с безукоризненной точностью.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-wrap">
+                        <div class="team__name">
+                            Секретариат
+                        </div>
+                        <div class="team-block">
+                            <div class="team-photo">
+                                <div class="team-photo-circle">
+                                    <img src="/assets/img/team/11.jpg" alt="team photo" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="team-info">
+                                <div class="team-info__name">
+                                    Змитрович Екатерина
+                                </div>
+                                <div class="team-info__work">
+                                    Офис-менеджер
+                                </div>
+                                <a href="mailto:market@svoiludi.ru " class="team-info__email">
+                                    <img src="/assets/img/icons/mail.svg" alt="icon" loading="lazy">
+                                    market@svoiludi.ru 
+                                </a>
+                            </div>
+                            <div class="team-content">
+                                <p>
+                                    <strong>Екатерина Змитрович</strong> — ваш гид в наш офис. Сделает все, <br>
+                                    чтобы в нашем историческом здании вам было комфортно и уютно.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-wrap">
+                        <div class="team__name">
+                            Вопросы рекламы и сотрудничества
+                        </div>
+                        <div class="team-block">
+                            <div class="team-photo">
+                                <div class="team-photo-circle">
+                                    <img src="/assets/img/team/12.jpg" alt="team photo" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="team-info">
+                                <div class="team-info__name">
+                                    Чубарова Анна
+                                </div>
+                                <div class="team-info__work">
+                                    Специалист отдела маркетинга
+                                </div>
+                                <a href="mailto:pr@svoiludi.ru" class="team-info__email">
+                                    <img src="/assets/img/icons/mail.svg" alt="icon" loading="lazy">
+                                    pr@svoiludi.ru  
+                                </a>
+                            </div>
+                            <div class="team-content">
+                                <p>
+                                    <strong>Анна Чубарова</strong> — ваш надежный контакт по вопросам рекламы <br>
+                                    и сотрудничества. Ее профессионализм и творческий подход помогут нам <br>
+                                    с вами воплотить в жизнь успешные совместные проекты.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="office">
+            <div class="container">
+                <h2 class="section__title">
+                    Наш офис
+                </h2>
+                <div class="office-text standart-text">
+                    <p>
+                        Наш офиc уже мнoгo лет расположен в одном из самых красивых домов Москвы. Это выдающийся своей красотой доходный дом Шагурина в стиле модерн, построенный в 1903 году. 
+                    </p>
+                    <p>
+                        Зайдя в Лялин переулок, где живет душа старой Москвы, вы не пройдете мимо столь романтического фасада! Особенно цепляет взгляд эркер с нежной женской маской в окружении извивающихся стеблей.
+                    </p>
+                </div>
+                <div class="slider__arrow">
+                    <div class="slider__prev office-prev"></div>
+                    <div class="slider__next office-next"></div>
+                </div>
+                <div class="swiper office-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide office-slide">
+                        <img src="/assets/img/office/1.jpg" alt="office photo" loading="lazy">
+                    </div>
+                    <div class="swiper-slide office-slide">
+                        <img src="/assets/img/office/1.jpg" alt="office photo" loading="lazy">
+                    </div>
+                    <div class="swiper-slide office-slide">
+                        <img src="/assets/img/office/1.jpg" alt="office photo" loading="lazy">
+                    </div>
+                    <div class="swiper-slide office-slide">
+                        <img src="/assets/img/office/1.jpg" alt="office photo" loading="lazy">
+                    </div>
+                    <div class="swiper-slide office-slide">
+                        <img src="/assets/img/office/1.jpg" alt="office photo" loading="lazy">
+                    </div>
+                    <div class="swiper-slide office-slide">
+                        <img src="/assets/img/office/1.jpg" alt="office photo" loading="lazy">
+                    </div>
+                    <div class="swiper-slide office-slide">
+                        <img src="/assets/img/office/1.jpg" alt="office photo" loading="lazy">
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </section>
+        <section class="located">
+            <div class="container">
+                <div class="located-wrap">
+                    <div class="located-content">
+                        <h2 class="section__title">
+                            Как добраться
+                        </h2>
+                        <div class="located__adress">
+                            105062, Россия, г. Москва, Лялин переулок, д. 9, стр.1, подъезд 1.
+                        </div>
+                    </div>
+                    <div class="located-map" id="customMap">
+
+                                            </div>
+                </div>
+                <div class="located-bottom">
+                    <div class="located-block">
+                        <h3 class="located-block__name">
+                            Пешком (около 7 минут)
+                        </h3>
+                        <div class="located-block__text standart-text">
+                            <p>
+                                ст. м «Курская» кольцевой или радиальной линии метро, выход в сторону Земляного Вала. Выйдя из метро, дойдите до подземного перехода на Земляном валу и перейдите на другую сторону, выход из перехода – направо. Следуйте до первого переулка около 100 метров и поверните налево, на Яковоапостольский переулок. Затем поднимитесь вверх по Яковоапостольскому переулку, пройдите мимо церкви и далее, на пересечении с Лялиным переулком сверните  направо. Наш адрес Лялин переулок, д. 9, стр.1, этаж 1. Офис компании находится на правой стороне Лялина переулка, напротив здания школы. На домофоне наберите цифру "1". Наш офис расположен на 1-м этаже, первая дверь слева.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="located-block">
+                        <h3 class="located-block__name">
+                            На машине
+                        </h3>
+                        <div class="located-block__text standart-text">
+                            <p>
+                                с улицы Земляной Вал (внутренняя сторона Садового кольца) поверните по указателю в Яковоапостольский переулок, следуйте до конца и поверните направо в Лялин переулок (движение одностороннее). Наш адрес Лялин переулок, д. 9, стр.1, этаж 1. Офис компании находится на правой стороне Лялина переулка, напротив здания школы. На домофоне наберите цифру "1". Наш офис расположен на 1-м этаже, первая дверь слева.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="news">
+            <div class="container">
+                <div class="news__top">
+                    <h2 class="section__title">
+                        Новости
+                    </h2>
+                    <div class="news__top-right">
+                        <a href="#" class="news__link">
+                            Все новости
+                        </a>
+                        <div class="slider__arrow">
+                            <div class="slider__prev news__prev"></div>
+                            <div class="slider__next news__next"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="news__slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide news__slide">
+                            <a href="#" class="news__img">
+                                <img  loading="lazy" src="/assets/img/home/news/1.jpg" alt="">
+                            </a>
+                            <p class="news__date">
+                                16.05.2024
+                            </p>
+                            <a href="#" class="news__title">
+                                Путешествие на Бали: советы 
+                                бывалых туристов. Что нужно знать перед поездкой
+                            </a>
+                            <a href="#">Подробнее</a>
+                        </div>
+                        <div class="swiper-slide news__slide">
+                            <a href="#" class="news__img">
+                                <img  loading="lazy" src="/assets/img/home/news/2.jpg" alt="">
+                            </a>
+                            <p class="news__date">
+                                16.05.2024
+                            </p>
+                            <a href="#" class="news__title">
+                                Путешествие на Бали: советы 
+                                бывалых туристов. Что нужно знать перед поездкой
+                            </a>
+                            <a href="#">Подробнее</a>
+                        </div>
+                        <div class="swiper-slide news__slide">
+                            <a href="#" class="news__img">
+                                <img  loading="lazy" src="/assets/img/home/news/3.jpg" alt="">
+                            </a>
+                            <p class="news__date">
+                                16.05.2024
+                            </p>
+                            <a href="#" class="news__title">
+                                Путешествие на Бали: советы 
+                                бывалых туристов. Что нужно знать перед поездкой
+                            </a>
+                            <a href="#">Подробнее</a>
+                        </div>
+                        <div class="swiper-slide news__slide">
+                            <a href="#" class="news__img">
+                                <img  loading="lazy" src="/assets/img/home/news/4.jpg" alt="">
+                            </a>
+                            <p class="news__date">
+                                16.05.2024
+                            </p>
+                            <a href="#" class="news__title">
+                                Путешествие на Бали: советы 
+                                бывалых туристов. Что нужно знать перед поездкой
+                            </a>
+                            <a href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="review">
+            <div class="container">
+                <div class="section__row">
+                    <div class="review__left">
+                        <h2 class="section__title">
+                            Отзывы 
+                        </h2>
+                        <p class="review__count">
+                            Средняя оценка  <span>4.9</span> <span> (367 отзывов)</span>
+                        </p>
+                        <div class="review__bottom">
+                            <div class="slider__arrow">
+                                <div class="slider__prev review__prev"></div>
+                                <div class="slider__next review__next"></div>
+                            </div>
+                            <a href="#" class="news__link">
+                                Все отзывы
+                            </a>
+                        </div>
+                    </div>
+                    <div class="review__right">
+                        <div class="review__slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide review__slide">
+                                    <p class="review__name">
+                                        Михаил
+                                    </p>
+                                    <p class="review__city">
+                                        Малайзия
+                                    </p>
+                                    <div class="review__info">
+                                        <p>
+                                            Уважаемая, Юлия.
+                                            Большое спасибо, за прекрасную поездку!!!
+                                            Всё было очень чётко организовано, ваши представители на местах всегда быстро реагировали на наши просьбы и вопросы.
+                                            Просим вас ,присылать нам ваши предложения, я уже вас начинаю рекламировать!!!
+                                        </p>
+                                    </div>
+                                    <div class="review__raiting">
+                                        <i>
+                                            <img  loading="lazy" src="/assets/img/home/review/star.svg" alt="">
+                                        </i>
+                                        <span>4.9</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide review__slide">
+                                    <p class="review__name">
+                                        Ольга
+                                    </p>
+                                    <p class="review__city">
+                                        Индонезия
+                                    </p>
+                                    <div class="review__info">
+                                        <p>
+                                            Здравствуйте, Юля! Мы вернулись в Москву.
+                                            Хотим поблагодарить Вас за профессионализм, за прекрасную организацию и поддержку. Тур у нас был сложный и мы справились, все прошло без накладок.
+                                            Желаю Вам здоровья и успехов во всем!
+                                            С удовольствием будем пользоваться услугами вашего турагентства.
+                                        </p>
+                                    </div>
+                                    <div class="review__raiting">
+                                        <i>
+                                            <img loading="lazy" src="/assets/img/home/review/star.svg" alt="">
+                                        </i>
+                                        <span>5</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide review__slide">
+                                    <p class="review__name">
+                                        Марина Валерьевна
+                                    </p>
+                                    <p class="review__city">
+                                        Италия
+                                    </p>
+                                    <div class="review__info">
+                                        <p>
+                                            Большое спасибо Роману Пыраеву за прекрасно организованную поездку по Италии. Мы не первый раз путешествовали по Италии, по Риму. И тем не менее, увидели много интересного. Понравилась экскурсия по Doria Pamphily Gallery, по Тиволи. Хочется отметить отличную работу всех экскусоводов. Спасибо!
+                                        </p>
+                                    </div>
+                                    <div class="review__raiting">
+                                        <i>
+                                            <img loading="lazy" src="/assets/img/home/review/star.svg" alt="">
+                                        </i>
+                                        <span>5</span>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide review__slide">
+                                    <p class="review__name">
+                                        Шагит
+                                    </p>
+                                    <p class="review__city">
+                                        Малайзия
+                                    </p>
+                                    <div class="review__info">
+                                        <p>
+                                            Юля, хочу сказать Вам большое спасибо за прекрасно организованный тур. Так случилось, что я в четвертый раз в Малайзии, но до этого ничего кроме КЛ не видел, а здесь полное знакомство со страной, отличный гид, со своей оценкой, может не всегда схожей с моей, но умница. Все было замечательно организовано, нигде ничего не ждали. Мы получили отличное впечатление. Еще раз Вам спасибо
+                                        </p>
+                                    </div>
+                                    <div class="review__raiting">
+                                        <i>
+                                            <img loading="lazy" src="/assets/img/home/review/star.svg" alt="">
+                                        </i>
+                                        <span>5</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tmr">
+            <div class="tmr__container lazy" data-bg="/assets/img/home/tmr/bg.jpg">
+                <div class="tmr__info">
+                    <h2 class="section__title">
+                        Не откладывайте 
+                        мечту на завтра                        
+                    </h2>
+                    <p>
+                        Свяжитесь с&nbsp;нами уже сегодня и&nbsp;шагните навстречу путешествию, 
+                        которое изменит ваше представление о&nbsp;привычном мире.
+                    </p>
+                    <button class="btn tmr__btn btn__call" data-modal="modal__podbor">Оставить заявку</button>
+                </div>
+            </div>
+        </section>
+        <section class="news">
+            <div class="container">
+                <div class="news__top">
+                    <h2 class="section__title">
+                        статьи
+                    </h2>
+                    <div class="news__top-right">
+                        <a href="#" class="news__link">
+                            Все статьи
+                        </a>
+                        <div class="slider__arrow">
+                            <div class="slider__prev news__prev"></div>
+                            <div class="slider__next news__next"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="news__slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide news__slide">
+                            <a href="#" class="news__img">
+                                <img  loading="lazy" src="/assets/img/home/news/5.jpg" alt="">
+                            </a>
+                            <p class="news__date">
+                                16.05.2024
+                            </p>
+                            <a href="#" class="news__title">
+                                Путешествие на Бали: советы 
+                                бывалых туристов. Что нужно знать перед поездкой
+                            </a>
+                            <a href="#">Подробнее</a>
+                        </div>
+                        <div class="swiper-slide news__slide">
+                            <a href="#" class="news__img">
+                                <img  loading="lazy" src="/assets/img/home/news/6.jpg" alt="">
+                            </a>
+                            <p class="news__date">
+                                16.05.2024
+                            </p>
+                            <a href="#" class="news__title">
+                                Путешествие на Бали: советы 
+                                бывалых туристов. Что нужно знать перед поездкой
+                            </a>
+                            <a href="#">Подробнее</a>
+                        </div>
+                        <div class="swiper-slide news__slide">
+                            <a href="#" class="news__img">
+                                <img  loading="lazy" src="/assets/img/home/news/7.jpg" alt="">
+                            </a>
+                            <p class="news__date">
+                                16.05.2024
+                            </p>
+                            <a href="#" class="news__title">
+                                Путешествие на Бали: советы 
+                                бывалых туристов. Что нужно знать перед поездкой
+                            </a>
+                            <a href="#">Подробнее</a>
+                        </div>
+                        <div class="swiper-slide news__slide">
+                            <a href="#" class="news__img">
+                                <img  loading="lazy" src="/assets/img/home/news/8.jpg" alt="">
+                            </a>
+                            <p class="news__date">
+                                16.05.2024
+                            </p>
+                            <a href="#" class="news__title">
+                                Путешествие на Бали: советы 
+                                бывалых туристов. Что нужно знать перед поездкой
+                            </a>
+                            <a href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mailing">
+            <div class="container lazy" data-bg="/assets/img/home/mailing/bg.jpg">
+                <div class="mailing__top">
+                    <h2 class="section__title">
+                        <span>Подпишитесь</span> на&nbsp;рассылку
+                    </h2>
+                    <div class="mailing__info">
+                        <p>
+                            Чтобы быть в&nbsp;курсе новостей, подпишитесь на нашу рассылку. Вы&nbsp;первыми узнаете о&nbsp;выгодных акциях и&nbsp;скидках, новых направлениях и&nbsp;редких маршрутах. А ещё мы расскажем Вам об интересных достопримечательностях, традициях и&nbsp;обычаях разных стран, а также о&nbsp;праздниках, мероприятиях, фестивалях и&nbsp;выставках. Авторская рассылка приходит не чаще 1-2 раза в&nbsp;неделю.
+                        </p>
+                    </div>
+                </div>
+                <form action="#" class="form">
+                    <div class="form__group">
+                        <input type="email" name="email" placeholder="E-mail" required>
+                        <button type="submit" class="btn form__btn">Подписаться</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+    <div class="footer__container">
+        <div class="section__row">
+            <div class="footer__top">
+                <a href="/" class="footer__logo">
+                    <img class="lazy" data-src="/assets/img/logo-w.svg" alt="logo">
+                </a>
+                <a href="tel:+7 (495) 660-49-33" class="footer__phone">+7 (495) 660-49-33</a>
+                <a href="mailto:info@svoiludi.ru" class="footer__mail">info@svoiludi.ru</a>
+            </div>
+            <div class="footer__menu">
+                <ul>
+                    <li>
+                        <a href="/about/">О компании</a>
+                    </li>
+                    <li>
+                        <a href="/news/">Новости</a>
+                    </li>
+                    <li>
+                        <a href="/blog/">Блог</a>
+                    </li>
+                    <li>
+                        <a href="/reviews/">Отзывы</a>
+                    </li>
+                    <li>
+                        <a href="#">Агентствам</a>
+                    </li>
+                    <li>
+                        <a href="#">Сайт по Японии</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#">Наши услуги</a>
+                    </li>
+                    <li>
+                        <a href="/country/">Страны</a>
+                    </li>
+                    <li>
+                        <a href="/tours/">Виды отдыха</a>
+                    </li>
+                    <li>
+                        <a href="/hotel/">Отели</a>
+                    </li>
+                    <li>
+                        <a href="#">Авиабилеты</a>
+                    </li>
+                    <li>
+                        <a href="#">Бизнес-авиация</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#">Спецпредложения</a>
+                    </li>
+                    <li>
+                        <a href="#">Топ-направления</a>
+                    </li>
+                    <li>
+                        <a href="#">Корпоративные туры</a>
+                    </li>
+                    <li>
+                        <a href="#">Организовать мероприятие</a>
+                    </li>
+                    <li>
+                        <a href="#">Подарочный сертификат</a>
+                    </li>
+                    <li>
+                        <a href="#">Архив туров</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__bottom-left">
+                <div class="footer-wrap">
+                    <p class="footer__address">
+                        105052, Россия, г. Москва, Лялин переулок, д. 9, стр. 1, подъезд 1
+                    </p>
+                    <p class="footer__days">
+                        Пн-Пт: с&nbsp;10:00 до 20:00
+                    </p>
+                </div>
+                <div class="footer-exchange">
+                    <div class="footer-exchange__name">
+                        Курсы валют 19.03.2025
+                    </div>
+                    <div class="exchange-items">
+                        <div class="exchange-item">
+                            <img class="lazy" data-src="/assets/img/icons/dollar.svg" alt="">
+                            <span>84.76 р.</span>
+                        </div>
+                        <div class="exchange-item">
+                            <img class="lazy" data-src="/assets/img/icons/euro.svg" alt="">
+                            <span>90.20 р.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="footer__number">
+                Номер в федеральном реестре 
+                туроператоров РТО 017357
+            </p>
+        </div>
+        <div class="footer__soc">
+            <a href="#" target="_blank">
+                <img class="lazy" data-src="/assets/img/icons/youtube.svg" alt="">
+            </a>
+            <a href="#" target="_blank">
+                <img class="lazy" data-src="/assets/img/icons/telegram.svg" alt="">
+            </a>
+            <a href="https://wa.me/74956604933" target="_blank">
+                <img class="lazy" data-src="/assets/img/icons/whatsapp.svg" alt="">
+            </a>
+            <a href="#">
+                <img class="lazy" data-src="/assets/img/icons/vk.svg" alt="">
+            </a>
+            <a href="#" target="_blank">
+                <img class="lazy" data-src="/assets/img/icons/mess2.svg" alt="">
+            </a>
+            <a href="#" class="top-scroll">
+                <img class="lazy" data-src="/assets/img/icons/top-icon.svg" alt="">
+            </a>
+        </div>
+        <div class="footer__copy">
+            <div class="footer-copy__left">
+                <p class="footer__copy-text">
+                    <span>©</span> ООО Студия индивидуального отдыха и&nbsp;туризма «Свои люди», 2025 
+                </p>
+                <a href="/policy/" class="footer__copy-link">
+                    Политика конфиденциальности
+                </a>
+            </div>
+            <div class="footer-copy__right">
+                <p class="veonix">
+                    Разработка сайта: <a href="https://veonix.ru/">Студия VEONIX.RU</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="modal__search" class="modal modal__search">
+    <div class="modal__content">
+        <div class="modal__close">
+            <span></span>
+            <span></span>
+        </div>
+        <h2 class="modal__search-title">ПОИСК</h2>
+        <form action="#" class="search__form">
+            <div class="search__form-wrapper">
+                <div class="search__form-napr">
+                    <i>
+                        <img width="14" height="14" class="lazy" data-src="/assets/img/home/main/earth.svg" alt="">
+                    </i>
+                    <select class="search__form-select" data-placeholder="Выберите направление">
+                        <option></option>
+                        <option>Африка</option>
+                        <option>Латинская Америка</option>
+                        <option>Азия</option>
+                        <option>Ближний Восток</option>
+                        <option>Европа</option>
+                        <option>Острова Индийского океана</option>
+                        <option>Россия и&nbsp;страны СНГ</option>
+                        <option>Карибский регион</option>
+                        <option>Антарктида</option>
+                        <option>Арктика</option>
+                        <option>Северная Америка</option>
+                        <option>Австралия и&nbsp;Океания</option>
+
+                                            </select>
+                </div>
+                <div class="search__form-napr">
+                    <select class="search__form-select" data-placeholder="Страна">
+                        <option></option>
+                        <option data-icon="/assets/img/icons/requered.svg">Ботсвана</option>
+                        <option>Гвинея</option>
+                        <option data-icon="/assets/img/icons/requered.svg">Египет</option>
+                        <option data-icon="/assets/img/icons/requered.svg">Замбия </option>
+                        <option>Мавритания</option>
+                        <option>Россия</option>
+                        <option>США</option>
+                        <option>Алжир</option>
+                        <option>Китай</option>
+                        <option>Япония</option>
+                    </select>
+                </div>
+                <div class="search__form-napr">
+                    <i>
+                        <img width="14" height="14" class="lazy" data-src="/assets/img/home/main/list.svg" alt="">
+                    </i>
+                    <select class="search__form-select" data-placeholder="Вид отдыха">
+                        <option></option>
+                        <option>Корпоративные туры</option>
+                        <option>Событийные туры </option>
+                        <option>Экскурсионные туры</option>
+                        <option>Гастрономические и&nbsp;винные туры</option>
+                        <option>Туры в&nbsp;мини-группах</option>
+                        <option>Индивидуальные туры</option>
+                        <option>Эко-туры</option>
+                        <option>Рыболовные туры</option>
+                        <option>Отдых на море</option>
+                        <option>Круизы</option>
+                        <option>Круизы на поездах</option>
+                        <option>Отдых с&nbsp;детьми</option>
+                        <option>Горнолыжные туры</option>
+                        <option>Активные туры</option>
+                        <option>Оздоровительные туры</option>
+                        <option>Аренда частного острова и&nbsp;дворца</option>
+                        <option>Организовать событие</option>
+                    </select>
+                </div>
+                <div class="search__form-group">
+                    <div class="main__select main__days">
+                        <i>
+                            <img width="14" height="14" class="lazy" data-src="/assets/img/home/main/moon.svg" alt="">
+                        </i>
+                        <p class="main__days-count">
+                            1 - 5
+                        </p>
+                        <div class="main__counter">
+                            <p>
+                                Кол-во ночей
+                            </p>
+                            <div class="main__counter-list">
+                                <div class="main__counter-item from">
+                                    <p>от</p>
+                                    <div class="main__counter-btns">
+                                        <button class="main__counter-btn main__counter-minus">-</button>
+                                        <input type="text" class="main__counter-input from" readonly min="1" value="1">
+                                        <button class="main__counter-btn main__counter-plus">+</button>
+                                    </div>
+                                </div>
+                                <div class="main__counter-item to">
+                                    <p>до</p>
+                                    <div class="main__counter-btns">
+                                        <button class="main__counter-btn main__counter-minus">-</button>
+                                        <input type="text" class="main__counter-input to" readonly min="1" value="1">
+                                        <button class="main__counter-btn main__counter-plus">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__calendar">
+                        <i>
+                            <img width="14" height="14" class="lazy" data-src="/assets/img/home/main/calendar.svg" alt="">
+                        </i>
+                        <input type="text" class="form-datapicker" placeholder="Выберите дату">
+                    </div>
+                </div>
+            </div>
+
+                        <button type="submit" class="main__btn">
+                <i>
+                    <img width="24" height="24" class="lazy" data-src="/assets/img/search-main.svg" alt="">
+                </i>
+                <span>
+                    Найти
+                </span>
+            </button>
+        </form>
+    </div>
+</div>
+
+
+<div class="notification">
+    <p>
+        Мы используем cookies, чтобы сайт работал лучше. Оставаясь на сайте, вы&nbsp;соглашаетесь с&nbsp;<a href="#">политикой конфиденциальности</a>
+    </p>
+    <button class="notification__btn notification__close">Подтверждаю</button>
+</div>
+
+
+
+<div id="modal__podbor" class="modal modal__podbor pod">
+    <div class="container">
+        <div class="modal__close">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="pod__wrapper">
+            <h2 class="section__title">
+                Запрос путешествия
+            </h2>
+            <form action="#" class="pod__form form">
+                <div class="form__items">
+                    <div class="form__item">
+                        <label class="form__label">
+                            <input name="name" type="text" required>
+                            <span>
+                                Ваше имя 
+                                <i>
+                                    <img class="lazy" data-src="/assets/img/icons/requered.svg" alt="">
+                                </i>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__label">
+                            <input name="email" type="email" required>
+                            <span>
+                                E-mail
+                                <i>
+                                    <img class="lazy" data-src="/assets/img/icons/requered.svg" alt="">
+                                </i>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__label">
+                            <input name="phone" type="tel" required>
+                            <span>
+                                Телефон 
+                                <i>
+                                    <img class="lazy" data-src="/assets/img/icons/requered.svg" alt="">
+                                </i>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form__items">
+                    <div class="pod__calendar">
+                        <div class="pod__calendar-icon">
+                            <i>
+                                <img width="14" height="14" class="lazy" data-src="/assets/img/home/main/calendar.svg" alt="">
+                            </i>
+                            <span>Предполагаемые даты поездки</span>
+                        </div>
+                        <input type="text" class="form-cal" name="date" readonly>
+                    </div>
+
+                                        <div class="main__days pod__days">
+                        <div class="pod__days-icon">
+                            <i>
+                                <img width="14" height="14" class="lazy" data-src="/assets/img/home/main/moon.svg" alt="">
+                            </i>
+                            <span>
+                                Кол-во ночей
+                            </span>
+                        </div>
+                        <div class="main__counter-list">
+                            <div class="main__counter-item from">
+                                <p>от</p>
+                                <div class="main__counter-btns">
+                                    <button class="main__counter-btn main__counter-minus">-</button>
+                                    <input type="text" name="night-from" class="main__counter-input from" readonly min="1" value="1">
+                                    <button class="main__counter-btn main__counter-plus">+</button>
+                                </div>
+                            </div>
+                            <div class="main__counter-item to">
+                                <p>до</p>
+                                <div class="main__counter-btns">
+                                    <button class="main__counter-btn main__counter-minus">-</button>
+                                    <input type="text" name="night-to" class="main__counter-input to" readonly min="1" value="1">
+                                    <button class="main__counter-btn main__counter-plus">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                                        <div class="main__days pod__days pod__people">
+                        <div class="pod__days-icon">
+                            <i>
+                                <img width="14" height="14" class="lazy" data-src="/assets/img/icons/user-plus.svg" alt="">
+                            </i>
+                            <span>
+                                Кол-во человек
+                            </span>
+                        </div>
+                        <div class="main__counter-list">
+                            <div class="main__counter-item from">
+                                <div class="main__counter-btns">
+                                    <button class="main__counter-btn main__counter-minus">-</button>
+                                    <input type="text" name="people" class="main__counter-input from" readonly min="1" value="1">
+                                    <button class="main__counter-btn main__counter-plus">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__list">
+                    <div class="form__item">
+                        <label class="form__label">
+                            <input name="city" type="text">
+                            <span>
+                                <i>
+                                    <img class="lazy" data-src="/assets/img/home/main/earth.svg" alt="">
+                                </i>
+                                Город вылета
+                            </span>
+                        </label>
+                        <label class="form__label form__check">
+                            <input name="flight" type="checkbox" hidden>
+                            <span>
+                                <i>
+                                    <img class="lazy" data-src="/assets/img/icons/plane.svg" alt="">
+                                </i>
+                                Перелет
+                            </span>
+                        </label>
+                    </div>
+                    <div class="form__item-big">
+                        <div class="form__item-wrapper">
+                            <div class="form__item-icon">
+                                <i>
+                                    <img width="14" height="14" class="lazy" data-src="/assets/img/icons/hostel.svg" alt="">
+                                </i>
+                                <span>
+                                    Категория отеля
+                                </span>
+                            </div>
+                            <select class="form-select-modal" data-placeholder="&nbsp;">
+                                <option></option>
+                                <option data-icon="/assets/img/icons/star-1.svg">1</option>
+                                <option data-icon="/assets/img/icons/star-2.svg">2</option>
+                                <option data-icon="/assets/img/icons/star-3.svg">3</option>
+                                <option data-icon="/assets/img/icons/star-4.svg">4</option>
+                                <option data-icon="/assets/img/icons/star-5.svg">5</option>
+                            </select>
+                        </div>
+                        <label class="form__label form__check">
+                            <input name="visa" type="checkbox" hidden>
+                            <span>
+                                <i>
+                                    <img class="lazy" data-src="/assets/img/icons/visa.svg" alt="">
+                                </i>
+                                Виза
+                            </span>
+                        </label>
+                        <label class="form__label form__check">
+                            <input name="car" type="checkbox" hidden>
+                            <span>
+                                <i>
+                                    <img class="lazy" data-src="/assets/img/icons/car.svg" alt="">
+                                </i>
+                                Трансфер
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="pod__bottom">
+                    <div class="pod__komm">
+                        <label for="" class="form__label">
+                            <textarea name="comment"></textarea>
+                            <span>
+                                Комментарий 
+                                <span>(дополнительные пожелания, удобное время и&nbsp;способ связи)</span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="pod__client">
+                        <label class="form__label form__check">
+                            <input name="spo" type="checkbox" hidden>
+                            <span>
+                                Рассылка СПО <span>(не чаще 2-3 раз в&nbsp;неделю)</span>
+                            </span>
+                        </label>
+                        <label class="form__label form__check">
+                            <input name="client" type="checkbox" hidden>
+                            <span>
+                                Являюсь постоянным клиентом компании
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="pod__sub">
+                    <div class="pod__sub-big">
+                        <button type="submit" class="pod__btn btn">
+                            Оставить заявку
+                        </button>
+                        <label class="form__polityc">
+                            <input type="checkbox" hidden checked>
+                            <span>
+                                Согласен на обработку персональных данных в&nbsp;соответствии с&nbsp;
+                                <a href="#">Политикой конфиденциальности</a>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="pod__sub-item">
+                        <p>
+                            <i>
+                                <img class="lazy" data-src="/assets/img/icons/requered.svg" alt="">
+                            </i>
+                            <span> - поля, обязательные для заполнения</span>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="fixed-icons">
+    <a href="#" class="mess">
+        <img class="lazy" data-src="/assets/img/icons/mess.svg" alt="">
+    </a>
+    <a href="#" class="up top-scroll">
+        <img class="lazy" data-src="/assets/img/icons/up.svg" alt="">
+    </a>
+</div>
+
+<script src="/assets/js/components/lottie.js?_v=20250723061907"></script>
+<script src="/assets/js/components/gsap.min.js?_v=20250723061907"></script>
+<script src="/assets/js/components/MotionPathPlugin.js?_v=20250723061907"></script>
+<script src="/assets/js/components/ScrollTrigger.js?_v=20250723061907"></script>
+<script src="/assets/js/components/swiper.min.js?_v=20250723061907"></script>
+<script src="/assets/js/components/jquery.min.js?_v=20250723061907"></script>
+<script src="/assets/js/components/jquery.fancybox.js?_v=20250723061907"></script>
+<script src="/assets/js/components/scrollClass.js?_v=20250723061907"></script>
+<script src="/assets/js/components/accordion.js?_v=20250723061907"></script>
+<script src="/assets/js/components/modalShow.js?_v=20250723061907"></script>
+<script src="/assets/js/components/lazyload.js?_v=20250723061907"></script>
+<script src="/assets/js/components/initYMap.js?_v=20250723061907"></script>
+<script src="/assets/js/components/mask.js?_v=20250723061907"></script>
+<script src="/assets/js/components/wow.js?_v=20250723061907"></script>
+<script src="/assets/js/components/select2.js?_v=20250723061907"></script>
+<script src="/assets/js/components/select2-dropdownPosition.js?_v=20250723061907"></script>
+<script src="/assets/js/components/air-datepicker.js?_v=20250723061907"></script>
+<script src="/assets/js/components/jquery.menu-aim.js?_v=20250723061907"></script>
+<script src="/assets/js/components/modernizr.js?_v=20250723061907"></script>
+<script src="/assets/js/components/mobMenu.js?_v=20250723061907"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js?_v=20250723061907"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20250723061907" type="text/javascript"></script>
+<script src="/assets/js/app.js?_v=20250723061907"></script>
+</body>
+</html>
