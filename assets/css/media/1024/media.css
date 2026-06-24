@@ -92,14 +92,14 @@
 
   .mobile-filter__open_wrapper {
     position: absolute;
-    bottom: 20px;
+    bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
   }
 
   .mobile-filter__open {
     display: flex;
-    width: 312px;
+    width: 340px;
   }
 
   .main__title p {
@@ -979,6 +979,7 @@
     font-size: 12px;
     line-height: 110%;
     order: 1;
+    color: #1F2832;
   }
 
   .filter-section__header .fi-arrow {
@@ -992,19 +993,6 @@
     order: 2;
   }
 
-
-  @media (max-width: 1000px) {
-
-    .filter-panel__wrapper.active~.fixed-icons,
-    .filter-panel__wrapper.active+.fixed-icons,
-    body:has(.filter-panel__wrapper.active) .fixed-icons {
-      display: none !important;
-    }
-
-    .fixed-icons {
-      z-index: 100 !important;
-    }
-  }
 
   .air-datepicker-body--cells {
     gap: 3px 0;
@@ -1727,10 +1715,31 @@
 }
 
 
-@media(min-width:1024px) {
+
+
+.fixed-icons {
+  z-index: 100 !important;
+}
+
+@media (min-width:1025px) {
 
   .menu-panel,
   .menu-overlay {
     display: none !important
+  }
+
+  .filter-panel__wrapper.active~.fixed-icons,
+  .filter-panel__wrapper.active+.fixed-icons,
+  body:has(.filter-panel__wrapper.active) .fixed-icons {
+    display: none !important;
+  }
+
+  .filter-overlay,
+  .filter-panel__wrapper,
+  .filter-panel,
+  .filter-trigger,
+  .filter-modal-overlay,
+  .filter-modal {
+    display: none !important;
   }
 }

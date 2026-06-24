@@ -745,6 +745,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 new Swiper(slider, {
                     slidesPerView: 1.36,
                     loop: true,
+                    loopAdditionalSlides: 2,
+                    watchSlidesProgress: true,
                     spaceBetween: 20,
                     navigation: {
                         nextEl: next_arrow,
@@ -981,6 +983,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 new Swiper(slider, {
                     slidesPerView: 1.36,
                     loop: true,
+                    loopAdditionalSlides: 2,
+                    watchSlidesProgress: true,
                     spaceBetween: 20,
                     navigation: {
                         nextEl: next_arrow,

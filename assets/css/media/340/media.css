@@ -5179,24 +5179,11 @@
     height: auto;
   }
 
-}
-
-
-@media (min-width: 10024px) {
-
-  .filter-overlay,
-  .filter-panel__wrapper,
-  .filter-panel,
-  .filter-trigger,
-  .filter-modal-overlay,
-  .filter-modal {
-    display: none !important;
+  .mobile-filter__open_wrapper {
+    bottom: 20px;
   }
-}
 
-
-@media (max-width: 768px) {
-  /* ... остальные стили ... */
-
-
+  .mobile-filter__open {
+    width: 312px;
+  }
 }

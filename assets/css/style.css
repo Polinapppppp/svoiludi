@@ -271,6 +271,7 @@ p:not([class]):last-child {
   font-weight: 500;
   text-transform: uppercase;
   font-size: 12px;
+  color: #1F2832;
 }
 
 
@@ -436,6 +437,15 @@ p:not([class]):last-child {
   background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.8249 11.1916L21.8744 11.1422L21.9098 11.1068L21.9451 11.0714L21.9381 10.9937C21.9254 10.9737 21.9085 10.9568 21.8886 10.9442L18.1904 7.24599C18.106 7.1616 17.9915 7.11419 17.8722 7.11419C17.7528 7.11419 17.6384 7.1616 17.554 7.24599C17.4696 7.33039 17.4222 7.44484 17.4222 7.56419C17.4222 7.68354 17.4696 7.798 17.554 7.88239L20.2693 10.5977L0.639998 10.4987C0.519975 10.4987 0.404867 10.5464 0.319998 10.6312C0.235129 10.7161 0.18745 10.8312 0.18745 10.9512C0.18745 11.0713 0.235129 11.1864 0.319998 11.2712C0.404867 11.3561 0.519975 11.4038 0.639998 11.4038L20.3966 11.3614L17.6388 14.1191C17.5575 14.2041 17.5127 14.3175 17.5141 14.4352C17.5154 14.5528 17.5627 14.6652 17.6459 14.7484C17.6851 14.7937 17.7341 14.8294 17.7893 14.8527C17.8445 14.876 17.9043 14.8863 17.9641 14.8827C18.0806 14.8832 18.1925 14.8374 18.2752 14.7555L21.8108 11.2199L21.8249 11.1916Z' fill='%23FFFFFF'/%3E%3C/svg%3E");
 }
 
+.nap .slider__prev {
+  background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.165317 10.7991L0.115818 10.8486L0.0804633 10.884L0.0451085 10.9193L0.0521784 10.9971C0.0648217 11.0171 0.081725 11.034 0.101676 11.0466L3.79984 14.7448C3.88423 14.8292 3.99869 14.8766 4.11804 14.8766C4.23739 14.8766 4.35185 14.8292 4.43624 14.7448C4.52063 14.6604 4.56804 14.5459 4.56804 14.4266C4.56804 14.3072 4.52063 14.1928 4.43624 14.1084L1.72095 11.3931L21.3502 11.4921C21.4703 11.4921 21.5854 11.4444 21.6702 11.3596C21.7551 11.2747 21.8028 11.1596 21.8028 11.0396C21.8028 10.9195 21.7551 10.8044 21.6702 10.7196C21.5854 10.6347 21.4703 10.587 21.3502 10.587L1.59367 10.6294L4.35139 7.87171C4.4327 7.7867 4.47749 7.67323 4.47617 7.55561C4.47485 7.43798 4.42752 7.32555 4.34432 7.24239C4.30516 7.19706 4.25608 7.16136 4.2009 7.13806C4.14572 7.11477 4.08591 7.10449 4.02612 7.10804C3.90965 7.10761 3.79777 7.15338 3.71499 7.23532L0.179458 10.7708L0.165317 10.7991Z' fill='%23FFFFFF'/%3E%3C/svg%3E");
+}
+
+.nap .slider__next {
+  background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.8249 11.1916L21.8744 11.1422L21.9098 11.1068L21.9451 11.0714L21.9381 10.9937C21.9254 10.9737 21.9085 10.9568 21.8886 10.9442L18.1904 7.24599C18.106 7.1616 17.9915 7.11419 17.8722 7.11419C17.7528 7.11419 17.6384 7.1616 17.554 7.24599C17.4696 7.33039 17.4222 7.44484 17.4222 7.56419C17.4222 7.68354 17.4696 7.798 17.554 7.88239L20.2693 10.5977L0.639998 10.4987C0.519975 10.4987 0.404867 10.5464 0.319998 10.6312C0.235129 10.7161 0.18745 10.8312 0.18745 10.9512C0.18745 11.0713 0.235129 11.1864 0.319998 11.2712C0.404867 11.3561 0.519975 11.4038 0.639998 11.4038L20.3966 11.3614L17.6388 14.1191C17.5575 14.2041 17.5127 14.3175 17.5141 14.4352C17.5154 14.5528 17.5627 14.6652 17.6459 14.7484C17.6851 14.7937 17.7341 14.8294 17.7893 14.8527C17.8445 14.876 17.9043 14.8863 17.9641 14.8827C18.0806 14.8832 18.1925 14.8374 18.2752 14.7555L21.8108 11.2199L21.8249 11.1916Z' fill='%23FFFFFF'/%3E%3C/svg%3E");
+}
+
+
 
 .slider__prev::before,
 .slider__next::before {
@@ -507,7 +517,7 @@ textarea {
 .form__btn {
   font-size: 12px;
   width: 100%;
-  max-width: 18.75vw;
+  max-width: 314pxф;
 }
 
 .form__items {
@@ -1934,7 +1944,7 @@ section.gran {
 
 .nap__info-item a {
   padding: 2.04861vw 0;
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
   color: #fff;
   border-radius: 0px 0.69444vw 0.69444vw 0px;
   font-family: "Halvar Breitschrift";
@@ -2001,8 +2011,8 @@ section.gran {
 .nap .slider__next {
   border-radius: 0px;
   border: none;
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .nap .slider__arrow {
@@ -2567,6 +2577,13 @@ section.gran {
   padding: 0px;
   width: 250px;
   height: 80px;
+  transition: 0.5s ease;
+}
+
+.gift__btn:hover{
+  background-color: #323D48;
+  transition: 0.5s ease;
+  color: #FFFFFF;
 }
 
 .gift__btn img {
@@ -2911,7 +2928,7 @@ section.news {
   font-style: normal;
   font-weight: 300;
   line-height: 110%;
-  color: #000;
+  color: #1F2832;
 }
 
 .review .section__row {
@@ -3059,15 +3076,16 @@ section.news {
 
 .tmr__container::before {
   content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50.21%, rgba(0, 0, 0, 1) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50.21%, rgba(0, 0, 0, 1) 100%);
 
-    z-index: 1;
-    pointer-events: none;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: 0 0 10px 10px;
 }
 
 .tmr__info {
@@ -3090,6 +3108,14 @@ section.news {
   font-weight: 500;
   padding: 34px 0;
   line-height: 110%;
+  transition: 0.5s ease;
+
+}
+
+.tmr__btn:hover {
+  background-color: #fff;
+  transition: 0.5s ease;
+  color: #323D48;
 }
 
 section.mailing {
@@ -3097,7 +3123,7 @@ section.mailing {
 }
 
 .mailing .container {
-  padding: 80px 104px 50px 107px;
+  padding: 80px 104px 70px 107px;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 10px;
@@ -3129,10 +3155,6 @@ section.mailing {
   border-color: #323D48;
 }
 
-.mailing .form__btn:hover {
-  border-color: #E21A55;
-}
-
 .mailing .form__group {
   display: flex;
   align-items: flex-end;
@@ -3147,6 +3169,12 @@ section.mailing {
 textarea {
   padding-bottom: 8px !important;
   margin-bottom: 21px;
+}
+
+.mailing .btn.form__btn:hover {
+  background-color: #323D48;
+  color: #FFFFFF;
+  transition: 0.5s ease;
 }
 
 .pod {
@@ -3667,7 +3695,7 @@ textarea {
 
 }
 
-.footer__copy-link:hover{
+.footer__copy-link:hover {
   color: #E21A55;
   transition: 0.5s ease;
 }
@@ -3702,7 +3730,7 @@ textarea {
   display: none;
 }
 
-.mobile-filter__open{
+.mobile-filter__open {
   display: none;
 }
 
@@ -4282,4 +4310,15 @@ body {
 .header .header-search.opened {
   opacity: 1;
   pointer-events: all;
+}
+
+@media (min-width:1400px) {
+  .nap__info{
+    max-width: 90.27778vw;
+  }
+
+  .header .container{
+    padding: 0 2.08333vw;
+
+  }
 }
