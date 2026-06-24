@@ -194,7 +194,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     accordionShow()
 
-    scrollClass()
+    try {
+        scrollClass()
+    } catch (e) {
+        console.error('scrollClass error:', e)
+    }
 
 
     const pxTovw = (mr) => {
@@ -251,12 +255,12 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     $('.form-select').each(function () {
-        var placeholder = $(this).data('placeholder') || 'Поиск...'; 
+        var placeholder = $(this).data('placeholder') || 'Поиск...';
         $(this).select2({
             theme: "dark",
             dropdownParent: $(this).parents('.main__napr-wrapper'),
             dropdownPosition: 'below',
-            placeholder: placeholder, 
+            placeholder: placeholder,
             width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
             language: {
                 inputTooShort: function () { return ''; },
@@ -339,13 +343,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     $('.search__form-select').each(function () {
-        var placeholder = $(this).data('placeholder') || 'Поиск...'; 
+        var placeholder = $(this).data('placeholder') || 'Поиск...';
         $(this).select2({
             theme: "dark",
             dropdownParent: $('.search__form'),
             dropdownPosition: 'below',
-            allowClear: true, 
-            placeholder: placeholder, 
+            allowClear: true,
+            placeholder: placeholder,
             width: '100%',
             language: {
                 noResults: function () { return 'Ничего не найдено'; },

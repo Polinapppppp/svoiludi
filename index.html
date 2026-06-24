@@ -959,7 +959,401 @@
 
                         </form>
                     </div>
-                    <div class="mobile-filter__open">
+
+                    <div class="filter-modal-overlay" id="nightsModalOverlay"></div>
+                    <div class="filter-modal" id="nightsModal">
+                        <h3 class="filter-modal__title">Количество ночей</h3>
+                        <div class="filter-counter">
+                            <div class="filter-counter__group">
+                                <span>от</span>
+                                <div class="counter__btn_wrapper">
+                                    <button type="button" class="filter-counter__btn minus"
+                                        data-target="nights-from">-</button>
+                                    <input type="number" class="filter-counter__input" id="nights-from-input" value="1"
+                                        min="1">
+                                    <button type="button" class="filter-counter__btn plus"
+                                        data-target="nights-from">+</button>
+                                </div>
+                            </div>
+                            <div class="filter-counter__group">
+                                <span>до</span>
+                                <div class="counter__btn_wrapper">
+                                    <button type="button" class="filter-counter__btn minus"
+                                        data-target="nights-to">-</button>
+                                    <input type="number" class="filter-counter__input" id="nights-to-input" value="5"
+                                        min="1">
+                                    <button type="button" class="filter-counter__btn plus"
+                                        data-target="nights-to">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="filter-apply" id="nightsApply">Применить</button>
+                    </div>
+
+                    <div class="filter-modal-overlay" id="calendarModalOverlay"></div>
+                    <div class="filter-modal filter-calendar-modal" id="calendarModal">
+                        <div id="air-datepicker-mobile"></div>
+                        <button type="button" class="filter-apply" id="calendarApply">Применить</button>
+                    </div>
+                    <div class="filter-overlay" id="filterOverlay"></div>
+                    <div class="filter-panel__wrapper" id="filterPanelWrapper">
+                        <aside class="filter-panel" id="filterPanel">
+                            <div class="filter-topbar">
+                                <button class="filter-topbar__close" id="filterClose">
+                                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M19.478 11.3214C19.4766 12.6405 18.952 13.9052 18.0193 14.8379C17.0865 15.7706 15.8219 16.2952 14.5028 16.2966H10.1343V15.0834H14.5028C15.5006 15.0834 16.4574 14.6871 17.1629 13.9815C17.8684 13.276 18.2648 12.3192 18.2648 11.3214C18.2648 10.3237 17.8684 9.36685 17.1629 8.66134C16.4574 7.95584 15.5006 7.55949 14.5028 7.55949H3.59021L6.19348 10.1644L5.33543 11.0224L1.26709 6.95287L5.33666 2.8833L6.19348 3.74135L3.58898 6.34625H14.5028C15.8219 6.34766 17.0865 6.87229 18.0193 7.80501C18.952 8.73773 19.4766 10.0024 19.478 11.3214Z"
+                                            fill="#E21A55" />
+                                    </svg>
+
+                                </button>
+                                <div class="filter-topbar__title">Подобрать путешествие</div>
+                            </div>
+
+                            <div class="filter-body">
+                                <div class="filter-body_wr">
+                                    <div class="filter-section" id="sec-direction">
+                                        <button type="button" class="filter-section__header"
+                                            data-target="direction-list">
+                                            <span class="fi-icon">
+                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_7153_14175)">
+                                                        <path
+                                                            d="M7 13.5C10.5899 13.5 13.5 10.5899 13.5 7C13.5 3.41015 10.5899 0.5 7 0.5C3.41015 0.5 0.5 3.41015 0.5 7C0.5 10.5899 3.41015 13.5 7 13.5Z"
+                                                            stroke="#1F2832" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path
+                                                            d="M1 9.49983H2.75C3.21413 9.49983 3.65925 9.31545 3.98744 8.98726C4.31563 8.65908 4.5 8.21395 4.5 7.74983V6.24983C4.5 5.7857 4.68437 5.34058 5.01256 5.01239C5.34075 4.6842 5.78587 4.49983 6.25 4.49983C6.71413 4.49983 7.15925 4.31545 7.48744 3.98726C7.81563 3.65907 8 3.21396 8 2.74983V0.569824"
+                                                            stroke="#1F2832" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path
+                                                            d="M13.5 6.9C12.9993 6.64021 12.4441 6.50311 11.88 6.5H9.75C9.28587 6.5 8.84075 6.68437 8.51256 7.01256C8.18437 7.34075 8 7.78587 8 8.25C8 8.71413 8.18437 9.15925 8.51256 9.48744C8.84075 9.81563 9.28587 10 9.75 10C10.0815 10 10.3995 10.1317 10.6339 10.3661C10.8683 10.6005 11 10.9185 11 11.25V12.12"
+                                                            stroke="#1F2832" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_7153_14175">
+                                                            <rect width="14" height="14" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+
+                                            </span>
+                                            <span class="fi-text" id="val-direction">Выберите направление</span>
+                                            <span class="fi-arrow">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2">
+                                                    <path d="M9 18l6-6-6-6" />
+                                                </svg>
+                                            </span>
+                                        </button>
+                                        <div class="filter-section__body" id="direction-list">
+                                            <div class="filter-search">
+                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g opacity="0.6" clip-path="url(#clip0_7094_5568)">
+                                                        <path
+                                                            d="M6.5 12.5713C9.81371 12.5713 12.5 9.885 12.5 6.57129C12.5 3.25758 9.81371 0.571289 6.5 0.571289C3.18629 0.571289 0.5 3.25758 0.5 6.57129C0.5 9.885 3.18629 12.5713 6.5 12.5713Z"
+                                                            stroke="#1F2832" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path d="M10.7402 10.74L13.5002 13.5" stroke="#1F2832"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_7094_5568">
+                                                            <rect width="14" height="14" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                <input type="text" placeholder="Поиск по направлениям">
+                                            </div>
+                                            <ul class="filter-list">
+                                                <li><button type="button" class="filter-option"
+                                                        data-value="africa">Африка</button></li>
+                                                <li><button type="button" class="filter-option"
+                                                        data-value="latin">Латинская
+                                                        Америка</button></li>
+                                                <li><button type="button" class="filter-option"
+                                                        data-value="asia">Азия</button></li>
+                                                <li><button type="button" class="filter-option"
+                                                        data-value="middle-east">Ближний Восток</button></li>
+                                                <li><button type="button" class="filter-option"
+                                                        data-value="europe">Европа</button></li>
+                                                <li><button type="button" class="filter-option"
+                                                        data-value="indian">Острова
+                                                        Индийского океана</button></li>
+                                                <li><button type="button" class="filter-option" data-value="cis">Россия
+                                                        и
+                                                        страны СНГ</button></li>
+                                                <li><button type="button" class="filter-option"
+                                                        data-value="caribbean">Карибский регион</button></li>
+                                                <li><button type="button" class="filter-option"
+                                                        data-value="antarctica">Антарктида</button></li>
+                                                <li><button type="button" class="filter-option"
+                                                        data-value="arctic">Арктика</button></li>
+                                                <li><button type="button" class="filter-option"
+                                                        data-value="north-america">Северная Америка</button></li>
+                                                <li><button type="button" class="filter-option"
+                                                        data-value="oceania">Австралия и Океания</button></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="filter-section" id="sec-country">
+                                        <button type="button" class="filter-section__header" data-target="country-list">
+                                            <span class="fi-text" id="val-country">Страна</span>
+                                            <span class="fi-arrow">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2">
+                                                    <path d="M9 18l6-6-6-6" />
+                                                </svg>
+                                            </span>
+                                        </button>
+                                        <div class="filter-section__body" id="country-list">
+                                            <div class="filter-search">
+                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g opacity="0.6" clip-path="url(#clip0_7094_5568)">
+                                                        <path
+                                                            d="M6.5 12.5713C9.81371 12.5713 12.5 9.885 12.5 6.57129C12.5 3.25758 9.81371 0.571289 6.5 0.571289C3.18629 0.571289 0.5 3.25758 0.5 6.57129C0.5 9.885 3.18629 12.5713 6.5 12.5713Z"
+                                                            stroke="#1F2832" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path d="M10.7402 10.74L13.5002 13.5" stroke="#1F2832"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_7094_5568">
+                                                            <rect width="14" height="14" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                <input type="text" placeholder="Поиск по странам">
+                                            </div>
+                                            <ul class="filter-list">
+                                                <li><button type="button" class="filter-option"
+                                                        data-value="botswana">Ботсвана</button></li>
+                                                <li><button type="button" class="filter-option"
+                                                        data-value="egypt">Египет</button></li>
+                                                <li><button type="button" class="filter-option"
+                                                        data-value="zambia">Замбия</button></li>
+                                                <li><button type="button" class="filter-option"
+                                                        data-value="zimbabwe">Зимбабве</button></li>
+                                                <li><button type="button" class="filter-option"
+                                                        data-value="kenya">Кения</button></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="filter-section" id="sec-resort">
+                                        <button type="button" class="filter-section__header" data-target="resort-list">
+                                            <span class="fi-text" id="val-resort">Город/Курорт</span>
+                                            <span class="fi-arrow">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2">
+                                                    <path d="M9 18l6-6-6-6" />
+                                                </svg>
+                                            </span>
+                                        </button>
+                                        <div class="filter-section__body" id="resort-list">
+                                            <div class="filter-search">
+                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g opacity="0.6" clip-path="url(#clip0_7094_5568)">
+                                                        <path
+                                                            d="M6.5 12.5713C9.81371 12.5713 12.5 9.885 12.5 6.57129C12.5 3.25758 9.81371 0.571289 6.5 0.571289C3.18629 0.571289 0.5 3.25758 0.5 6.57129C0.5 9.885 3.18629 12.5713 6.5 12.5713Z"
+                                                            stroke="#1F2832" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path d="M10.7402 10.74L13.5002 13.5" stroke="#1F2832"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_7094_5568">
+                                                            <rect width="14" height="14" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                <input type="text" placeholder="Поиск по городам">
+                                            </div>
+                                            <ul class="filter-list">
+                                                <li><button type="button" class="filter-option">Абриола</button></li>
+                                                <li><button type="button" class="filter-option">Авелла</button></li>
+                                                <li><button type="button" class="filter-option">Москва</button></li>
+                                                <li><button type="button" class="filter-option">Стамбул</button></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="filter-section" id="sec-type">
+                                        <button type="button" class="filter-section__header" data-target="type-list">
+                                            <span class="fi-icon">
+                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_7153_14183)">
+                                                        <path d="M0.5 1H13.5" stroke="#1F2832" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path d="M0.5 4H10.5" stroke="#1F2832" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path d="M0.5 7H7.5" stroke="#1F2832" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path d="M0.5 13H13.5" stroke="#1F2832" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path d="M0.5 10H10.5" stroke="#1F2832" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_7153_14183">
+                                                            <rect width="14" height="14" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+
+                                            </span>
+                                            <span class="fi-text" id="val-type">Вид отдыха</span>
+                                            <span class="fi-arrow">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2">
+                                                    <path d="M9 18l6-6-6-6" />
+                                                </svg>
+                                            </span>
+                                        </button>
+                                        <div class="filter-section__body" id="type-list">
+                                            <div class="filter-search">
+                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g opacity="0.6" clip-path="url(#clip0_7094_5568)">
+                                                        <path
+                                                            d="M6.5 12.5713C9.81371 12.5713 12.5 9.885 12.5 6.57129C12.5 3.25758 9.81371 0.571289 6.5 0.571289C3.18629 0.571289 0.5 3.25758 0.5 6.57129C0.5 9.885 3.18629 12.5713 6.5 12.5713Z"
+                                                            stroke="#1F2832" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path d="M10.7402 10.74L13.5002 13.5" stroke="#1F2832"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_7094_5568">
+                                                            <rect width="14" height="14" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                <input type="text" placeholder="Поиск по видам отдыха">
+                                            </div>
+                                            <ul class="filter-list">
+                                                <li><button type="button" class="filter-option">Корпоративные
+                                                        туры</button>
+                                                </li>
+                                                <li><button type="button" class="filter-option">Событийные туры</button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="filter-option filter-option--has-child"
+                                                        data-target="excursion-list">
+                                                        Экскурсионные туры
+                                                        <span class="fi-arrow">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2">
+                                                                <path d="M9 18l6-6-6-6" />
+                                                            </svg>
+                                                        </span>
+                                                    </button>
+                                                </li>
+                                                <div class="filter-sublevel" id="excursion-list">
+
+                                                    <ul class="filter-list">
+                                                        <li><button type="button" class="filter-option">Туры на
+                                                                Формулу-1</button></li>
+                                                        <li><button type="button" class="filter-option">Туры на
+                                                                Формулу-1</button></li>
+                                                    </ul>
+                                                </div>
+                                                <li><button type="button" class="filter-option">Гастрономические и
+                                                        винные
+                                                        туры</button></li>
+                                                <li><button type="button" class="filter-option">Туры в
+                                                        мини-группах</button>
+                                                </li>
+                                                <li><button type="button" class="filter-option">Индивидуальные
+                                                        туры</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="filter-section__wrapper">
+                                        <div class="filter-section" id="sec-nights">
+                                            <button type="button" class="filter-section__header"
+                                                data-target="nights-modal">
+                                                <span class="fi-icon">
+                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M8 7C8.00471 5.78763 8.32421 4.59726 8.92723 3.54548C9.53025 2.4937 10.3961 1.61657 11.44 1C10.6659 0.679515 9.83775 0.509809 9 0.5C7.27609 0.5 5.62279 1.18482 4.40381 2.40381C3.18482 3.62279 2.5 5.27609 2.5 7C2.5 8.72391 3.18482 10.3772 4.40381 11.5962C5.62279 12.8152 7.27609 13.5 9 13.5C9.84786 13.494 10.6866 13.3242 11.47 13C10.4205 12.3872 9.54869 11.5117 8.94026 10.4596C8.33183 9.40759 8.00779 8.21528 8 7Z"
+                                                            stroke="#1F2832" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+
+                                                </span>
+                                                <span class="fi-text" id="val-nights">Количество ночей</span>
+                                            </button>
+                                        </div>
+
+                                        <div class="filter-section" id="sec-date">
+                                            <button type="button" class="filter-section__header"
+                                                data-target="calendar-modal">
+                                                <span class="fi-icon">
+                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <g clip-path="url(#clip0_7153_14167)">
+                                                            <path
+                                                                d="M1.5 2C1.23478 2 0.98043 2.10536 0.792893 2.29289C0.605357 2.48043 0.5 2.73478 0.5 3V12.5C0.5 12.7652 0.605357 13.0196 0.792893 13.2071C0.98043 13.3946 1.23478 13.5 1.5 13.5H12.5C12.7652 13.5 13.0196 13.3946 13.2071 13.2071C13.3946 13.0196 13.5 12.7652 13.5 12.5V3C13.5 2.73478 13.3946 2.48043 13.2071 2.29289C13.0196 2.10536 12.7652 2 12.5 2H10.5"
+                                                                stroke="#1F2832" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                            <path d="M0.5 5.5H13.5" stroke="#1F2832"
+                                                                stroke-linecap="round" stroke-linejoin="round" />
+                                                            <path d="M3.5 0.5V3.5" stroke="#1F2832"
+                                                                stroke-linecap="round" stroke-linejoin="round" />
+                                                            <path d="M10.5 0.5V3.5" stroke="#1F2832"
+                                                                stroke-linecap="round" stroke-linejoin="round" />
+                                                            <path d="M3.5 2H8.5" stroke="#1F2832" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_7153_14167">
+                                                                <rect width="14" height="14" fill="white" />
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+
+                                                </span>
+                                                <span class="fi-text" id="val-date">Дата поездки</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-submit-wrap">
+                                    <button type="button" class="filter-submit" id="filterSubmit">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <circle cx="11" cy="11" r="8" />
+                                            <path d="M21 21l-4.35-4.35" />
+                                        </svg>
+                                        Найти
+                                    </button>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+
+                </div>
+                <div class="main__bg">
+                    <video width="1400" height="700" class="main__video lazy" muted loop autoplay playsinline
+                        loading="lazy" src="./assets/files/main.mp4"
+                        poster="./assets/img/home/main/preload.jpg"></video>
+                </div>
+                <div class="mobile-filter__open_wrapper">
+                    <div class="mobile-filter__open" id="filterTrigger">
                         <div class="mobile-filter__item_wrapper">
                             <div class="mobile-filter__item">
                                 <i>
@@ -982,280 +1376,7 @@
                             </i>
                         </div>
                     </div>
-                    <!-- Мобильный фильтр -->
-                    <div class="filter-overlay" id="filterOverlay"></div>
-
-                    <aside class="filter-panel" id="filterPanel">
-                        <div class="filter-topbar">
-                            <button class="filter-topbar__back" id="filterBack">
-                                <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
-                                    <path
-                                        d="M19.478 11.3214C19.4766 12.6405 18.952 13.9052 18.0193 14.8379C17.0865 15.7706 15.8219 16.2952 14.5028 16.2966H10.1343V15.0834H14.5028C15.5006 15.0834 16.4574 14.6871 17.1629 13.9815C17.8684 13.276 18.2648 12.3192 18.2648 11.3214C18.2648 10.3237 17.8684 9.36685 17.1629 8.66134C16.4574 7.95584 15.5006 7.55949 14.5028 7.55949H3.59021L6.19348 10.1644L5.33543 11.0224L1.26709 6.95287L5.33666 2.8833L6.19348 3.74135L3.58898 6.34625H14.5028C15.8219 6.34766 17.0865 6.87229 18.0193 7.80501C18.952 8.73773 19.4766 10.0024 19.478 11.3214Z"
-                                        fill="#E21A55" />
-                                </svg>
-                            </button>
-                            <div class="filter-topbar__title" id="filterTitle">Подобрать путешествие</div>
-                            <button class="filter-topbar__close" id="filterClose">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="#E21A55" stroke-width="2">
-                                    <path d="M18 6L6 18M6 6l12 12" />
-                                </svg>
-                            </button>
-                        </div>
-
-                        <div class="filter-body">
-                            <div class="filter-levels" id="filterLevels">
-
-                                <!-- Уровень 0 — главный экран -->
-                                <div class="filter-level active" data-level="0" data-title="Подобрать путешествие"
-                                    id="filter-level-0">
-                                    <ul class="filter-list">
-                                        <li>
-                                            <button type="button" class="filter-item" data-target="filter-direction"
-                                                data-title="Направление">
-                                                <span class="fi-icon">
-                                                    <svg viewBox="0 0 24 24" fill="none" stroke="#323D48"
-                                                        stroke-width="1.5">
-                                                        <circle cx="12" cy="12" r="10" />
-                                                        <path d="M2 12h20" />
-                                                        <path
-                                                            d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
-                                                    </svg>
-                                                </span>
-                                                <span class="fi-text">Выберите направление</span>
-                                                <span class="fi-arrow">
-                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                        stroke-width="2">
-                                                        <path d="M9 18l6-6-6-6" />
-                                                    </svg>
-                                                </span>
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button type="button" class="filter-item" data-target="filter-country"
-                                                data-title="Страна">
-                                                <span class="fi-text">Страна</span>
-                                                <span class="fi-arrow">
-                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                        stroke-width="2">
-                                                        <path d="M9 18l6-6-6-6" />
-                                                    </svg>
-                                                </span>
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button type="button" class="filter-item" data-target="filter-resort"
-                                                data-title="Город/Курорт">
-                                                <span class="fi-text">Город/Курорт</span>
-                                                <span class="fi-arrow">
-                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                        stroke-width="2">
-                                                        <path d="M9 18l6-6-6-6" />
-                                                    </svg>
-                                                </span>
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button type="button" class="filter-item" data-target="filter-type"
-                                                data-title="Вид отдыха">
-                                                <span class="fi-icon">
-                                                    <svg viewBox="0 0 24 24" fill="none" stroke="#323D48"
-                                                        stroke-width="1.5">
-                                                        <rect x="2" y="7" width="20" height="14" rx="2" />
-                                                        <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" />
-                                                    </svg>
-                                                </span>
-                                                <span class="fi-text">Вид отдыха</span>
-                                                <span class="fi-arrow">
-                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                        stroke-width="2">
-                                                        <path d="M9 18l6-6-6-6" />
-                                                    </svg>
-                                                </span>
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button type="button" class="filter-item" data-target="filter-nights"
-                                                data-title="Количество ночей">
-                                                <span class="fi-icon">
-                                                    <svg viewBox="0 0 24 24" fill="none" stroke="#323D48"
-                                                        stroke-width="1.5">
-                                                        <path d="M12 3a6 6 0 009 9 9 9 0 11-9-9z" />
-                                                    </svg>
-                                                </span>
-                                                <span class="fi-text">Количество ночей</span>
-                                                <span class="fi-arrow">
-                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                        stroke-width="2">
-                                                        <path d="M9 18l6-6-6-6" />
-                                                    </svg>
-                                                </span>
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button type="button" class="filter-item" data-target="filter-date"
-                                                data-title="Дата поездки">
-                                                <span class="fi-icon">
-                                                    <svg viewBox="0 0 24 24" fill="none" stroke="#323D48"
-                                                        stroke-width="1.5">
-                                                        <rect x="3" y="4" width="18" height="18" rx="2" />
-                                                        <path d="M16 2v4M8 2v4M3 10h18" />
-                                                    </svg>
-                                                </span>
-                                                <span class="fi-text">Дата поездки</span>
-                                                <span class="fi-arrow">
-                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                        stroke-width="2">
-                                                        <path d="M9 18l6-6-6-6" />
-                                                    </svg>
-                                                </span>
-                                            </button>
-                                        </li>
-                                    </ul>
-                                    <div class="filter-submit-wrap">
-                                        <button type="button" class="filter-submit" id="filterSubmit">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                <circle cx="11" cy="11" r="8" />
-                                                <path d="M21 21l-4.35-4.35" />
-                                            </svg>
-                                            Найти
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <!-- Уровень 1 — Направления -->
-                                <div class="filter-level" data-level="1" data-title="Направление" id="filter-direction">
-                                    <div class="filter-search">
-                                        <input type="text" placeholder="Поиск по направлениям">
-                                    </div>
-                                    <ul class="filter-list">
-                                        <li><button type="button" class="filter-option"
-                                                data-value="africa">Африка</button></li>
-                                        <li><button type="button" class="filter-option" data-value="latin">Латинская
-                                                Америка</button></li>
-                                        <li><button type="button" class="filter-option" data-value="asia">Азия</button>
-                                        </li>
-                                        <li><button type="button" class="filter-option" data-value="middle-east">Ближний
-                                                Восток</button></li>
-                                        <li><button type="button" class="filter-option"
-                                                data-value="europe">Европа</button></li>
-                                        <li><button type="button" class="filter-option" data-value="indian">Острова
-                                                Индийского океана</button></li>
-                                        <li><button type="button" class="filter-option" data-value="cis">Россия и страны
-                                                СНГ</button></li>
-                                        <li><button type="button" class="filter-option" data-value="caribbean">Карибский
-                                                регион</button></li>
-                                        <li><button type="button" class="filter-option"
-                                                data-value="antarctica">Антарктида</button></li>
-                                        <li><button type="button" class="filter-option"
-                                                data-value="arctic">Арктика</button></li>
-                                        <li><button type="button" class="filter-option"
-                                                data-value="north-america">Северная Америка</button></li>
-                                        <li><button type="button" class="filter-option" data-value="oceania">Австралия и
-                                                Океания</button></li>
-                                    </ul>
-                                </div>
-
-                                <!-- Уровень 1 — Страны -->
-                                <div class="filter-level" data-level="1" data-title="Страна" id="filter-country">
-                                    <div class="filter-search">
-                                        <input type="text" placeholder="Поиск по странам">
-                                    </div>
-                                    <ul class="filter-list">
-                                        <li><button type="button" class="filter-option"
-                                                data-value="botswana">Ботсвана</button></li>
-                                        <li><button type="button" class="filter-option"
-                                                data-value="egypt">Египет</button></li>
-                                        <li><button type="button" class="filter-option"
-                                                data-value="zambia">Замбия</button></li>
-                                        <li><button type="button" class="filter-option"
-                                                data-value="zimbabwe">Зимбабве</button></li>
-                                        <li><button type="button" class="filter-option"
-                                                data-value="kenya">Кения</button></li>
-                                    </ul>
-                                    <div class="filter-hint">Безвизовые страны и страны упрощенного въезда</div>
-                                </div>
-
-                                <!-- Уровень 1 — Виды отдыха -->
-                                <div class="filter-level" data-level="1" data-title="Вид отдыха" id="filter-type">
-                                    <ul class="filter-list">
-                                        <li><button type="button" class="filter-option">Корпоративные туры</button></li>
-                                        <li><button type="button" class="filter-option">Событийные туры</button></li>
-                                        <li>
-                                            <button type="button" class="filter-option" data-target="filter-excursion"
-                                                data-title="Экскурсионные туры">
-                                                <span class="fi-text">Экскурсионные туры</span>
-                                                <span class="fi-arrow">
-                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                        stroke-width="2">
-                                                        <path d="M9 18l6-6-6-6" />
-                                                    </svg>
-                                                </span>
-                                            </button>
-                                        </li>
-                                        <li><button type="button" class="filter-option">Гастрономические и винные
-                                                туры</button></li>
-                                        <li><button type="button" class="filter-option">Туры в мини-группах</button>
-                                        </li>
-                                        <li><button type="button" class="filter-option">Индивидуальные туры</button>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <!-- Уровень 2 — Экскурсионные туры -->
-                                <div class="filter-level" data-level="2" data-title="Экскурсионные туры"
-                                    id="filter-excursion">
-                                    <ul class="filter-list">
-                                        <li><button type="button" class="filter-option">Туры на Формулу-1</button></li>
-                                        <li><button type="button" class="filter-option">Туры на Формулу-1</button></li>
-                                    </ul>
-                                </div>
-
-                                <!-- Уровень 1 — Количество ночей -->
-                                <div class="filter-level" data-level="1" data-title="Количество ночей"
-                                    id="filter-nights">
-                                    <div class="filter-counter">
-                                        <div class="filter-counter__row">
-                                            <span>от</span>
-                                            <button type="button" class="filter-counter__btn minus">-</button>
-                                            <input type="text" class="filter-counter__input" readonly value="1">
-                                            <button type="button" class="filter-counter__btn plus">+</button>
-                                        </div>
-                                        <div class="filter-counter__row">
-                                            <span>до</span>
-                                            <button type="button" class="filter-counter__btn minus">-</button>
-                                            <input type="text" class="filter-counter__input" readonly value="5">
-                                            <button type="button" class="filter-counter__btn plus">+</button>
-                                        </div>
-                                    </div>
-                                    <button type="button" class="filter-apply">Применить</button>
-                                </div>
-
-                                <!-- Уровень 1 — Дата -->
-                                <div class="filter-level" data-level="1" data-title="Дата поездки" id="filter-date">
-                                    <div class="filter-calendar">
-                                        <input type="text" class="form-datapicker-mobile" placeholder="Выберите дату">
-                                    </div>
-                                    <button type="button" class="filter-apply">Применить</button>
-                                </div>
-
-                            </div>
-                        </div>
-                    </aside>
-
-                    <!-- Кнопка открытия фильтра -->
-                    <button type="button" class="filter-trigger" id="filterTrigger">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="11" cy="11" r="8" />
-                            <path d="M21 21l-4.35-4.35" />
-                        </svg>
-                        Подобрать путешествие
-                    </button>
                 </div>
-            </div>
-            <div class="main__bg">
-                <video width="1400" height="700" class="main__video lazy" muted loop autoplay playsinline loading="lazy"
-                    src="./assets/files/main.mp4" poster="./assets/img/home/main/preload.jpg"></video>
-            </div>
         </section>
 
 
@@ -1871,7 +1992,8 @@
                     <p class="koll__bottom">
                         Мы знаем, что истинная роскошь заключается не&nbsp;только в&nbsp;золоте и&nbsp;блеске, но
                         и&nbsp;в&nbsp;возможности испытывать новое, переживать непередаваемые эмоции и&nbsp;создавать
-                        воспоминания, которые станут частью вашей жизни. с&nbsp;нами вы&nbsp;увидите мир таким, каким не
+                        воспоминания, которые станут частью вашей жизни.<br> C&nbsp;нами вы&nbsp;увидите мир таким,
+                        каким не
                         увидит больше никто
                     </p>
                     <a href="#" class="koll__link">Все разделы</a>
@@ -2129,7 +2251,7 @@
                             </p>
                             <p>
                                 Позвольте вашим любимым почувствовать себя
-                                особенными, подарив им удивительное путешествие,
+                                особенными,&nbsp;подарив им удивительное путешествие,
                                 организованное с&nbsp;трепетом и&nbsp;вниманием к каждой детали
                             </p>
                         </div>
@@ -2192,7 +2314,8 @@
                                     Проверенные партнеры и&nbsp;отели
                                 </p>
                                 <p>
-                                    Мы сотрудничаем только с&nbsp;надежными партнерами и&nbsp;отелями, что гарантирует
+                                    Мы сотрудничаем только с&nbsp;надежными партнерами и&nbsp;отелями,
+                                    что&nbsp;гарантирует
                                     вам комфорт и&nbsp;безопасность
                                 </p>
                             </div>
@@ -2537,8 +2660,8 @@
                             Все статьи
                         </a>
                         <div class="slider__arrow">
-                            <div class="slider__prev news__prev"></div>
-                            <div class="slider__next news__next"></div>
+                            <div class="slider__prev news__slider-prev"></div>
+                            <div class="slider__next news__slider-next"></div>
                         </div>
                     </div>
                 </div>
@@ -3123,29 +3246,29 @@
         </a>
     </div>
 
-    <script src="./assets/js/components/lottie.js?_v=20250723061907"></script>
+    <script src="./assets/js/components/lottie.js"></script>
     <script src="./assets/js/components/gsap.min.js"></script>
-    <script src="./assets/js/components/MotionPathPlugin.js?_v=20250723061907"></script>
-    <script src="./assets/js/components/ScrollTrigger.js?_v=20250723061907"></script>
-    <script src="./assets/js/components/swiper.min.js?_v=20250723061907"></script>
-    <script src="./assets/js/components/jquery.min.js?_v=20250723061907"></script>
-    <script src="./assets/js/components/jquery.fancybox.js?_v=20250723061907"></script>
-    <script src="./assets/js/components/scrollClass.js?_v=20250723061907"></script>
-    <script src="./assets/js/components/accordion.js?_v=20250723061907"></script>
-    <script src="./assets/js/components/modalShow.js?_v=20250723061907"></script>
-    <script src="./assets/js/components/lazyload.js?_v=20250723061907"></script>
-    <script src="./assets/js/components/initYMap.js?_v=20250723061907"></script>
-    <script src="./assets/js/components/mask.js?_v=20250723061907"></script>
-    <script src="./assets/js/components/wow.js?_v=20250723061907"></script>
-    <script src="./assets/js/components/select2.js?_v=20250723061907"></script>
-    <script src="./assets/js/components/select2-dropdownPosition.js?_v=20250723061907"></script>
-    <script src="./assets/js/components/air-datepicker.js?_v=20250723061907"></script>
-    <script src="./assets/js/components/jquery.menu-aim.js?_v=20250723061907"></script>
-    <script src="./assets/js/components/modernizr.js?_v=20250723061907"></script>
-    <script src="./assets/js/components/mobMenu.js?_v=20250723061907"></script>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js?_v=20250723061907"></script>
+    <script src="./assets/js/components/MotionPathPlugin.js"></script>
+    <script src="./assets/js/components/ScrollTrigger.js"></script>
+    <script src="./assets/js/components/swiper.min.js"></script>
+    <script src="./assets/js/components/jquery.min.js"></script>
+    <script src="./assets/js/components/jquery.fancybox.js"></script>
+    <script src="./assets/js/components/scrollClass.js"></script>
+    <script src="./assets/js/components/accordion.js"></script>
+    <script src="./assets/js/components/modalShow.js"></script>
+    <script src="./assets/js/components/lazyload.js"></script>
+    <script src="./assets/js/components/initYMap.js"></script>
+    <script src="./assets/js/components/mask.js"></script>
+    <script src="./assets/js/components/wow.js"></script>
+    <script src="./assets/js/components/select2.js"></script>
+    <script src="./assets/js/components/select2-dropdownPosition.js"></script>
+    <script src="./assets/js/components/air-datepicker.js"></script>
+    <script src="./assets/js/components/jquery.menu-aim.js"></script>
+    <script src="./assets/js/components/modernizr.js"></script>
+    <script src="./assets/js/components/mobMenu.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20250723061907" type="text/javascript"></script>
-    <script src="./assets/js/app.js?_v=20250723061907"></script>
+    <script src="./assets/js/app.js"></script>
     <script src="./assets/js/components/script.js"></script>
 </body>
 

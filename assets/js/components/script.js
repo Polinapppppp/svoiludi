@@ -18,8 +18,6 @@
 
 document.addEventListener('DOMContentLoaded', function () {
   (function () {
-    const menuLevels = document.getElementById('menuLevels');
-    let currentLevel = 0;
     const overlay = document.getElementById('menuOverlay');
     const panel = document.getElementById('menuPanel');
     const menuNav = document.getElementById('menuNav');
@@ -115,36 +113,34 @@ document.addEventListener('DOMContentLoaded', function () {
       updateNavState();
     }
 
-
     function goForward(targetId) {
-    currentLevel++;
-
-    stack.push(targetId);
-
-    menuLevels.style.transform =
-        `translateX(-${currentLevel * 100}%)`;
-
-    menuNav.classList.add('visible');
-    updateBreadcrumbs();
-}
-
-
-    function goBack() {
-    if (!stack.length) return;
-
-    stack.pop();
-
-    currentLevel--;
-
-    menuLevels.style.transform =
-        `translateX(-${currentLevel * 100}%)`;
-
-    if (!stack.length) {
-        menuNav.classList.remove('visible');
+      const target = findLevel(targetId);
+      if (!target) return;
+      stack.push(targetId);
+      const current = document.querySelector('.menu-level.active');
+      if (current) current.classList.remove('active');
+      target.classList.add('active');
+      menuNav.classList.add('visible');
+      updateBreadcrumbs();
     }
 
-    updateBreadcrumbs();
-}
+    function goBack() {
+      if (stack.length === 0) return;
+
+      const currentId = stack.pop();
+      const current = findLevel(currentId);
+      if (current) current.classList.remove('active');
+
+      let prevId = stack.length > 0 ? stack[stack.length - 1] : 'level-0';
+      const prev = findLevel(prevId);
+      if (prev) prev.classList.add('active');
+
+      if (stack.length === 0) {
+        menuNav.classList.remove('visible');
+      }
+
+      updateBreadcrumbs();
+    }
 
     function openMenu() {
       isOpen = true;
@@ -184,11 +180,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (btnBack) {
       btnBack.addEventListener('click', (e) => {
         e.preventDefault();
-        e.stopPropagation();
-
-        if (menuNav.classList.contains('has-single')) {
-          goBack();
-        }
+        goBack();
       });
     }
 
@@ -207,22 +199,28 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  // ===== МОБИЛЬНЫЙ ФИЛЬТР =====
   (function () {
     const overlay = document.getElementById('filterOverlay');
+    const panelWrapper = document.getElementById('filterPanelWrapper');
     const panel = document.getElementById('filterPanel');
-    const btnBack = document.getElementById('filterBack');
     const btnClose = document.getElementById('filterClose');
-    const titleEl = document.getElementById('filterTitle');
     const trigger = document.getElementById('filterTrigger');
     const btnSubmit = document.getElementById('filterSubmit');
 
-    if (!panel) return;
+    const nightsModalOverlay = document.getElementById('nightsModalOverlay');
+    const nightsModal = document.getElementById('nightsModal');
+    const nightsApply = document.getElementById('nightsApply');
 
-    let stack = [];
+    const calendarModalOverlay = document.getElementById('calendarModalOverlay');
+    const calendarModal = document.getElementById('calendarModal');
+    const calendarApply = document.getElementById('calendarApply');
+
+    if (!panelWrapper) return;
+
     let isOpen = false;
+    let currentModal = null;
+    let datepickerInstance = null;
 
-    // Значения фильтра
     const values = {
       direction: '',
       country: '',
@@ -233,199 +231,283 @@ document.addEventListener('DOMContentLoaded', function () {
       date: ''
     };
 
-    function findLevel(id) { return document.getElementById(id); }
-
-    function getLevelTitle(id) {
-      const el = document.getElementById(id);
-      return el ? (el.dataset.title || '') : '';
+    function hasAnyValue() {
+      return values.direction || values.country || values.resort ||
+        values.type || values.date ||
+        values.nightsFrom !== '1' || values.nightsTo !== '5';
     }
 
-    function updateNav() {
-      if (stack.length > 0) {
-        titleEl.textContent = getLevelTitle(stack[stack.length - 1]);
-        btnBack.classList.add('visible');
-      } else {
-        titleEl.textContent = 'Подобрать путешествие';
-        btnBack.classList.remove('visible');
+    function updateSubmitButton() {
+      if (btnSubmit) {
+        btnSubmit.classList.toggle('active', hasAnyValue());
       }
-    }
-
-    function goForward(targetId) {
-      const target = findLevel(targetId);
-      if (!target) return;
-      stack.push(targetId);
-      const current = document.querySelector('.filter-level.active');
-      if (current) current.classList.remove('active');
-      target.classList.add('active');
-      updateNav();
-    }
-
-    function goBack() {
-      if (stack.length === 0) return;
-      const currentId = stack.pop();
-      const current = findLevel(currentId);
-      if (current) current.classList.remove('active');
-      const prevId = stack.length > 0 ? stack[stack.length - 1] : 'filter-level-0';
-      const prev = findLevel(prevId);
-      if (prev) prev.classList.add('active');
-      updateNav();
     }
 
     function openFilter() {
       isOpen = true;
+      const scrollY = window.scrollY;
+      document.body.classList.add('filter-open');
+      document.body.style.top = `-${scrollY}px`;
       overlay.classList.add('active');
-      panel.classList.add('active');
-      document.body.style.overflow = 'hidden';
+      panelWrapper.classList.add('active');
     }
 
     function closeFilter() {
+      closeAllModals();
       isOpen = false;
+      const scrollY = document.body.style.top;
+      document.body.classList.remove('filter-open');
+      document.body.style.top = '';
       overlay.classList.remove('active');
-      panel.classList.remove('active');
-      document.body.style.overflow = '';
+      panelWrapper.classList.remove('active');
+      window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    }
 
-      setTimeout(() => {
-        document.querySelectorAll('.filter-level').forEach(el => el.classList.remove('active'));
-        const l0 = document.getElementById('filter-level-0');
-        if (l0) l0.classList.add('active');
-        stack = [];
-        updateNav();
-      }, 350);
+    function openModal(modal, modalOverlay) {
+      currentModal = modal;
+      modalOverlay.classList.add('active');
+      modal.classList.add('active');
+    }
+
+    function closeModal(modal, modalOverlay) {
+      modalOverlay.classList.remove('active');
+      modal.classList.remove('active');
+      currentModal = null;
+    }
+
+    function closeAllModals() {
+      if (nightsModal) closeModal(nightsModal, nightsModalOverlay);
+      if (calendarModal) closeModal(calendarModal, calendarModalOverlay);
     }
 
     function updateDisplay() {
-      // Направление
-      const dirItem = document.querySelector('[data-target="filter-direction"] .fi-text');
-      if (dirItem) dirItem.textContent = values.direction || 'Выберите направление';
+      const dirEl = document.getElementById('val-direction');
+      if (dirEl) {
+        dirEl.textContent = values.direction || 'Выберите направление';
+        dirEl.classList.toggle('selected', !!values.direction);
+      }
 
-      // Страна
-      const countryItem = document.querySelector('[data-target="filter-country"] .fi-text');
-      if (countryItem) countryItem.textContent = values.country || 'Страна';
+      const countryEl = document.getElementById('val-country');
+      if (countryEl) {
+        countryEl.textContent = values.country || 'Страна';
+        countryEl.classList.toggle('selected', !!values.country);
+      }
 
-      // Город
-      const resortItem = document.querySelector('[data-target="filter-resort"] .fi-text');
-      if (resortItem) resortItem.textContent = values.resort || 'Город/Курорт';
+      const resortEl = document.getElementById('val-resort');
+      if (resortEl) {
+        resortEl.textContent = values.resort || 'Город/Курорт';
+        resortEl.classList.toggle('selected', !!values.resort);
+      }
 
-      // Вид отдыха
-      const typeItem = document.querySelector('[data-target="filter-type"] .fi-text');
-      if (typeItem) typeItem.textContent = values.type || 'Вид отдыха';
+      const typeEl = document.getElementById('val-type');
+      if (typeEl) {
+        typeEl.textContent = values.type || 'Вид отдыха';
+        typeEl.classList.toggle('selected', !!values.type);
+      }
 
-      // Ночи
-      const nightsItem = document.querySelector('[data-target="filter-nights"] .fi-text');
-      if (nightsItem) nightsItem.textContent = `${values.nightsFrom} - ${values.nightsTo}`;
+      const nightsEl = document.getElementById('val-nights');
+      if (nightsEl) {
+        nightsEl.textContent = `${values.nightsFrom} - ${values.nightsTo}`;
+        nightsEl.classList.add('selected');
+      }
 
-      // Дата
-      const dateItem = document.querySelector('[data-target="filter-date"] .fi-text');
-      if (dateItem) dateItem.textContent = values.date || 'Дата поездки';
+      const dateEl = document.getElementById('val-date');
+      if (dateEl) {
+        dateEl.textContent = values.date || 'Дата поездки';
+        dateEl.classList.toggle('selected', !!values.date);
+      }
+
+      updateSubmitButton();
     }
 
-    // Клики по панели
     panel.addEventListener('click', function (e) {
-      // Вперёд (айтемы с data-target)
-      const item = e.target.closest('[data-target]');
-      if (item && item.classList.contains('filter-item')) {
+      const nightsHeader = e.target.closest('[data-target="nights-modal"]');
+      if (nightsHeader) {
         e.preventDefault();
-        e.stopPropagation();
-        goForward(item.dataset.target);
+        document.querySelectorAll('.filter-section').forEach(s => s.classList.remove('open'));
+        openModal(nightsModal, nightsModalOverlay);
         return;
       }
 
-      // Вперёд (опции с подуровнями)
-      const subItem = e.target.closest('.filter-option[data-target]');
-      if (subItem) {
+      const dateHeader = e.target.closest('[data-target="calendar-modal"]');
+      if (dateHeader) {
         e.preventDefault();
-        e.stopPropagation();
-        goForward(subItem.dataset.target);
+        document.querySelectorAll('.filter-section').forEach(s => s.classList.remove('open'));
+        openModal(calendarModal, calendarModalOverlay);
+
+        if (!datepickerInstance && document.getElementById('air-datepicker-mobile')) {
+          datepickerInstance = new AirDatepicker('#air-datepicker-mobile', {
+            minDate: new Date(),
+            range: true,
+            multipleDatesSeparator: ' — ',
+            selectedDates: values.date ? values.date.split(' — ').map(d => {
+              const [day, month, year] = d.split('.');
+              return new Date(`${year}-${month}-${day}`);
+            }) : [],
+            onSelect: ({ date, formattedDate, datepicker }) => {
+              if (date.length === 2) {
+                values.date = formattedDate;
+              }
+            }
+          });
+        }
         return;
       }
 
-      // Выбор опции (без подуровня)
-      const option = e.target.closest('.filter-option:not([data-target])');
+      const header = e.target.closest('.filter-section__header');
+      if (header && !header.dataset.target?.includes('modal')) {
+        e.preventDefault();
+        const section = header.closest('.filter-section');
+        const wasOpen = section.classList.contains('open');
+
+        document.querySelectorAll('.filter-section').forEach(s => s.classList.remove('open'));
+
+        if (!wasOpen) {
+          section.classList.add('open');
+        }
+        return;
+      }
+
+      const option = e.target.closest('.filter-option:not(.filter-option--has-child):not(.filter-sublevel__back)');
       if (option) {
         e.preventDefault();
-        const value = option.dataset.value || option.textContent.trim();
-        const parentLevel = option.closest('.filter-level');
+        const value = option.textContent.trim();
+        const section = option.closest('.filter-section');
+        const sublevel = option.closest('.filter-sublevel');
 
-        // Определяем поле
-        if (parentLevel.id === 'filter-direction') values.direction = value;
-        else if (parentLevel.id === 'filter-country') values.country = value;
-        else if (parentLevel.id === 'filter-resort') values.resort = value;
-        else if (parentLevel.id === 'filter-type' || parentLevel.id === 'filter-excursion') values.type = value;
+        if (section.id === 'sec-direction') values.direction = value;
+        else if (section.id === 'sec-country') values.country = value;
+        else if (section.id === 'sec-resort') values.resort = value;
+        else if (section.id === 'sec-type' || sublevel) values.type = value;
 
-        // Подсветка
-        parentLevel.querySelectorAll('.filter-option').forEach(opt => opt.classList.remove('selected'));
+        const list = option.closest('.filter-list');
+        list.querySelectorAll('.filter-option').forEach(opt => opt.classList.remove('selected'));
         option.classList.add('selected');
 
         updateDisplay();
-        goBack();
+
+        if (sublevel) {
+          sublevel.classList.remove('active');
+        }
+        section.classList.remove('open');
         return;
       }
 
-      // Счётчик
-      const counterBtn = e.target.closest('.filter-counter__btn');
-      if (counterBtn) {
-        const input = counterBtn.parentElement.querySelector('.filter-counter__input');
-        let val = parseInt(input.value) || 0;
-        if (counterBtn.classList.contains('plus')) val++;
-        else val = Math.max(1, val - 1);
-        input.value = val;
-
-        const row = counterBtn.closest('.filter-counter__row');
-        if (row.querySelector('span').textContent === 'от') values.nightsFrom = val;
-        else values.nightsTo = val;
+      const hasChild = e.target.closest('.filter-option--has-child');
+      if (hasChild) {
+        e.preventDefault();
+        const targetId = hasChild.dataset.target;
+        const sublevel = document.getElementById(targetId);
+        if (sublevel) {
+          const isActive = sublevel.classList.toggle('active');
+          hasChild.classList.toggle('open', isActive);
+        }
         return;
       }
 
-      // Применить (ночи)
-      const applyNights = e.target.closest('.filter-apply');
-      if (applyNights && applyNights.closest('#filter-nights')) {
-        updateDisplay();
-        goBack();
-        return;
-      }
-
-      // Применить (дата)
-      const applyDate = e.target.closest('.filter-apply');
-      if (applyDate && applyDate.closest('#filter-date')) {
-        const dateInput = document.querySelector('.form-datapicker-mobile');
-        if (dateInput) values.date = dateInput.value;
-        updateDisplay();
-        goBack();
+      const backBtn = e.target.closest('.filter-sublevel__back');
+      if (backBtn) {
+        e.preventDefault();
+        const parentId = backBtn.dataset.parent;
+        const parent = document.getElementById(parentId);
+        if (parent) parent.classList.remove('active');
         return;
       }
     });
 
-    // Кнопки
+    if (nightsModal) {
+      nightsModal.addEventListener('click', function (e) {
+        const counterBtn = e.target.closest('.filter-counter__btn');
+        if (counterBtn) {
+          const target = counterBtn.dataset.target;
+          const input = document.getElementById(`${target}-input`);
+          let val = parseInt(input.value) || 0;
+
+          if (counterBtn.classList.contains('plus')) {
+            val++;
+          } else {
+            val = Math.max(1, val - 1);
+          }
+
+          input.value = val;
+          return;
+        }
+
+        if (e.target.closest('#nightsApply')) {
+          e.preventDefault();
+          values.nightsFrom = document.getElementById('nights-from-input').value;
+          values.nightsTo = document.getElementById('nights-to-input').value;
+          updateDisplay();
+          closeModal(nightsModal, nightsModalOverlay);
+          return;
+        }
+      });
+
+      nightsModal.querySelectorAll('.filter-counter__input').forEach(input => {
+        input.addEventListener('change', function () {
+          let val = parseInt(this.value) || 1;
+          val = Math.max(1, val);
+          this.value = val;
+        });
+      });
+    }
+
+    if (calendarApply) {
+      calendarApply.addEventListener('click', function (e) {
+        e.preventDefault();
+        updateDisplay();
+        closeModal(calendarModal, calendarModalOverlay);
+      });
+    }
+
+    if (nightsModalOverlay) {
+      nightsModalOverlay.addEventListener('click', () => closeModal(nightsModal, nightsModalOverlay));
+    }
+    if (calendarModalOverlay) {
+      calendarModalOverlay.addEventListener('click', () => closeModal(calendarModal, calendarModalOverlay));
+    }
     if (trigger) trigger.addEventListener('click', (e) => { e.preventDefault(); openFilter(); });
-    if (btnBack) btnBack.addEventListener('click', (e) => { e.preventDefault(); goBack(); });
     if (btnClose) btnClose.addEventListener('click', (e) => { e.preventDefault(); closeFilter(); });
     if (overlay) overlay.addEventListener('click', closeFilter);
 
-    // Submit
+
     if (btnSubmit) {
       btnSubmit.addEventListener('click', () => {
+        if (!hasAnyValue()) return;
         console.log('Filter values:', values);
-        // Здесь отправка формы
         closeFilter();
       });
     }
 
-    // Escape
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && isOpen) {
-        stack.length > 0 ? goBack() : closeFilter();
-      }
+    const searchInputs = panel.querySelectorAll('.filter-search input');
+    searchInputs.forEach(input => {
+      input.addEventListener('input', function () {
+        const query = this.value.toLowerCase().trim();
+        const section = this.closest('.filter-section');
+        const options = section.querySelectorAll('.filter-list > li:not(:has(.filter-sublevel)) .filter-option, .filter-list > li > .filter-option:not(.filter-option--has-child)');
+
+        options.forEach(option => {
+          const text = option.textContent.toLowerCase();
+          const li = option.closest('li');
+          if (text.includes(query)) {
+            li.style.display = '';
+          } else {
+            li.style.display = 'none';
+          }
+        });
+      });
     });
 
-    // Календарь
-    if (document.querySelector('.form-datapicker-mobile')) {
-      new AirDatepicker('.form-datapicker-mobile', {
-        minDate: new Date(),
-        range: true,
-        isMobile: true,
-        multipleDatesSeparator: ' — '
-      });
-    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (currentModal) {
+          closeAllModals();
+        } else if (isOpen) {
+          closeFilter();
+        }
+      }
+    });
 
     console.log('Mobile filter initialized!');
   })();
