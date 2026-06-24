@@ -118,8 +118,10 @@ document.addEventListener('DOMContentLoaded', function () {
       if (!target) return;
       stack.push(targetId);
       const current = document.querySelector('.menu-level.active');
-      if (current) current.classList.remove('active');
       target.classList.add('active');
+setTimeout(() => {
+  if (current) current.classList.remove('active');
+}, 10);
       menuNav.classList.add('visible');
       updateBreadcrumbs();
     }

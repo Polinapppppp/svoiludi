@@ -1178,6 +1178,35 @@ document.addEventListener('DOMContentLoaded', () => {
         return false;
     })
 
+    // Мобильные иконки — показываем от .gran.lazy.entered до футера
+let $fixedIconsMobile = $('.fixed-icons__mobile');
+let $granBlock = $('.put');
+
+function checkFooterMobile() {
+    if (!$granBlock.length || !$footer.length || !$fixedIconsMobile.length) return;
+
+    let granTop = $granBlock.offset().top;
+    let footerTop = $footer.offset().top;
+    let scrollTop = $(window).scrollTop();
+    let scrollBottom = scrollTop + $(window).height();
+
+    // Показываем: если скролл прошёл .gran и ещё не дошёл до футера
+    if (scrollBottom >= granTop && scrollTop + $(window).height() < footerTop) {
+        $fixedIconsMobile.addClass('active');
+    } else {
+        $fixedIconsMobile.removeClass('active');
+    }
+}
+
+$(window).on('scroll resize', checkFooterMobile);
+checkFooterMobile();
+
+// Плавная прокрутка вверх для мобильной версии
+$('.top-scroll-mobile').on('click', function () {
+    $('html, body').animate({ scrollTop: 0 }, 300, 'swing');
+    return false;
+});
+
     $('.js-readmore').each(function () {
         const $container = $(this);
         const $content = $container.find('.readmore__content');

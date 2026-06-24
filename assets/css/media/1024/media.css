@@ -1712,6 +1712,126 @@
       transform: translateX(30px);
     }
   }
+
+  .fixed-icons {
+    display: none;
+  }
+
+  .fixed-icons__mobile {
+    position: fixed;
+    right: 2.77778vw;
+    bottom: 2.77778vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 100 !important;
+    gap: 10px;
+  }
+
+  .fixed-icons__mobile .up {
+    z-index: 20;
+    background-color: transparent;
+    border: 1px solid #323D48;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 13.23529vw;
+    height: 13.23529vw;
+    transition: all 0.3s;
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .fixed-icons__mobile .up img {
+    width: 6.47059vw;
+    height: 6.47059vw;
+    -o-object-fit: contain;
+    object-fit: contain;
+    color: #323D48;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(131deg) brightness(103%) contrast(101%);
+  }
+
+  .fixed-icons__mobile .search-mobile {
+    z-index: 20;
+    background-color: #323D48;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 13.23529vw;
+    height: 13.23529vw;
+    transition: all 0.3s;
+    opacity: 1;
+    pointer-events: all;
+    border-radius: 50%;
+  }
+
+
+  .mess-mobile {
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 13.23529vw;
+    height: 13.23529vw;
+    transition: all 0.3s;
+  }
+
+  .mess-mobile img {
+    width: 13.23529vw;
+    height: 13.23529vw;
+  }
+
+
+}
+
+.fixed-icons__mobile {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .fixed-icons__mobile {
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  }
+
+  .fixed-icons__mobile.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .fixed-icons {
+    display: none !important;
+  }
+
+  /* .mess-mobile {
+    transform: translateY(100%);
+  } */
+
+  .mess-mobile.active {
+    transform: translateY(-0.41667vw);
+    position: relative;
+    z-index: 1000;
+    transition: 0.7s all ease;
+  }
+
+  /* .fixed-icons__mobile .search-mobile {
+    transform: translateY(100%);
+  } */
+
+  .fixed-icons__mobile .search-mobile.active {
+    transform: translateY(-0.41667vw);
+    position: relative;
+    z-index: 1000;
+    transition: 0.7s all ease;
+  }
 }
 
 
