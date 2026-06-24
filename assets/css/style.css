@@ -3113,9 +3113,10 @@ section.news {
 }
 
 .tmr__btn:hover {
-  background-color: #fff;
+  background-color: rgba(226, 26, 85, 1);
+    border-color: rgba(226, 26, 85, 1);
+
   transition: 0.5s ease;
-  color: #323D48;
 }
 
 section.mailing {
@@ -4319,6 +4320,6 @@ body {
 
   .header .container{
     padding: 0 2.08333vw;
-
+    max-width: 100%;
   }
 }
