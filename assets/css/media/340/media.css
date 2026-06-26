@@ -1509,7 +1509,6 @@
     text-align: left;
     min-height: auto;
     position: relative;
-    overflow: hidden;
   }
 
   .gran p {
@@ -5174,10 +5173,9 @@
   }
 
   .gran svg #plaine {
-    transform: translateX(-20px) scale(1.7);
-    width: 6vw;
-    height: auto;
-  }
+  width: 6vw;
+  height: auto;
+}
 
   .mobile-filter__open_wrapper {
     bottom: 20px;

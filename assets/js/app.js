@@ -92,33 +92,45 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
 
-        gsap.registerPlugin(MotionPathPlugin);
+        gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
+
+        let planeTween;
+        let currentWidth = window.innerWidth;
 
         function initPlaneAnimation() {
-            gsap.killTweensOf("#plaine");
+            const isMobile = window.innerWidth <= 768;
 
-            const isMobile = window.innerWidth <= 680;
-            const put = document.querySelector('#put');
-
-            if (isMobile && put) {
-                const bbox = put.getBBox();
-                const centerX = bbox.x + bbox.width / 2;
+            if (planeTween) {
+                planeTween.scrollTrigger?.kill();
+                planeTween.kill();
             }
 
-            gsap.set("#plaine", { clearProps: "all" });
+            gsap.set("#plaine", {
+                clearProps: "all"
+            });
 
-            gsap.to("#plaine", {
-                duration: 5,
-                scrollTrigger: {
-                    trigger: '.gran',
-                    start: isMobile ? 'top 100%' : "top 50%",
-                    scrub: 2,
-                },
+            if (isMobile) {
+                gsap.set("#plaine", {
+                    x: -20,
+                    scale: 1.7,
+                    transformOrigin: "50% 50%"
+                });
+            }
+
+            planeTween = gsap.to("#plaine", {
+                ease: "none",
                 motionPath: {
                     path: "#put",
                     align: "#put",
                     autoRotate: true,
                     alignOrigin: [0.5, 0.5]
+                },
+                scrollTrigger: {
+                    trigger: ".gran",
+                    start: isMobile ? "top 100%" : "top 50%",
+                    end: "bottom top",
+                    scrub: 0.5,
+                    invalidateOnRefresh: true
                 }
             });
         }
@@ -126,8 +138,14 @@ document.addEventListener('DOMContentLoaded', () => {
         initPlaneAnimation();
 
         let resizeTimer;
-        window.addEventListener('resize', () => {
+
+        window.addEventListener("resize", () => {
+            if (window.innerWidth === currentWidth) return;
+
+            currentWidth = window.innerWidth;
+
             clearTimeout(resizeTimer);
+
             resizeTimer = setTimeout(() => {
                 ScrollTrigger.refresh();
                 initPlaneAnimation();
@@ -1178,34 +1196,31 @@ document.addEventListener('DOMContentLoaded', () => {
         return false;
     })
 
-    // Мобильные иконки — показываем от .gran.lazy.entered до футера
-let $fixedIconsMobile = $('.fixed-icons__mobile');
-let $granBlock = $('.put');
+    let $fixedIconsMobile = $('.fixed-icons__mobile');
+    let $granBlock = $('.put');
 
-function checkFooterMobile() {
-    if (!$granBlock.length || !$footer.length || !$fixedIconsMobile.length) return;
+    function checkFooterMobile() {
+        if (!$granBlock.length || !$footer.length || !$fixedIconsMobile.length) return;
 
-    let granTop = $granBlock.offset().top;
-    let footerTop = $footer.offset().top;
-    let scrollTop = $(window).scrollTop();
-    let scrollBottom = scrollTop + $(window).height();
+        let granTop = $granBlock.offset().top;
+        let footerTop = $footer.offset().top;
+        let scrollTop = $(window).scrollTop();
+        let scrollBottom = scrollTop + $(window).height();
 
-    // Показываем: если скролл прошёл .gran и ещё не дошёл до футера
-    if (scrollBottom >= granTop && scrollTop + $(window).height() < footerTop) {
-        $fixedIconsMobile.addClass('active');
-    } else {
-        $fixedIconsMobile.removeClass('active');
+        if (scrollBottom >= granTop && scrollTop + $(window).height() < footerTop) {
+            $fixedIconsMobile.addClass('active');
+        } else {
+            $fixedIconsMobile.removeClass('active');
+        }
     }
-}
 
-$(window).on('scroll resize', checkFooterMobile);
-checkFooterMobile();
+    $(window).on('scroll resize', checkFooterMobile);
+    checkFooterMobile();
 
-// Плавная прокрутка вверх для мобильной версии
-$('.top-scroll-mobile').on('click', function () {
-    $('html, body').animate({ scrollTop: 0 }, 300, 'swing');
-    return false;
-});
+    $('.top-scroll-mobile').on('click', function () {
+        $('html, body').animate({ scrollTop: 0 }, 300, 'swing');
+        return false;
+    });
 
     $('.js-readmore').each(function () {
         const $container = $(this);
