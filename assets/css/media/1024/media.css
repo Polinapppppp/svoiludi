@@ -1717,17 +1717,6 @@
     display: none;
   }
 
-  .fixed-icons__mobile {
-    position: fixed;
-    right: 2.77778vw;
-    bottom: 2.77778vw;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    z-index: 100 !important;
-    gap: 10px;
-  }
-
   .fixed-icons__mobile .up {
     z-index: 20;
     background-color: transparent;
@@ -1790,48 +1779,57 @@
 
 @media (max-width: 1024px) {
   .fixed-icons__mobile {
-    display: flex;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 100;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(20px);
-    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-  }
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .4s ease;
+}
 
-  .fixed-icons__mobile.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
+.top-scroll-mobile {
+  position: relative;
+  z-index: 3;
+}
 
-  .fixed-icons {
-    display: none !important;
-  }
+.search-mobile,
+.mess-mobile {
+  position: absolute;
+  right: 0;
+  transition: transform 0.7s ease;
+}
 
-  /* .mess-mobile {
-    transform: translateY(100%);
-  } */
+.search-mobile {
+  bottom: 0;
+  transform: translateY(0);
+  z-index: 1;
+}
 
-  .mess-mobile.active {
-    transform: translateY(-0.41667vw);
-    position: relative;
-    z-index: 1000;
-    transition: 0.7s all ease;
-  }
+.mess-mobile {
+  bottom: 0;
+  transform: translateY(0);
+  z-index: 25;
+}
 
-  /* .fixed-icons__mobile .search-mobile {
-    transform: translateY(100%);
-  } */
+.search-mobile.active {
+  transform: translateY(-64px);
+}
 
-  .fixed-icons__mobile .search-mobile.active {
-    transform: translateY(-0.41667vw);
-    position: relative;
-    z-index: 1000;
-    transition: 0.7s all ease;
-  }
+.mess-mobile.active {
+  transform: translateY(-128px);
+}
+.fixed-icons__mobile.visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
 }
 
 
@@ -1850,7 +1848,9 @@
 
   .filter-panel__wrapper.active~.fixed-icons,
   .filter-panel__wrapper.active+.fixed-icons,
-  body:has(.filter-panel__wrapper.active) .fixed-icons {
+  body:has(.filter-panel__wrapper.active) .fixed-icons,
+  body:has(.filter-panel__wrapper.active) .fixed-icons__mobile {
+
     display: none !important;
   }
 
@@ -1863,3 +1863,4 @@
     display: none !important;
   }
 }
+

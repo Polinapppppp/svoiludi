@@ -178,6 +178,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
         observer.observe(document.querySelector("section"))
     }
+
+    ScrollTrigger.create({
+        trigger: '.gran',
+        start: 'top 70%',
+        endTrigger: 'footer',
+        end: 'top bottom',
+        toggleClass: {
+            targets: '.fixed-icons__mobile',
+            className: 'visible'
+        }
+    });
+
+    ScrollTrigger.create({
+        trigger: '.gran',
+        start: 'top 70%',
+        endTrigger: 'footer',
+        end: 'top bottom',
+        toggleClass: {
+            targets: ['.mess-mobile', '.search-mobile'],
+            className: 'active'
+        }
+    });
     if (!localStorage.getItem('notificationShown')) {
         const notification = document.querySelector('.notification');
 

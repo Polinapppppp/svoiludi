@@ -119,9 +119,9 @@ document.addEventListener('DOMContentLoaded', function () {
       stack.push(targetId);
       const current = document.querySelector('.menu-level.active');
       target.classList.add('active');
-setTimeout(() => {
-  if (current) current.classList.remove('active');
-}, 10);
+      setTimeout(() => {
+        if (current) current.classList.remove('active');
+      }, 10);
       menuNav.classList.add('visible');
       updateBreadcrumbs();
     }
@@ -207,6 +207,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const panel = document.getElementById('filterPanel');
     const btnClose = document.getElementById('filterClose');
     const trigger = document.getElementById('filterTrigger');
+    const triggerMobile = document.getElementById('filterTriggerMobile');
     const btnSubmit = document.getElementById('filterSubmit');
 
     const nightsModalOverlay = document.getElementById('nightsModalOverlay');
@@ -216,6 +217,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const calendarModalOverlay = document.getElementById('calendarModalOverlay');
     const calendarModal = document.getElementById('calendarModal');
     const calendarApply = document.getElementById('calendarApply');
+
+    
 
     if (!panelWrapper) return;
 
@@ -513,4 +516,132 @@ document.addEventListener('DOMContentLoaded', function () {
 
     console.log('Mobile filter initialized!');
   })();
+});
+
+(function () {
+  'use strict';
+
+  const MOBILE_BREAKPOINT = 768;
+
+  let originalState = null;
+
+  function initMobileReorder() {
+    const mapSection = document.querySelector('.map');
+    const napSection = document.querySelector('.nap');
+    const dreamSection = document.querySelector('.dream');
+
+    if (!mapSection || !napSection || !dreamSection) {
+      console.warn('[MobileReorder] Не найдены необходимые секции (.map, .nap, .dream)');
+      return;
+    }
+
+    if (!originalState) {
+      originalState = {
+        napParent: napSection.parentNode,
+        napNext: napSection.nextElementSibling,
+        dreamParent: dreamSection.parentNode,
+        dreamNext: dreamSection.nextElementSibling
+      };
+    }
+
+    function applyMobileOrder() {
+      mapSection.insertAdjacentElement('afterend', napSection);
+      napSection.insertAdjacentElement('afterend', dreamSection);
+    }
+
+    function restoreDesktopOrder() {
+      if (originalState.napNext) {
+        originalState.napParent.insertBefore(napSection, originalState.napNext);
+      } else {
+        originalState.napParent.appendChild(napSection);
+      }
+
+      if (originalState.dreamNext) {
+        originalState.dreamParent.insertBefore(dreamSection, originalState.dreamNext);
+      } else {
+        originalState.dreamParent.appendChild(dreamSection);
+      }
+    }
+
+    function checkAndApply() {
+      const isMobile = window.innerWidth <= MOBILE_BREAKPOINT;
+
+      if (isMobile) {
+        if (napSection.previousElementSibling !== mapSection) {
+          applyMobileOrder();
+        }
+      } else {
+        if (napSection.previousElementSibling === mapSection ||
+          (dreamSection.previousElementSibling === napSection)) {
+          restoreDesktopOrder();
+        }
+      }
+    }
+
+    checkAndApply();
+
+    let resizeTimer;
+    window.addEventListener('resize', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(checkAndApply, 150);
+    });
+
+    window.addEventListener('orientationchange', function () {
+      setTimeout(checkAndApply, 300);
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileReorder);
+  } else {
+    initMobileReorder();
+  }
+})();
+
+document.addEventListener('DOMContentLoaded', function() {
+    var btn = document.getElementById('filterTriggerMobile');
+    var filterPanelWrapper = document.getElementById('filterPanelWrapper');
+    var filterOverlay = document.getElementById('filterOverlay');
+    var filterClose = document.getElementById('filterClose');
+    var fixedIconsMobile = document.querySelector('.fixed-icons__mobile');
+    var scrollPosition = 0;
+
+    if (!btn || !filterPanelWrapper || !filterOverlay) return;
+
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+        filterPanelWrapper.classList.add('active');
+        filterOverlay.classList.add('active');
+        document.body.classList.add('filter-open');
+
+        document.documentElement.style.scrollBehavior = 'auto';
+        window.scrollTo(0, scrollPosition);
+        document.documentElement.style.scrollBehavior = '';
+
+        if (fixedIconsMobile) {
+            fixedIconsMobile.classList.remove('visible');
+        }
+    });
+
+    function closeFilter() {
+        filterPanelWrapper.classList.remove('active');
+        filterOverlay.classList.remove('active');
+        document.body.classList.remove('filter-open');
+
+        document.documentElement.style.scrollBehavior = 'auto';
+        window.scrollTo(0, scrollPosition);
+        document.documentElement.style.scrollBehavior = '';
+    }
+
+    if (filterClose) {
+        filterClose.addEventListener('click', closeFilter);
+    }
+
+    if (filterOverlay) {
+        filterOverlay.addEventListener('click', closeFilter);
+    }
 });
