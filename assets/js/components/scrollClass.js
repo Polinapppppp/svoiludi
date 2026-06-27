@@ -7,12 +7,13 @@ const scrollClass = () => {
     const scrollChange = 1
 
     const add_class_on_scroll = () => {
-        menu.classList.add("fixed")
-        header.classList.add("fixed")
+        if (menu) menu.classList.add("fixed")
+        if (header) header.classList.add("fixed")
     }
+    
     const remove_class_on_scroll = () => {
-        menu.classList.remove("fixed")
-        header.classList.remove("fixed")
+        if (menu) menu.classList.remove("fixed")
+        if (header) header.classList.remove("fixed")
     }
 
     if (scrollpos > 10) {
@@ -24,9 +25,7 @@ const scrollClass = () => {
 
         if (scrollpos >= scrollChange) { add_class_on_scroll() }
         else { remove_class_on_scroll() }
-    
     })
-
-
 }
 
+scrollClass()

@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(document.querySelector("section"))
     }
 
-    ScrollTrigger.create({
+   /*  ScrollTrigger.create({
         trigger: '.gran',
         start: 'top 70%',
         endTrigger: 'footer',
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
             targets: '.fixed-icons__mobile',
             className: 'visible'
         }
-    });
+    }); */
 
     ScrollTrigger.create({
         trigger: '.gran',

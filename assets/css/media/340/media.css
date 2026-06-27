@@ -2138,7 +2138,8 @@
 
   .main {
     padding: 42.94118vw 2.94118vw;
-    max-height: 100vh;
+    height: 100%;
+  min-height: 100svh;
     height: calc(100svh - 14.70588vw - 5.88235vw);
     margin: 0 10px;
   }

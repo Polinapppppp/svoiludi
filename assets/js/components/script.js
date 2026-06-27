@@ -218,13 +218,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const calendarModal = document.getElementById('calendarModal');
     const calendarApply = document.getElementById('calendarApply');
 
-    
-
     if (!panelWrapper) return;
 
     let isOpen = false;
     let currentModal = null;
     let datepickerInstance = null;
+    let scrollPosition = 0;
 
     const values = {
       direction: '',
@@ -248,11 +247,22 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
 
+    function getScrollbarWidth() {
+      return window.innerWidth - document.documentElement.clientWidth;
+    }
+
     function openFilter() {
       isOpen = true;
-      const scrollY = window.scrollY;
+      scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      var scrollbarWidth = getScrollbarWidth();
+      document.body.style.paddingRight = scrollbarWidth + 'px';
+      var header = document.querySelector('header');
+      if (header) header.style.paddingRight = scrollbarWidth + 'px';
+      document.body.style.top = '-' + scrollPosition + 'px';
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
+      document.body.style.overflow = 'hidden';
       document.body.classList.add('filter-open');
-      document.body.style.top = `-${scrollY}px`;
       overlay.classList.add('active');
       panelWrapper.classList.add('active');
     }
@@ -260,23 +270,30 @@ document.addEventListener('DOMContentLoaded', function () {
     function closeFilter() {
       closeAllModals();
       isOpen = false;
-      const scrollY = document.body.style.top;
-      document.body.classList.remove('filter-open');
-      document.body.style.top = '';
-      overlay.classList.remove('active');
       panelWrapper.classList.remove('active');
-      window.scrollTo(0, parseInt(scrollY || '0') * -1);
+      overlay.classList.remove('active');
+      document.body.classList.remove('filter-open');
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      document.body.style.paddingRight = '';
+      var header = document.querySelector('header');
+      if (header) header.style.paddingRight = '';
+      document.documentElement.style.scrollBehavior = 'auto';
+      window.scrollTo(0, scrollPosition);
+      document.documentElement.style.scrollBehavior = '';
     }
 
     function openModal(modal, modalOverlay) {
       currentModal = modal;
-      modalOverlay.classList.add('active');
-      modal.classList.add('active');
+      if (modalOverlay) modalOverlay.classList.add('active');
+      if (modal) modal.classList.add('active');
     }
 
     function closeModal(modal, modalOverlay) {
-      modalOverlay.classList.remove('active');
-      modal.classList.remove('active');
+      if (modalOverlay) modalOverlay.classList.remove('active');
+      if (modal) modal.classList.remove('active');
       currentModal = null;
     }
 
@@ -472,9 +489,9 @@ document.addEventListener('DOMContentLoaded', function () {
       calendarModalOverlay.addEventListener('click', () => closeModal(calendarModal, calendarModalOverlay));
     }
     if (trigger) trigger.addEventListener('click', (e) => { e.preventDefault(); openFilter(); });
+    if (triggerMobile) triggerMobile.addEventListener('click', (e) => { e.preventDefault(); openFilter(); });
     if (btnClose) btnClose.addEventListener('click', (e) => { e.preventDefault(); closeFilter(); });
     if (overlay) overlay.addEventListener('click', closeFilter);
-
 
     if (btnSubmit) {
       btnSubmit.addEventListener('click', () => {
@@ -502,7 +519,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
       });
     });
-
 
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
@@ -597,51 +613,25 @@ document.addEventListener('DOMContentLoaded', function () {
     initMobileReorder();
   }
 })();
-
-document.addEventListener('DOMContentLoaded', function() {
-    var btn = document.getElementById('filterTriggerMobile');
-    var filterPanelWrapper = document.getElementById('filterPanelWrapper');
-    var filterOverlay = document.getElementById('filterOverlay');
-    var filterClose = document.getElementById('filterClose');
-    var fixedIconsMobile = document.querySelector('.fixed-icons__mobile');
-    var scrollPosition = 0;
-
-    if (!btn || !filterPanelWrapper || !filterOverlay) return;
-
-    btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-
-        scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-
-        filterPanelWrapper.classList.add('active');
-        filterOverlay.classList.add('active');
-        document.body.classList.add('filter-open');
-
-        document.documentElement.style.scrollBehavior = 'auto';
-        window.scrollTo(0, scrollPosition);
-        document.documentElement.style.scrollBehavior = '';
-
-        if (fixedIconsMobile) {
-            fixedIconsMobile.classList.remove('visible');
-        }
-    });
-
-    function closeFilter() {
-        filterPanelWrapper.classList.remove('active');
-        filterOverlay.classList.remove('active');
-        document.body.classList.remove('filter-open');
-
-        document.documentElement.style.scrollBehavior = 'auto';
-        window.scrollTo(0, scrollPosition);
-        document.documentElement.style.scrollBehavior = '';
+(function () {
+  var fixedIcons = document.querySelector('.fixed-icons__mobile');
+  var gran = document.querySelector('.gran__title');
+  var footer = document.querySelector('.footer');
+  if (!fixedIcons || !gran || !footer) return;
+  function checkIcons() {
+    var viewportHeight = window.innerHeight;
+    var granRect = gran.getBoundingClientRect();
+    var footerRect = footer.getBoundingClientRect();
+    var afterGranStart = granRect.top < viewportHeight;
+    var beforeFooter = footerRect.top > viewportHeight;
+    if (afterGranStart && beforeFooter) {
+      fixedIcons.classList.add('visible');
+    } else {
+      fixedIcons.classList.remove('visible');
     }
+  }
 
-    if (filterClose) {
-        filterClose.addEventListener('click', closeFilter);
-    }
-
-    if (filterOverlay) {
-        filterOverlay.addEventListener('click', closeFilter);
-    }
-});
+  window.addEventListener('scroll', checkIcons, { passive: true });
+  window.addEventListener('resize', checkIcons);
+  checkIcons();
+})();
