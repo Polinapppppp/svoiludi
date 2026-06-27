@@ -3681,7 +3681,7 @@ textarea {
   font-weight: 400;
   font-size: 12px;
   line-height: 110%;
-  top: 2px;
+  top: 0;
 }
 
 .footer__copy-policy {
