@@ -818,7 +818,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             slidesPerView: 1,
                             spaceBetween: marginRightVW(20),
                             centeredSlides: true,
-                        }
+                        },
                     }
                 });
             });

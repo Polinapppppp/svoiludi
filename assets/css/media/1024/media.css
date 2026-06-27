@@ -245,6 +245,11 @@
     margin-bottom: 30px;
   }
 
+  .koll_bottom:has(> .koll__bottom + .koll__link) .koll__bottom,
+  .koll_bottom:has(> .koll__link + .koll__bottom) .koll__bottom {
+    max-width: 600px;
+  }
+
   .features .section__title {
     margin-bottom: 30px;
   }

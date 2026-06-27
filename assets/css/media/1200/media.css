@@ -4,8 +4,8 @@
     }
 
     .header .container {
-           max-width: 100%;
-    padding: 0 2.08333vw;
+        max-width: 100%;
+        padding: 0 2.08333vw;
     }
 
     .header__row {
@@ -13,7 +13,7 @@
         gap: 20px;
     }
 
-    .header__cont{
+    .header__cont {
         font-size: 0.83333vw;
     }
 
@@ -116,7 +116,7 @@
         transform: translate(100%, -50%);
     }
 
-   
+
 
     .koll__title {
         padding: 20px 18px 22px 20px;
@@ -128,7 +128,7 @@
         font-size: 1.11111vw;
     }
 
-    .koll__link{
+    .koll__link {
         padding: 2vw;
     }
 
@@ -137,9 +137,10 @@
     }
 
     .org__info {
-        max-width: 500px;
         padding: 30px 0 35px;
+        max-width: 42.6vw;
     }
+
 
     .org__info-top {
         padding: 0 30px 20px;
@@ -190,19 +191,19 @@
         font-size: 40px;
     }
 
-    .features__list{
+    .features__list {
         gap: 2.36111vw;
     }
 
-    .features .section__title{
+    .features .section__title {
         margin-bottom: 3.26389vw;
     }
 
-    .features__item{
-            font-size: 1.11111vw;
+    .features__item {
+        font-size: 1.11111vw;
     }
 
-    .faq .section__title{
+    .faq .section__title {
         margin-bottom: 3.81944vw;
     }
 
@@ -297,14 +298,14 @@
         font-size: 12px;
     }
 
-  
+
 
     .tmr .section__title {
         font-size: 3.47222vw;
         margin-bottom: 1.73611vw;
     }
 
-    .tmr__info p{
+    .tmr__info p {
         font-size: 1.11111vw;
     }
 
@@ -320,7 +321,7 @@
         max-width: 300px;
     }
 
-    .mailing__info{
+    .mailing__info {
         font-size: 1.11111vw;
     }
 
@@ -419,12 +420,12 @@
         gap: 30px;
     }
 
-    .gift__btn{
+    .gift__btn {
         padding: 2vw;
         height: 100%;
     }
 
-    .gift__info{
+    .gift__info {
         font-size: 1.11111vw;
     }
 
@@ -549,4 +550,3 @@
         height: 18px;
     }
 }
-
