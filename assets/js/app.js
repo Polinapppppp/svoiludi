@@ -179,16 +179,16 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(document.querySelector("section"))
     }
 
-   /*  ScrollTrigger.create({
-        trigger: '.gran',
-        start: 'top 70%',
-        endTrigger: 'footer',
-        end: 'top bottom',
-        toggleClass: {
-            targets: '.fixed-icons__mobile',
-            className: 'visible'
-        }
-    }); */
+    /*  ScrollTrigger.create({
+         trigger: '.gran',
+         start: 'top 70%',
+         endTrigger: 'footer',
+         end: 'top bottom',
+         toggleClass: {
+             targets: '.fixed-icons__mobile',
+             className: 'visible'
+         }
+     }); */
 
     ScrollTrigger.create({
         trigger: '.gran',
@@ -581,7 +581,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const next_arrow = parent.querySelector('.put__slider-next');
 
                 new Swiper(slider, {
-                    slidesPerView: 1,
+                    slidesPerView: 1.32,
                     spaceBetween: marginRightVW(12),
                     loop: true,
                     navigation: {
@@ -657,23 +657,73 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
+    /*  if (document.querySelector('.special-slider-rest')) {
+         const slider = document.querySelector('.special-slider-rest');
+ 
+         if (slider.length > 0) {
+             const putSlider = new Swiper(slider, {
+                 slidesPerView: 1,
+                 spaceBetween: marginRightVW(20),
+                 loop: true,
+                 navigation: {
+                     nextEl: document.querySelector('.special-slider-rest__next'),
+                     prevEl: document.querySelector('.special-slider-rest__prev'),
+                 },
+                 breakpoints: {
+                     680: {
+                         slidesPerView: 4,
+                         spaceBetween: marginRightVW(20),
+                     },
+                 }
+             })
+         }
+     } */
+
     if (document.querySelector('.special-slider-rest')) {
-        const slider = document.querySelector('.special-slider-rest');
-        const putSlider = new Swiper(slider, {
-            slidesPerView: 1,
-            spaceBetween: marginRightVW(20),
-            loop: true,
-            navigation: {
-                nextEl: document.querySelector('.special-slider-rest__next'),
-                prevEl: document.querySelector('.special-slider-rest__prev'),
-            },
-            breakpoints: {
-                680: {
-                    slidesPerView: 4,
-                    spaceBetween: marginRightVW(20),
-                },
-            }
-        })
+        const special_slider = document.querySelectorAll('.special-slider-rest');
+
+        if (special_slider.length > 0) {
+            special_slider.forEach(slider => {
+                const parent = slider.closest('.news');
+
+                const prev_arrow = parent.querySelector('.special-slider-rest__next');
+                const next_arrow = parent.querySelector('.special-slider-rest__prev');
+
+                new Swiper(slider, {
+                    slidesPerView: 1.375,
+                    loop: true,
+                    loopAdditionalSlides: 2,
+                    watchSlidesProgress: true,
+                    spaceBetween: marginRightVW(12),
+                    navigation: {
+                        nextEl: next_arrow,
+                        prevEl: prev_arrow,
+                    },
+                    breakpoints: {
+                        768: {
+                            slidesPerView: 1.6,
+                            spaceBetween: marginRightVW(20),
+                        },
+                        1000: {
+                            slidesPerView: 3,
+                            spaceBetween: marginRightVW(20),
+                        },
+                        1200: {
+                            slidesPerView: 3,
+                            spaceBetween: marginRightVW(20),
+                        },
+                        1300: {
+                            slidesPerView: 4,
+                            spaceBetween: marginRightVW(20),
+                        },
+                        1400: {
+                            slidesPerView: 4,
+                            spaceBetween: marginRightVW(20),
+                        }
+                    }
+                });
+            });
+        }
     }
 
     if (document.querySelector('.groups__slider')) {
@@ -795,7 +845,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     },
                     breakpoints: {
                         768: {
-                            slidesPerView: 1.3,
+                            slidesPerView: 1.6,
                             spaceBetween: 20,
                             centeredSlides: false,
                         },
@@ -950,7 +1000,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             breakpoints: {
                 768: {
-                    slidesPerView: 3,
+                    slidesPerView: 1,
                     spaceBetween: marginRightVW(20),
                     centeredSlides: true,
                 },
@@ -1081,26 +1131,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    /* if (document.querySelector('.review__slider')) {
-        const slider = document.querySelector('.review__slider');
-        const putSlider = new Swiper(slider, {
-            slidesPerView: 1.235,
-            loop: true,
-            spaceBetween: marginRightVW(12),
-
-            navigation: {
-                nextEl: document.querySelector('.review__next'),
-                prevEl: document.querySelector('.review__prev'),
-            },
-            breakpoints: {
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: marginRightVW(20),
-                },
-            }
-        })
-    } */
-
     if (document.querySelector('.review__slider')) {
         const put_sliders = document.querySelectorAll('.review__slider');
 
@@ -1121,7 +1151,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     },
                     breakpoints: {
                         768: {
-                            slidesPerView: 1.3,
+                            slidesPerView: 1.6,
                             spaceBetween: marginRightVW(20),
                         },
                         1200: {

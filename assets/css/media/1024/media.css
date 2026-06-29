@@ -245,11 +245,7 @@
     margin-bottom: 30px;
   }
 
-  .koll_bottom:has(> .koll__bottom + .koll__link) .koll__bottom,
-  .koll_bottom:has(> .koll__link + .koll__bottom) .koll__bottom {
-    max-width: 600px;
-  }
-
+ 
   .features .section__title {
     margin-bottom: 30px;
   }
@@ -270,6 +266,14 @@
 
   .faq__list {
     max-width: 100%;
+  }
+
+  .mailing__info{
+    line-height: normal;
+  }
+
+  .form__btn{
+    max-width: 18.75vw;
   }
 
   .footer__container {
@@ -1638,8 +1642,9 @@
   .modal__search-icon input::placeholder {
     font-family: Halvar Breitschrift;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 14px !important;
     line-height: 120%;
+    opacity: 0.6;
   }
 
   .menu-topbar__close {
@@ -1835,6 +1840,10 @@
 
   .filter-modal {
     z-index: 99983;
+  }
+
+  .contacts-message__text{
+    font-size: 15px;
   }
 
 }

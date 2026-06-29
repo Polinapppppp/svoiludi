@@ -517,7 +517,7 @@ textarea {
 .form__btn {
   font-size: 12px;
   width: 100%;
-  max-width: 314pxф;
+  max-width: 314px;
 }
 
 .form__items {
@@ -1138,6 +1138,12 @@ textarea {
   overflow: hidden;
 }
 
+.main__bg img {
+  object-fit: cover;
+  -o-object-fit: cover;
+  height: 100%;
+}
+
 .main__bg::before {
   content: "";
   position: absolute;
@@ -1199,12 +1205,71 @@ textarea {
   overflow: hidden;
   text-align: center;
   font-family: "Halvar Breitschrift";
-  font-size: 4.16667vw;
-  font-style: normal;
+  font-size: 60px;
   font-weight: 250;
   line-height: 100%;
   /* 60px */
   text-transform: uppercase;
+}
+
+.inner__title {
+  color: #1F2832;
+  font-family: "Halvar Breitschrift";
+  font-size: 2.43056vw;
+  font-weight: 250;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+/* .bread {
+  margin-bottom: 1.38889vw;
+} */
+
+.bread {
+  opacity: 0.4;
+  color: #1F2832;
+  font-family: Gilroy;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.link--icon {
+  display: flex;
+  align-items: center;
+}
+
+
+.inner-photo .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inner-photo .inner__title {
+  font-family: "Halvar Breitschrift";
+  font-size: 60px;
+  font-weight: 250;
+  line-height: 100%;
+  /* 60px */
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFF;
+  margin-bottom: 60px;
+}
+
+.inner-photo .bread {
+  color: #fff;
+  opacity: 1;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.inner-photo .bread a {
+  color: #fff;
 }
 
 .main__title p {
@@ -1249,6 +1314,7 @@ textarea {
   -o-object-fit: contain;
   object-fit: contain;
   transition: all 0.3s;
+  margin-bottom: 2px;
 }
 
 .main__napr {
@@ -1460,6 +1526,7 @@ textarea {
   -o-object-fit: contain;
   object-fit: contain;
   transition: all 0.3s;
+  margin-bottom: 3px;
 }
 
 .main__calendar input {
@@ -1720,10 +1787,6 @@ section.gran {
   overflow: hidden;
 }
 
-.put__slider {
-  max-width: 64.23611vw;
-  width: 64.23611vw;
-}
 
 .put__item {
   position: relative;
@@ -1748,7 +1811,7 @@ section.gran {
 }
 
 .put__item-top h3 {
-  font-weight: 350;
+  font-weight: 300;
   font-size: 18px;
   line-height: 110%;
 }
@@ -2104,11 +2167,11 @@ section.gran {
   position: absolute;
   left: 0;
   bottom: 0;
-  padding: 1.25vw 2.77778vw 1.38889vw 30.05px;
+  padding: 21px 2.77778vw 21px 25px;
   width: 100%;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 1.25vw;
-  font-weight: 350;
+  font-size: 18px;
+  font-weight: 300;
   line-height: 100%;
 }
 
@@ -2176,9 +2239,9 @@ section.gran {
   position: relative;
   width: 100%;
   min-width: 22.56944vw;
-  font-size: 1.25vw;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 350;
+  font-weight: 300;
   line-height: 100%;
   color: #fff;
   overflow: hidden;
@@ -2250,7 +2313,7 @@ section.gran {
   position: absolute;
   left: 0;
   bottom: 0;
-  padding: 1.80556vw 1.55556vw 1.94444vw 30.05px;
+  padding: 26px 1.55556vw 24px 24px;
   width: 100%;
   transition: all 0.3s;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -3128,6 +3191,7 @@ section.news {
 
 section.mailing {
   padding-bottom: 150px;
+  margin-bottom: 0;
 }
 
 .mailing .container {
@@ -4333,7 +4397,137 @@ body {
   .org__info {
     max-width: 43.7vw;
   }
+
   .org__top-right p {
     max-width: 33.16667vw;
+  }
 }
+
+
+.contacts-items {
+  margin-top: 3.47222vw;
+}
+
+.contacts-message {
+  border-radius: 10px;
+  background: #EEECE0;
+  padding: 33px;
+  padding-right: 104px;
+  position: relative;
+}
+
+.contacts-message::after {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  left: 15px;
+  bottom: 15px;
+  content: "";
+  display: block;
+  border-radius: 10px;
+  border: 1px solid #323D48;
+  opacity: 0.1;
+}
+
+
+.contacts-message__title {
+  color: #1F2832;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.contacts-message__title h3 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  font-family: "Halvar Breitschrift";
+  text-transform: uppercase;
+  margin-top: 2px;
+  max-width: 320px;
+}
+
+.contacts-message__title img {
+  width: 14px;
+}
+
+.contacts-message__text {
+  color: #1F2832;
+  font-family: Gilroy;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+.contacts-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 58px;
+}
+
+.contacts-item__name {
+  opacity: 0.4;
+  color: #1F2832;
+  font-family: Gilroy;
+  font-size: 0.83333vw;
+  font-weight: 300;
+  line-height: 100%;
+  margin-bottom: 0.69444vw;
+}
+
+.contacts-item__link {
+  color: #323D48;
+  font-family: Gilroy;
+  font-size: 1.11111vw;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+.contacts-items {
+  margin-bottom: -2.08333vw;
+}
+
+.contacts-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 2.08333vw;
+  min-width: 29.16667vw;
+  color: #1F2832;
+  font-family: Gilroy;
+  font-size: 1.11111vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+.contacts-item:last-child {
+  min-width: unset;
+  margin-left: 7.29167vw;
+}
+
+
+.contacts-message--black {
+  background: #323D48;
+  color: #fff;
+}
+
+.contacts-message--black .contacts-message__text {
+  color: #fff;
+}
+
+.contacts-message--black .contacts-message__title {
+  color: #fff;
+}
+
+.contacts-message--black::after {
+  border-color: #FFF;
+}
+
+.professionals .contacts-message__text {
+  width: 49.72222vw;
+}
+
+.professionals .contacts-message {
+  margin-top: 10.41667vw;
 }

@@ -635,3 +635,17 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('resize', checkIcons);
   checkIcons();
 })();
+(function() {
+    const btnSpan = document.querySelector('.gift__btn span');
+    if (!btnSpan) return;
+
+    const desktopText = 'Подарить';
+    const mobileText = 'Подарить сертификат';
+
+    function updateText() {
+        btnSpan.textContent = window.innerWidth <= 768 ? mobileText : desktopText;
+    }
+
+    updateText();
+    window.addEventListener('resize', updateText);
+})();

@@ -40,6 +40,15 @@
         max-width: 60px;
     }
 
+    .main__title{
+        font-size: 4.16667vw;
+    }
+
+    .inner-photo .inner__title{
+        font-size: 4.16667vw;
+        
+    }
+
     .put__row {
         gap: 30px;
     }
@@ -55,8 +64,6 @@
     /*}*/
 
     .put__slider {
-        max-width: 550px;
-        width: 550px;
         overflow: visible !important;
         height: 100%;
     }
@@ -130,6 +137,11 @@
 
     .koll__link {
         padding: 2vw;
+    }
+
+    .koll_bottom:has(> .koll__bottom + .koll__link) .koll__bottom,
+    .koll_bottom:has(> .koll__link + .koll__bottom) .koll__bottom {
+        max-width: 60.97222vw;
     }
 
     .org__slide>img {
